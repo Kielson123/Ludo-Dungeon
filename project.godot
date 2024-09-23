@@ -18,6 +18,10 @@ boot_splash/bg_color=Color(0.0509804, 0.0509804, 0.0509804, 1)
 boot_splash/show_image=false
 config/icon="res://icon.svg"
 
+[autoload]
+
+Global="*res://Util/global.gd"
+
 [display]
 
 window/size/viewport_width=720
