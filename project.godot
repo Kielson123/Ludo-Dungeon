@@ -21,18 +21,26 @@ config/icon="res://icon.svg"
 [autoload]
 
 Global="*res://Util/global.gd"
+Signals="*res://Util/signals.gd"
+
+[debug]
+
+gdscript/warnings/untyped_declaration=1
 
 [display]
 
 window/size/viewport_width=720
 window/size/viewport_height=720
-window/size/resizable=false
 window/size/window_width_override=1920
 window/size/window_height_override=1920
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 window/handheld/orientation=6
 window/vsync/vsync_mode=2
+
+[global_group]
+
+"Main Menu Incompatible"="All scenes that cannot be shown at the same time as Main Menu scene"
 
 [rendering]
 

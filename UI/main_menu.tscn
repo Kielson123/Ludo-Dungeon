@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bm243lw37y02j"]
 
 [ext_resource type="Script" path="res://UI/main_menu.gd" id="1_6268k"]
-[ext_resource type="Texture2D" uid="uid://de1dpis8g54fg" path="res://icon.svg" id="2_fk1kw"]
+[ext_resource type="Texture2D" uid="uid://ddk4eer1ef88r" path="res://icon.svg" id="2_fk1kw"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -11,6 +11,15 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_6268k")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.866111, 0.866111, 0.866111, 1)
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -26,6 +35,7 @@ theme_override_constants/margin_bottom = 50
 
 [node name="VSplitContainer" type="VSplitContainer" parent="MarginContainer"]
 layout_mode = 2
+dragger_visibility = 1
 
 [node name="CenterContainer" type="CenterContainer" parent="MarginContainer/VSplitContainer"]
 layout_mode = 2
@@ -42,24 +52,35 @@ theme_override_constants/separation = 25
 [node name="PanelContainer" type="PanelContainer" parent="MarginContainer/VSplitContainer/VBoxContainer"]
 modulate = Color(1, 1, 1, 0)
 self_modulate = Color(1, 1, 1, 0)
-custom_minimum_size = Vector2(0, 100)
+custom_minimum_size = Vector2(0, 150)
 layout_mode = 2
 
 [node name="SingleplayerModeButton" type="Button" parent="MarginContainer/VSplitContainer/VBoxContainer"]
-custom_minimum_size = Vector2(100, 0)
+custom_minimum_size = Vector2(170, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-text = "PvB"
+text = "Play with Bots"
 
 [node name="MultiplayerModeButton" type="Button" parent="MarginContainer/VSplitContainer/VBoxContainer"]
-custom_minimum_size = Vector2(100, 0)
+custom_minimum_size = Vector2(170, 0)
 layout_mode = 2
 size_flags_horizontal = 4
-text = "PvP"
+text = "Play with Others!"
 
 [node name="OptionsButton" type="Button" parent="MarginContainer/VSplitContainer/VBoxContainer"]
-custom_minimum_size = Vector2(100, 0)
+custom_minimum_size = Vector2(170, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 text = "Options"
+
+[node name="ExitButton" type="Button" parent="MarginContainer/VSplitContainer/VBoxContainer"]
+custom_minimum_size = Vector2(170, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Exit Game"
+
+[connection signal="pressed" from="MarginContainer/VSplitContainer/VBoxContainer/SingleplayerModeButton" to="." method="_on_singleplayer_mode_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VSplitContainer/VBoxContainer/MultiplayerModeButton" to="." method="_on_multiplayer_mode_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VSplitContainer/VBoxContainer/OptionsButton" to="." method="_on_options_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VSplitContainer/VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]
