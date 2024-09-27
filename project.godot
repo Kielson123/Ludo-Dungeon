@@ -41,6 +41,7 @@ window/vsync/vsync_mode=2
 [global_group]
 
 "Main Menu Incompatible"="All scenes that cannot be shown at the same time as Main Menu scene"
+"Options Menu Incompatible"="All scenes that cannot be show at the same time as Options Menu"
 
 [rendering]
 

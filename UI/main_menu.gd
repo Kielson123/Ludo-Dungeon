@@ -10,7 +10,7 @@ func _on_multiplayer_mode_button_pressed() -> void:
 	pass
 
 func _on_options_button_pressed() -> void:
-	#open OptionsMenu
+	Signals.request_options_menu.emit()
 	pass
 
 func _on_exit_button_pressed() -> void:
