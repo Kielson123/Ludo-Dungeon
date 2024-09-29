@@ -74,3 +74,36 @@ popup/item_1/text = "Fullscreen"
 popup/item_1/id = 1
 popup/item_2/text = "Borderless"
 popup/item_2/id = 2
+
+[node name="MaxFPS" type="HSplitContainer" parent="MarginContainer/TabContainer/Display/VBoxContainer"]
+custom_minimum_size = Vector2(0, 70)
+layout_mode = 2
+theme_override_constants/separation = 50
+dragger_visibility = 1
+
+[node name="Label" type="Label" parent="MarginContainer/TabContainer/Display/VBoxContainer/MaxFPS"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Max FPS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HSplitContainer" type="HSplitContainer" parent="MarginContainer/TabContainer/Display/VBoxContainer/MaxFPS"]
+layout_mode = 2
+dragger_visibility = 1
+
+[node name="LineEdit" type="LineEdit" parent="MarginContainer/TabContainer/Display/VBoxContainer/MaxFPS/HSplitContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+
+[node name="HSlider" type="HSlider" parent="MarginContainer/TabContainer/Display/VBoxContainer/MaxFPS/HSplitContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+max_value = 240.0
+allow_greater = true
+
+[connection signal="item_selected" from="MarginContainer/TabContainer/Display/VBoxContainer/ScreenMode/OptionButton" to="." method="_on_screen_mode_changed"]
+[connection signal="text_submitted" from="MarginContainer/TabContainer/Display/VBoxContainer/MaxFPS/HSplitContainer/LineEdit" to="." method="_on_max_fps_text_submitted"]
+[connection signal="drag_ended" from="MarginContainer/TabContainer/Display/VBoxContainer/MaxFPS/HSplitContainer/HSlider" to="." method="_on_max_fps_slider_drag_ended"]
+[connection signal="value_changed" from="MarginContainer/TabContainer/Display/VBoxContainer/MaxFPS/HSplitContainer/HSlider" to="." method="_on_max_fps_slider_value_changed"]

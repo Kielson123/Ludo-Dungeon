@@ -24,11 +24,13 @@ buses/default_bus_layout=""
 
 [autoload]
 
-Global="*res://Util/global.gd"
+ConfigManager="*res://Util/config_manager.gd"
 Signals="*res://Util/signals.gd"
+Global="res://Util/global.gd"
 
 [debug]
 
+gdscript/warnings/unused_signal=0
 gdscript/warnings/untyped_declaration=1
 
 [display]
