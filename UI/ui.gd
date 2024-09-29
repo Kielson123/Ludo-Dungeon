@@ -6,12 +6,12 @@ func _ready() -> void:
 	Signals.request_options_menu.connect(on_options_menu_requested)
 
 func on_main_menu_requested() -> void:
-	var main_menu: Control = load("res://UI/main_menu.tscn").instantiate()
+	var main_menu: Control = load("res://UI/Main Menu/main_menu.tscn").instantiate()
 	close_all_nodes_in_group("Main Menu Incompatible")
 	add_child(main_menu)
 
 func on_options_menu_requested() -> void:
-	var options_menu: Control = load("res://UI/options_menu.tscn").instantiate()
+	var options_menu: Control = load("res://UI/Options Menu/options_menu.tscn").instantiate()
 	close_all_nodes_in_group("Options Menu Incompatible")
 	add_child(options_menu)
 

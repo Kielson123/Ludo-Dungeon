@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bm243lw37y02j"]
 
-[ext_resource type="Script" path="res://UI/main_menu.gd" id="1_6268k"]
-[ext_resource type="Texture2D" uid="uid://de1dpis8g54fg" path="res://icon.svg" id="2_fk1kw"]
+[ext_resource type="Script" path="res://UI/Main Menu/main_menu.gd" id="1_6268k"]
+[ext_resource type="Texture2D" uid="uid://ddk4eer1ef88r" path="res://icon.svg" id="2_fk1kw"]
 
 [node name="MainMenu" type="Control" groups=["Options Menu Incompatible"]]
 layout_mode = 3
