@@ -1,5 +1,11 @@
 extends Node
 
+enum AUDIO_TYPE{
+	AUDIO = 0,
+	MUSIC = 1,
+	SFX = 2,
+}
+
 enum SCREEN_MODE{
 	WINDOWED = 0,
 	FULLSCREEN = 1, 
@@ -10,9 +16,11 @@ const CONFIG_PATH: String = "user://config.cfg"
 
 var screen_mode: SCREEN_MODE = SCREEN_MODE.FULLSCREEN
 var max_fps: int = 0
-var vsync: DisplayServer.VSyncMode = DisplayServer.VSYNC_ENABLED
+var vsync: DisplayServer.VSyncMode = DisplayServer.VSYNC_ADAPTIVE
 
-var audio_volume: float = 1.0
+var audio_volume: int = 100
+var music_volume: int = 100
+var sfx_volume: int = 100
 
 var config := ConfigFile.new()
 
@@ -24,11 +32,14 @@ func _init() -> void:
 		vsync = config.get_value("Display", "vsync")
 		
 		audio_volume = config.get_value("Audio", "audioVolume")
+		music_volume = config.get_value("Audio", "musicVolume")
+		sfx_volume = config.get_value("Audio", "sfxVolume")
 
 func _ready() -> void:
 	call_deferred("init_settings")
 
 func init_settings() -> void:
+	configure_audio()
 	get_window().mode = set_window_mode()
 	DisplayServer.window_set_vsync_mode(vsync)
 	Engine.max_fps = max_fps
@@ -54,6 +65,15 @@ func save_settings(setting: String) -> void:
 		"audioVolume":
 			category = "Audio"
 			value = audio_volume
+			AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Master"), linear_to_db(float(value) / 100))
+		"musicVolume":
+			category = "Audio"
+			value = music_volume
+			AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Music"), linear_to_db(float(value) / 100))
+		"sfxVolume":
+			category = "Audio"
+			value = sfx_volume
+			AudioServer.set_bus_volume_db(AudioServer.get_bus_index("SFX"), linear_to_db(float(value) / 100))
 	
 	
 	if category != null and value != null:
@@ -68,3 +88,14 @@ func set_window_mode() -> Window.Mode:
 			return Window.MODE_FULLSCREEN
 		_:
 			return Window.MODE_EXCLUSIVE_FULLSCREEN
+
+func configure_audio() -> void:
+	AudioServer.add_bus(1)
+	AudioServer.add_bus(2)
+	
+	AudioServer.set_bus_name(1, "Music")
+	AudioServer.set_bus_name(2, "SFX")
+	
+	AudioServer.set_bus_volume_db(0, linear_to_db(float(audio_volume) / 100))
+	AudioServer.set_bus_volume_db(1, linear_to_db(float(music_volume) / 100))
+	AudioServer.set_bus_volume_db(2, linear_to_db(float(sfx_volume) / 100))

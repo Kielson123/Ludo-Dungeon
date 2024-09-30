@@ -27,6 +27,7 @@ buses/default_bus_layout=""
 ConfigManager="*res://Util/config_manager.gd"
 Signals="*res://Util/signals.gd"
 Global="*res://Util/global.gd"
+GameManager="*res://Util/game_manager.gd"
 
 [debug]
 
@@ -46,6 +47,7 @@ window/vsync/vsync_mode=2
 
 "Main Menu Incompatible"="All scenes that cannot be shown at the same time as Main Menu scene"
 "Options Menu Incompatible"="All scenes that cannot be show at the same time as Options Menu"
+"Singleplayer Start Menu Incompatible"="All scenes that cannot be shown at the same time as Singleplayer Start Menu"
 
 [rendering]
 

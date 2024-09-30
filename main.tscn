@@ -32,8 +32,9 @@ stretch_mode = 0
 [node name="Intro" type="VideoStreamPlayer" parent="AspectRatioContainer"]
 layout_mode = 2
 stream = ExtResource("2_kh485")
-volume_db = -12.0
+volume_db = -10.0
 autoplay = true
 expand = true
+bus = &"Music"
 
 [connection signal="finished" from="AspectRatioContainer/Intro" to="." method="_on_intro_finished"]
