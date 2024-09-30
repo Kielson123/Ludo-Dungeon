@@ -32,13 +32,24 @@ theme_override_constants/margin_top = 50
 theme_override_constants/margin_right = 50
 theme_override_constants/margin_bottom = 50
 
-[node name="TabContainer" type="TabContainer" parent="MarginContainer"]
+[node name="VSplitContainer" type="VSplitContainer" parent="MarginContainer"]
 layout_mode = 2
+
+[node name="ExitButton" type="Button" parent="MarginContainer/VSplitContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_font_sizes/font_size = 25
+text = "X"
+
+[node name="TabContainer" type="TabContainer" parent="MarginContainer/VSplitContainer"]
+layout_mode = 2
+theme_override_constants/side_margin = 0
 theme_override_font_sizes/font_size = 25
 current_tab = 0
 all_tabs_in_front = true
 
-[node name="Display" type="MarginContainer" parent="MarginContainer/TabContainer"]
+[node name="Display" type="MarginContainer" parent="MarginContainer/VSplitContainer/TabContainer"]
 layout_mode = 2
 theme_override_constants/margin_left = 30
 theme_override_constants/margin_top = 30
@@ -46,16 +57,16 @@ theme_override_constants/margin_right = 30
 theme_override_constants/margin_bottom = 30
 metadata/_tab_index = 0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/TabContainer/Display"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VSplitContainer/TabContainer/Display"]
 layout_mode = 2
 
-[node name="ScreenMode" type="HSplitContainer" parent="MarginContainer/TabContainer/Display/VBoxContainer"]
+[node name="ScreenMode" type="HSplitContainer" parent="MarginContainer/VSplitContainer/TabContainer/Display/VBoxContainer"]
 custom_minimum_size = Vector2(0, 70)
 layout_mode = 2
 theme_override_constants/separation = 50
 dragger_visibility = 1
 
-[node name="Label" type="Label" parent="MarginContainer/TabContainer/Display/VBoxContainer/ScreenMode"]
+[node name="Label" type="Label" parent="MarginContainer/VSplitContainer/TabContainer/Display/VBoxContainer/ScreenMode"]
 custom_minimum_size = Vector2(250, 0)
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
@@ -63,7 +74,7 @@ text = "Screen  Mode"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="OptionButton" type="OptionButton" parent="MarginContainer/TabContainer/Display/VBoxContainer/ScreenMode"]
+[node name="OptionButton" type="OptionButton" parent="MarginContainer/VSplitContainer/TabContainer/Display/VBoxContainer/ScreenMode"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
 selected = 0
@@ -75,13 +86,13 @@ popup/item_1/id = 1
 popup/item_2/text = "Borderless"
 popup/item_2/id = 2
 
-[node name="MaxFPS" type="HSplitContainer" parent="MarginContainer/TabContainer/Display/VBoxContainer"]
+[node name="MaxFPS" type="HSplitContainer" parent="MarginContainer/VSplitContainer/TabContainer/Display/VBoxContainer"]
 custom_minimum_size = Vector2(0, 70)
 layout_mode = 2
 theme_override_constants/separation = 50
 dragger_visibility = 1
 
-[node name="Label" type="Label" parent="MarginContainer/TabContainer/Display/VBoxContainer/MaxFPS"]
+[node name="Label" type="Label" parent="MarginContainer/VSplitContainer/TabContainer/Display/VBoxContainer/MaxFPS"]
 custom_minimum_size = Vector2(250, 0)
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
@@ -89,21 +100,49 @@ text = "Max FPS"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="HSplitContainer" type="HSplitContainer" parent="MarginContainer/TabContainer/Display/VBoxContainer/MaxFPS"]
+[node name="HSplitContainer" type="HSplitContainer" parent="MarginContainer/VSplitContainer/TabContainer/Display/VBoxContainer/MaxFPS"]
 layout_mode = 2
 dragger_visibility = 1
 
-[node name="LineEdit" type="LineEdit" parent="MarginContainer/TabContainer/Display/VBoxContainer/MaxFPS/HSplitContainer"]
+[node name="LineEdit" type="LineEdit" parent="MarginContainer/VSplitContainer/TabContainer/Display/VBoxContainer/MaxFPS/HSplitContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
 
-[node name="HSlider" type="HSlider" parent="MarginContainer/TabContainer/Display/VBoxContainer/MaxFPS/HSplitContainer"]
+[node name="HSlider" type="HSlider" parent="MarginContainer/VSplitContainer/TabContainer/Display/VBoxContainer/MaxFPS/HSplitContainer"]
 layout_mode = 2
 size_flags_vertical = 4
 max_value = 240.0
 allow_greater = true
 
-[connection signal="item_selected" from="MarginContainer/TabContainer/Display/VBoxContainer/ScreenMode/OptionButton" to="." method="_on_screen_mode_changed"]
-[connection signal="text_submitted" from="MarginContainer/TabContainer/Display/VBoxContainer/MaxFPS/HSplitContainer/LineEdit" to="." method="_on_max_fps_text_submitted"]
-[connection signal="drag_ended" from="MarginContainer/TabContainer/Display/VBoxContainer/MaxFPS/HSplitContainer/HSlider" to="." method="_on_max_fps_slider_drag_ended"]
-[connection signal="value_changed" from="MarginContainer/TabContainer/Display/VBoxContainer/MaxFPS/HSplitContainer/HSlider" to="." method="_on_max_fps_slider_value_changed"]
+[node name="Vsync" type="HSplitContainer" parent="MarginContainer/VSplitContainer/TabContainer/Display/VBoxContainer"]
+custom_minimum_size = Vector2(0, 70)
+layout_mode = 2
+theme_override_constants/separation = 50
+dragger_visibility = 1
+
+[node name="Label" type="Label" parent="MarginContainer/VSplitContainer/TabContainer/Display/VBoxContainer/Vsync"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Vsync"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="OptionButton" type="OptionButton" parent="MarginContainer/VSplitContainer/TabContainer/Display/VBoxContainer/Vsync"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+selected = 0
+allow_reselect = true
+item_count = 3
+popup/item_0/text = "Disabled"
+popup/item_1/text = "Enabled"
+popup/item_1/id = 1
+popup/item_2/text = "Adaptive"
+popup/item_2/id = 2
+
+[connection signal="pressed" from="MarginContainer/VSplitContainer/ExitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="item_selected" from="MarginContainer/VSplitContainer/TabContainer/Display/VBoxContainer/ScreenMode/OptionButton" to="." method="_on_screen_mode_changed"]
+[connection signal="text_submitted" from="MarginContainer/VSplitContainer/TabContainer/Display/VBoxContainer/MaxFPS/HSplitContainer/LineEdit" to="." method="_on_max_fps_text_submitted"]
+[connection signal="drag_ended" from="MarginContainer/VSplitContainer/TabContainer/Display/VBoxContainer/MaxFPS/HSplitContainer/HSlider" to="." method="_on_max_fps_slider_drag_ended"]
+[connection signal="value_changed" from="MarginContainer/VSplitContainer/TabContainer/Display/VBoxContainer/MaxFPS/HSplitContainer/HSlider" to="." method="_on_max_fps_slider_value_changed"]
+[connection signal="item_selected" from="MarginContainer/VSplitContainer/TabContainer/Display/VBoxContainer/Vsync/OptionButton" to="." method="_on_vsync_mode_changed"]

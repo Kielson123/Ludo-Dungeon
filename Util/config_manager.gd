@@ -8,7 +8,7 @@ enum SCREEN_MODE{
 
 const CONFIG_PATH: String = "user://config.cfg"
 
-var screen_mode: SCREEN_MODE = SCREEN_MODE.WINDOWED
+var screen_mode: SCREEN_MODE = SCREEN_MODE.FULLSCREEN
 var max_fps: int = 0
 var vsync: DisplayServer.VSyncMode = DisplayServer.VSYNC_ENABLED
 
@@ -62,11 +62,9 @@ func save_settings(setting: String) -> void:
 
 func set_window_mode() -> Window.Mode:
 	match screen_mode:
-		SCREEN_MODE.FULLSCREEN:
-			return Window.MODE_EXCLUSIVE_FULLSCREEN
+		SCREEN_MODE.WINDOWED:
+			return Window.MODE_MAXIMIZED
 		SCREEN_MODE.BORDERLESS:
 			return Window.MODE_FULLSCREEN
 		_:
-			get_window().size = DisplayServer.screen_get_size() / 2
-			get_window().move_to_center()
-			return Window.MODE_WINDOWED
+			return Window.MODE_EXCLUSIVE_FULLSCREEN

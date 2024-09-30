@@ -26,7 +26,7 @@ buses/default_bus_layout=""
 
 ConfigManager="*res://Util/config_manager.gd"
 Signals="*res://Util/signals.gd"
-Global="res://Util/global.gd"
+Global="*res://Util/global.gd"
 
 [debug]
 
@@ -37,8 +37,6 @@ gdscript/warnings/untyped_declaration=1
 
 window/size/viewport_width=720
 window/size/viewport_height=720
-window/size/window_width_override=1920
-window/size/window_height_override=1920
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 window/handheld/orientation=6
