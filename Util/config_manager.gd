@@ -24,6 +24,8 @@ var sfx_volume: int = 100
 
 var config := ConfigFile.new()
 
+
+
 func _init() -> void:
 	var err := config.load(CONFIG_PATH)
 	if err == OK:
@@ -35,14 +37,17 @@ func _init() -> void:
 		music_volume = config.get_value("Audio", "musicVolume")
 		sfx_volume = config.get_value("Audio", "sfxVolume")
 
+
 func _ready() -> void:
 	call_deferred("init_settings")
+
 
 func init_settings() -> void:
 	configure_audio()
 	get_window().mode = set_window_mode()
 	DisplayServer.window_set_vsync_mode(vsync)
 	Engine.max_fps = max_fps
+
 
 func save_settings(setting: String) -> void:
 	var category: String
@@ -75,10 +80,10 @@ func save_settings(setting: String) -> void:
 			value = sfx_volume
 			AudioServer.set_bus_volume_db(AudioServer.get_bus_index("SFX"), linear_to_db(float(value) / 100))
 	
-	
 	if category != null and value != null:
 		config.set_value(category, setting, value)
 		config.save(CONFIG_PATH)
+
 
 func set_window_mode() -> Window.Mode:
 	match screen_mode:
@@ -88,6 +93,7 @@ func set_window_mode() -> Window.Mode:
 			return Window.MODE_FULLSCREEN
 		_:
 			return Window.MODE_EXCLUSIVE_FULLSCREEN
+
 
 func configure_audio() -> void:
 	AudioServer.add_bus(1)
@@ -99,3 +105,12 @@ func configure_audio() -> void:
 	AudioServer.set_bus_volume_db(0, linear_to_db(float(audio_volume) / 100))
 	AudioServer.set_bus_volume_db(1, linear_to_db(float(music_volume) / 100))
 	AudioServer.set_bus_volume_db(2, linear_to_db(float(sfx_volume) / 100))
+
+
+func save_all_settings() -> void:
+	save_settings("screenMode")
+	save_settings("maxFPS")
+	save_settings("vsync")
+	save_settings("audioVolume")
+	save_settings("musicVolume")
+	save_settings("sfxVolume")
