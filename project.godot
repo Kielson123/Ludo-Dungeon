@@ -51,12 +51,12 @@ enabled=PackedStringArray("res://addons/discord-rpc-gd/plugin.cfg")
 [file_customization]
 
 folder_colors={
-"res://Addons/": "gray",
 "res://Assets/": "teal",
 "res://Boards/": "orange",
 "res://Pawns/": "orange",
 "res://UI/": "green",
-"res://Util/": "purple"
+"res://Util/": "purple",
+"res://addons/": "gray"
 }
 
 [global_group]
