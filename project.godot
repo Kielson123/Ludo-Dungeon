@@ -28,6 +28,7 @@ ConfigManager="*res://Util/config_manager.gd"
 Signals="*res://Util/signals.gd"
 Global="*res://Util/global.gd"
 GameManager="*res://Util/game_manager.gd"
+DiscordRPCLoader="*res://addons/discord-rpc-gd/nodes/discord_autoload.gd"
 
 [debug]
 
@@ -42,6 +43,21 @@ window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 window/handheld/orientation=6
 window/vsync/vsync_mode=2
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/discord-rpc-gd/plugin.cfg")
+
+[file_customization]
+
+folder_colors={
+"res://Addons/": "gray",
+"res://Assets/": "teal",
+"res://Boards/": "orange",
+"res://Pawns/": "orange",
+"res://UI/": "green",
+"res://Util/": "purple"
+}
 
 [global_group]
 

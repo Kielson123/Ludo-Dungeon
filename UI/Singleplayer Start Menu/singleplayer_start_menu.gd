@@ -1,6 +1,6 @@
 extends Control
 
-@onready var bot_count_input: LineEdit = $"MarginContainer/VBoxContainer/PanelContainer/MarginContainer/VSplitContainer/HSplitContainer/GameOptionsContainer/Bot Count Option/LineEdit"
+@onready var bot_count_input: LineEdit = $"MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HSplitContainer/VSplitContainer/GameOptionsContainer/Bot Count Option/LineEdit"
 
 var max_player_count: int = 4
 
