@@ -3,7 +3,7 @@ extends Control
 
 
 func _on_singleplayer_mode_button_pressed() -> void:
-	Signals.request_game_start.emit()
+	Signals.request_singleplayer_start_menu.emit()
 
 
 func _on_multiplayer_mode_button_pressed() -> void:

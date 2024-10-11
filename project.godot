@@ -55,8 +55,7 @@ folder_colors={
 "res://Boards/": "orange",
 "res://Pawns/": "orange",
 "res://UI/": "green",
-"res://Util/": "purple",
-"res://addons/": "gray"
+"res://Util/": "purple"
 }
 
 [global_group]

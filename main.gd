@@ -11,7 +11,10 @@ func _init() -> void:
 func _on_intro_finished() -> void:
 	background_color.color = Color("4d4d4d")
 	$AspectRatioContainer.queue_free()
-	Signals.request_main_menu.emit()
+	if boot_into_game_with_bots:
+		Signals.request_game_start.emit()
+	else:
+		Signals.request_main_menu.emit()
 	ui.visible = true
 
 func _ready() -> void:
