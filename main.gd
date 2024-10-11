@@ -1,7 +1,12 @@
-extends Node
+class_name Main extends Node
+
+@export var boot_into_game_with_bots: bool = false
 
 @onready var ui: UI = $UI
 @onready var background_color: ColorRect = $BackgroundColor
+
+func _init() -> void:
+	Global.main_scene = self
 
 func _on_intro_finished() -> void:
 	background_color.color = Color("4d4d4d")

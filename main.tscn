@@ -6,6 +6,7 @@
 
 [node name="Main" type="Node"]
 script = ExtResource("1_5e5a8")
+boot_into_game_with_bots = true
 
 [node name="BackgroundColor" type="ColorRect" parent="."]
 anchors_preset = 15
@@ -35,6 +36,5 @@ stream = ExtResource("2_kh485")
 volume_db = -10.0
 autoplay = true
 expand = true
-bus = &"Music"
 
 [connection signal="finished" from="AspectRatioContainer/Intro" to="." method="_on_intro_finished"]
