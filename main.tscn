@@ -18,6 +18,8 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 color = Color(0.0509804, 0.0509804, 0.0509804, 1)
 
+[node name="Game" type="Node2D" parent="."]
+
 [node name="UI" parent="." instance=ExtResource("3_uilka")]
 visible = false
 

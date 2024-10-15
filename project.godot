@@ -28,7 +28,6 @@ ConfigManager="*res://Util/config_manager.gd"
 Signals="*res://Util/signals.gd"
 Global="*res://Util/global.gd"
 GameManager="*res://Util/game_manager.gd"
-DiscordRPCLoader="*res://addons/discord-rpc-gd/nodes/discord_autoload.gd"
 
 [debug]
 
@@ -46,7 +45,7 @@ window/vsync/vsync_mode=2
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/discord-rpc-gd/plugin.cfg")
+enabled=PackedStringArray()
 
 [file_customization]
 
