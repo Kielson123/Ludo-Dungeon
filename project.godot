@@ -27,7 +27,6 @@ buses/default_bus_layout=""
 ConfigManager="*res://Util/config_manager.gd"
 Signals="*res://Util/signals.gd"
 Global="*res://Util/global.gd"
-GameManager="*res://Util/game_manager.gd"
 
 [debug]
 
@@ -51,8 +50,7 @@ enabled=PackedStringArray()
 
 folder_colors={
 "res://Assets/": "teal",
-"res://Boards/": "orange",
-"res://Pawns/": "orange",
+"res://Game/": "orange",
 "res://UI/": "green",
 "res://Util/": "purple"
 }

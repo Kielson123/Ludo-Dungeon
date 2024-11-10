@@ -1,18 +1,18 @@
 class_name Main extends Node
 
-@export var boot_into_game_with_bots: bool = false
-
-@onready var game: Node2D = $Game
+@onready var game: Node2D = $CenterContainer/Control/Game
 @onready var ui: UI = $UI
-@onready var background_color: ColorRect = $BackgroundColor
+
+var dev_mode: bool = false
+var intro_finished: bool = false
 
 func _init() -> void:
 	Global.main_scene = self
 
 func _on_intro_finished() -> void:
-	background_color.color = Color("4d4d4d")
+	intro_finished = true
 	$AspectRatioContainer.queue_free()
-	if boot_into_game_with_bots:
+	if dev_mode and OS.is_debug_build():
 		Signals.request_game_start.emit(Global.GAME_TYPE.SINGLEPLAYER, {
 			"bots": 3,
 			"players": 1
@@ -30,3 +30,7 @@ func _notification(what: int) -> void:
 		get_tree().quit()
 	if what == NOTIFICATION_APPLICATION_PAUSED:
 		ConfigManager.save_all_settings()
+
+func _process(_delta: float) -> void:
+	if Input.is_action_just_pressed("ui_text_backspace") and not intro_finished:
+		dev_mode = true

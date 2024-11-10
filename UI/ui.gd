@@ -2,7 +2,6 @@ class_name UI
 extends Control
 
 
-
 func _ready() -> void:
 	Signals.request_main_menu.connect(on_main_menu_requested)
 	Signals.request_options_menu.connect(on_options_menu_requested)
