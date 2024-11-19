@@ -24,6 +24,7 @@ func _on_max_fps_text_submitted(new_text: String) -> void:
 		ConfigManager.max_fps = maxi(new_text.to_int(), 0)
 	sync_max_fps()
 	ConfigManager.save_settings("maxFPS")
+	max_fps_text.release_focus()
 
 
 func _on_max_fps_slider_value_changed(value: float) -> void:
