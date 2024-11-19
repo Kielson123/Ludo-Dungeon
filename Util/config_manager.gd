@@ -60,7 +60,7 @@ func save_settings(setting: String) -> void:
 			get_window().mode = set_window_mode()
 		"maxFPS":
 			category = "Display"
-			value = screen_mode
+			value = max_fps
 			Engine.max_fps = max_fps
 		"vsync":
 			category = "Display"
