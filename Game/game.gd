@@ -20,11 +20,13 @@ func setup_singleplayer(game_data: Dictionary) -> void:
 	var bot_number: int = game_data["bots"]
 	var player_number: int = game_data["players"]
 	var board: Board
+	var board_size: Vector2 = Global.main_scene.ui.size
 	match (bot_number + player_number):
 		4:
 			board = BOARD_4.instantiate()
 		_:
 			board = BOARD_4.instantiate()
+	board.color_rect.size = board_size
 	add_child(board)
 
 func setup_local_multiplayer(_game_data: Dictionary) -> void:
