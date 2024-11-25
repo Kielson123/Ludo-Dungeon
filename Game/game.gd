@@ -1,4 +1,4 @@
-class_name Game extends Node2D
+class_name Game extends Control
 
 const BOARD_4 = preload("res://Game/Boards/Board4/board_4.tscn")
 
@@ -26,7 +26,6 @@ func setup_singleplayer(game_data: Dictionary) -> void:
 			board = BOARD_4.instantiate()
 		_:
 			board = BOARD_4.instantiate()
-	board.color_rect.size = board_size
 	add_child(board)
 
 func setup_local_multiplayer(_game_data: Dictionary) -> void:

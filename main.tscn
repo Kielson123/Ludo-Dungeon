@@ -8,19 +8,43 @@
 [node name="Main" type="Node"]
 script = ExtResource("1_5e5a8")
 
-[node name="CenterContainer" type="CenterContainer" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 
-[node name="Control" type="Control" parent="CenterContainer"]
-layout_mode = 2
-
-[node name="Game" parent="CenterContainer/Control" instance=ExtResource("2_qh4fa")]
+[node name="Game" parent="Control" instance=ExtResource("2_qh4fa")]
+layout_mode = 1
 
 [node name="UI" parent="." instance=ExtResource("3_uilka")]
 visible = false
 
-[node name="AspectRatioContainer" type="AspectRatioContainer" parent="."]
+[node name="IntroContainer" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BackgroundColor" type="ColorRect" parent="IntroContainer"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0.0509804, 0.0509804, 0.0509804, 1)
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="IntroContainer"]
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -29,17 +53,11 @@ grow_vertical = 2
 ratio = 1.7778
 stretch_mode = 0
 
-[node name="BackgroundColor" type="ColorRect" parent="AspectRatioContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0.0509804, 0.0509804, 0.0509804, 1)
-
-[node name="Intro" type="VideoStreamPlayer" parent="AspectRatioContainer"]
+[node name="Intro" type="VideoStreamPlayer" parent="IntroContainer/AspectRatioContainer"]
 layout_mode = 2
 stream = ExtResource("2_kh485")
 volume_db = -10.0
 autoplay = true
 expand = true
 
-[connection signal="finished" from="AspectRatioContainer/Intro" to="." method="_on_intro_finished"]
+[connection signal="finished" from="IntroContainer/AspectRatioContainer/Intro" to="." method="_on_intro_finished"]

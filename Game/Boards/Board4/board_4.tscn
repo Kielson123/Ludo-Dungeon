@@ -2,10 +2,20 @@
 
 [ext_resource type="Script" path="res://Game/Boards/Board4/board_4.gd" id="1_wg12l"]
 
-[node name="Board-4" type="Node2D"]
+[node name="Board-4" type="Control" node_paths=PackedStringArray("background")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 script = ExtResource("1_wg12l")
+background = NodePath("Background")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0

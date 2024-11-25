@@ -1,6 +1,6 @@
 class_name Main extends Node
 
-@onready var game: Node2D = $CenterContainer/Control/Game
+@onready var game: Control = $Control/Game
 @onready var ui: UI = $UI
 
 var dev_mode: bool = false
@@ -11,7 +11,7 @@ func _init() -> void:
 
 func _on_intro_finished() -> void:
 	intro_finished = true
-	$AspectRatioContainer.queue_free()
+	$IntroContainer.queue_free()
 	if dev_mode and OS.is_debug_build():
 		Signals.request_game_start.emit(Global.GAME_TYPE.SINGLEPLAYER, {
 			"bots": 3,
