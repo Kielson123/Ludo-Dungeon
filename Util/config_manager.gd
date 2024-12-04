@@ -17,6 +17,7 @@ const CONFIG_PATH: String = "user://config.cfg"
 var screen_mode: SCREEN_MODE = SCREEN_MODE.FULLSCREEN
 var max_fps: int = 0
 var vsync: DisplayServer.VSyncMode = DisplayServer.VSYNC_ADAPTIVE
+var resolution: Vector2i = Vector2i.ZERO
 
 var audio_volume: int = 100
 var music_volume: int = 100
@@ -24,18 +25,17 @@ var sfx_volume: int = 100
 
 var config := ConfigFile.new()
 
-
-
 func _init() -> void:
 	var err := config.load(CONFIG_PATH)
 	if err == OK:
-		screen_mode = config.get_value("Display", "screenMode")
-		max_fps = config.get_value("Display", "maxFPS")
-		vsync = config.get_value("Display", "vsync")
+		screen_mode = config.get_value("Display", "screenMode") if config.has_section_key("Display", "screenMode") else screen_mode
+		max_fps = config.get_value("Display", "maxFPS") if config.has_section_key("Display", "maxFPS") else max_fps
+		vsync = config.get_value("Display", "vsync") if config.has_section_key("Display", "vsync") else vsync
+		resolution = config.get_value("Display", "resolution") if config.has_section_key("Display", "resolution") else resolution
 		
-		audio_volume = config.get_value("Audio", "audioVolume")
-		music_volume = config.get_value("Audio", "musicVolume")
-		sfx_volume = config.get_value("Audio", "sfxVolume")
+		audio_volume = config.get_value("Audio", "audioVolume") if config.has_section_key("Audio", "audioVolume") else audio_volume
+		music_volume = config.get_value("Audio", "musicVolume") if config.has_section_key("Audio", "musicVolume") else music_volume
+		sfx_volume = config.get_value("Audio", "sfxVolume") if config.has_section_key("Audio", "sfxVolume") else sfx_volume
 
 
 func _ready() -> void:
@@ -45,8 +45,18 @@ func _ready() -> void:
 func init_settings() -> void:
 	configure_audio()
 	get_window().mode = set_window_mode()
+	if resolution != Vector2i.ZERO and screen_mode == SCREEN_MODE.WINDOWED:
+		get_window().size = resolution
+		get_window().move_to_center()
 	DisplayServer.window_set_vsync_mode(vsync)
 	Engine.max_fps = max_fps
+
+
+func _process(delta: float) -> void:
+	if get_window().mode == Window.MODE_WINDOWED:
+		resolution = get_window().size
+	else:
+		resolution = Vector2i.ZERO
 
 
 func save_settings(setting: String) -> void:
@@ -66,6 +76,12 @@ func save_settings(setting: String) -> void:
 			category = "Display"
 			value = vsync
 			DisplayServer.window_set_vsync_mode(vsync)
+		"resolution":
+			category = "Display"
+			value = get_window().size if get_window().mode == Window.MODE_WINDOWED else Vector2i.ZERO
+			if resolution != Vector2i.ZERO:
+				get_window().size = resolution 
+				get_window().move_to_center()
 		
 		"audioVolume":
 			category = "Audio"
@@ -88,7 +104,10 @@ func save_settings(setting: String) -> void:
 func set_window_mode() -> Window.Mode:
 	match screen_mode:
 		SCREEN_MODE.WINDOWED:
-			return Window.MODE_MAXIMIZED
+			if resolution != Vector2i.ZERO:
+				return Window.MODE_WINDOWED
+			else:
+				return Window.MODE_MAXIMIZED
 		SCREEN_MODE.BORDERLESS:
 			return Window.MODE_FULLSCREEN
 		_:
@@ -111,6 +130,7 @@ func save_all_settings() -> void:
 	save_settings("screenMode")
 	save_settings("maxFPS")
 	save_settings("vsync")
+	save_settings("resolution")
 	save_settings("audioVolume")
 	save_settings("musicVolume")
 	save_settings("sfxVolume")
