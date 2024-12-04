@@ -1,8 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://d1rwgwto16neu"]
+[gd_scene load_steps=3 format=3 uid="uid://d1rwgwto16neu"]
 
 [ext_resource type="Script" path="res://Game/Boards/Board4/board_4.gd" id="1_wg12l"]
+[ext_resource type="Texture2D" uid="uid://dhslwmayr66ei" path="res://Assets/Game/tile.png" id="2_xfqoh"]
 
-[node name="Board-4" type="Control" node_paths=PackedStringArray("background")]
+[node name="Board-4" type="Control" node_paths=PackedStringArray("background", "tiles")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -13,6 +14,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("1_wg12l")
 background = NodePath("Background")
+tiles = [NodePath("MarginContainer/CenterContainer/TileContainer/Row1/Tile1"), NodePath("MarginContainer/CenterContainer/TileContainer/Row1/Tile2"), NodePath("MarginContainer/CenterContainer/TileContainer/Row1/Tile3"), NodePath("MarginContainer/CenterContainer/TileContainer/Row2/Tile4"), NodePath("MarginContainer/CenterContainer/TileContainer/Row3/Tile5"), NodePath("MarginContainer/CenterContainer/TileContainer/Row4/Tile6"), NodePath("MarginContainer/CenterContainer/TileContainer/Row5/Tile7"), NodePath("MarginContainer/CenterContainer/TileContainer/Row5/Tile8"), NodePath("MarginContainer/CenterContainer/TileContainer/Row5/Tile9"), NodePath("MarginContainer/CenterContainer/TileContainer/Row5/Tile10"), NodePath("MarginContainer/CenterContainer/TileContainer/Row5/Tile11"), NodePath("MarginContainer/CenterContainer/TileContainer/Row6/Tile12"), NodePath("MarginContainer/CenterContainer/TileContainer/Row7/Tile13"), NodePath("MarginContainer/CenterContainer/TileContainer/Row7/Tile14"), NodePath("MarginContainer/CenterContainer/TileContainer/Row7/Tile15"), NodePath("MarginContainer/CenterContainer/TileContainer/Row7/Tile16"), NodePath("MarginContainer/CenterContainer/TileContainer/Row7/Tile17"), NodePath("MarginContainer/CenterContainer/TileContainer/Row8/Tile18"), NodePath("MarginContainer/CenterContainer/TileContainer/Row9/Tile19"), NodePath("MarginContainer/CenterContainer/TileContainer/Row10/Tile20"), NodePath("MarginContainer/CenterContainer/TileContainer/Row11/Tile21"), NodePath("MarginContainer/CenterContainer/TileContainer/Row11/Tile22"), NodePath("MarginContainer/CenterContainer/TileContainer/Row11/Tile23"), NodePath("MarginContainer/CenterContainer/TileContainer/Row10/Tile24"), NodePath("MarginContainer/CenterContainer/TileContainer/Row9/Tile25"), NodePath("MarginContainer/CenterContainer/TileContainer/Row8/Tile26"), NodePath("MarginContainer/CenterContainer/TileContainer/Row7/Tile27"), NodePath("MarginContainer/CenterContainer/TileContainer/Row7/Tile28"), NodePath("MarginContainer/CenterContainer/TileContainer/Row7/Tile29"), NodePath("MarginContainer/CenterContainer/TileContainer/Row7/Tile30"), NodePath("MarginContainer/CenterContainer/TileContainer/Row7/Tile31"), NodePath("MarginContainer/CenterContainer/TileContainer/Row6/Tile32"), NodePath("MarginContainer/CenterContainer/TileContainer/Row5/Tile33"), NodePath("MarginContainer/CenterContainer/TileContainer/Row5/Tile34"), NodePath("MarginContainer/CenterContainer/TileContainer/Row5/Tile35"), NodePath("MarginContainer/CenterContainer/TileContainer/Row5/Tile36"), NodePath("MarginContainer/CenterContainer/TileContainer/Row5/Tile37"), NodePath("MarginContainer/CenterContainer/TileContainer/Row4/Tile38"), NodePath("MarginContainer/CenterContainer/TileContainer/Row3/Tile39"), NodePath("MarginContainer/CenterContainer/TileContainer/Row2/Tile40")]
 
 [node name="Background" type="ColorRect" parent="."]
 layout_mode = 1
@@ -24,7 +26,7 @@ grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="MarginContainer" type="MarginContainer" parent="Background"]
+[node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -36,16 +38,640 @@ theme_override_constants/margin_top = 45
 theme_override_constants/margin_right = 45
 theme_override_constants/margin_bottom = 45
 
-[node name="CenterContainer" type="CenterContainer" parent="Background/MarginContainer"]
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer"]
 layout_mode = 2
 
-[node name="ItemList" type="ItemList" parent="Background/MarginContainer/CenterContainer"]
+[node name="TileContainer" type="VBoxContainer" parent="MarginContainer/CenterContainer"]
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
-max_columns = 11
+theme_override_constants/separation = 2
 
-[node name="Tile" type="TextureRect" parent="Background/MarginContainer/CenterContainer/ItemList"]
-custom_minimum_size = Vector2(30, 30)
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="Row1" type="GridContainer" parent="MarginContainer/CenterContainer/TileContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 2
+theme_override_constants/v_separation = 2
+columns = 11
+
+[node name="EmptyTile1" type="Control" parent="MarginContainer/CenterContainer/TileContainer/Row1"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+
+[node name="EmptyTile2" type="Control" parent="MarginContainer/CenterContainer/TileContainer/Row1"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+
+[node name="EmptyTile3" type="Control" parent="MarginContainer/CenterContainer/TileContainer/Row1"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+
+[node name="EmptyTile4" type="Control" parent="MarginContainer/CenterContainer/TileContainer/Row1"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+
+[node name="Tile1" type="TextureRect" parent="MarginContainer/CenterContainer/TileContainer/Row1"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+texture = ExtResource("2_xfqoh")
+stretch_mode = 5
+
+[node name="Tile2" type="TextureRect" parent="MarginContainer/CenterContainer/TileContainer/Row1"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+texture = ExtResource("2_xfqoh")
+stretch_mode = 5
+
+[node name="Tile3" type="TextureRect" parent="MarginContainer/CenterContainer/TileContainer/Row1"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+texture = ExtResource("2_xfqoh")
+stretch_mode = 5
+
+[node name="EmptyTile5" type="Control" parent="MarginContainer/CenterContainer/TileContainer/Row1"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+
+[node name="EmptyTile6" type="Control" parent="MarginContainer/CenterContainer/TileContainer/Row1"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+
+[node name="EmptyTile7" type="Control" parent="MarginContainer/CenterContainer/TileContainer/Row1"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+
+[node name="EmptyTile8" type="Control" parent="MarginContainer/CenterContainer/TileContainer/Row1"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+
+[node name="Row2" type="GridContainer" parent="MarginContainer/CenterContainer/TileContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 2
+theme_override_constants/v_separation = 2
+columns = 11
+
+[node name="EmptyTile1" type="Control" parent="MarginContainer/CenterContainer/TileContainer/Row2"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+
+[node name="EmptyTile2" type="Control" parent="MarginContainer/CenterContainer/TileContainer/Row2"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+
+[node name="EmptyTile3" type="Control" parent="MarginContainer/CenterContainer/TileContainer/Row2"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+
+[node name="EmptyTile4" type="Control" parent="MarginContainer/CenterContainer/TileContainer/Row2"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+
+[node name="Tile40" type="TextureRect" parent="MarginContainer/CenterContainer/TileContainer/Row2"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+texture = ExtResource("2_xfqoh")
+stretch_mode = 5
+
+[node name="EmptyTile5" type="Control" parent="MarginContainer/CenterContainer/TileContainer/Row2"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+
+[node name="Tile4" type="TextureRect" parent="MarginContainer/CenterContainer/TileContainer/Row2"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+texture = ExtResource("2_xfqoh")
+stretch_mode = 5
+
+[node name="EmptyTile6" type="Control" parent="MarginContainer/CenterContainer/TileContainer/Row2"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+
+[node name="EmptyTile7" type="Control" parent="MarginContainer/CenterContainer/TileContainer/Row2"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+
+[node name="EmptyTile8" type="Control" parent="MarginContainer/CenterContainer/TileContainer/Row2"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+
+[node name="EmptyTile9" type="Control" parent="MarginContainer/CenterContainer/TileContainer/Row2"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+
+[node name="Row3" type="GridContainer" parent="MarginContainer/CenterContainer/TileContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 2
+theme_override_constants/v_separation = 2
+columns = 11
+
+[node name="EmptyTile1" type="Control" parent="MarginContainer/CenterContainer/TileContainer/Row3"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+
+[node name="EmptyTile2" type="Control" parent="MarginContainer/CenterContainer/TileContainer/Row3"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+
+[node name="EmptyTile3" type="Control" parent="MarginContainer/CenterContainer/TileContainer/Row3"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+
+[node name="EmptyTile4" type="Control" parent="MarginContainer/CenterContainer/TileContainer/Row3"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+
+[node name="Tile39" type="TextureRect" parent="MarginContainer/CenterContainer/TileContainer/Row3"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+texture = ExtResource("2_xfqoh")
+stretch_mode = 5
+
+[node name="EmptyTile5" type="Control" parent="MarginContainer/CenterContainer/TileContainer/Row3"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+
+[node name="Tile5" type="TextureRect" parent="MarginContainer/CenterContainer/TileContainer/Row3"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+texture = ExtResource("2_xfqoh")
+stretch_mode = 5
+
+[node name="EmptyTile6" type="Control" parent="MarginContainer/CenterContainer/TileContainer/Row3"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+
+[node name="EmptyTile7" type="Control" parent="MarginContainer/CenterContainer/TileContainer/Row3"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+
+[node name="EmptyTile8" type="Control" parent="MarginContainer/CenterContainer/TileContainer/Row3"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+
+[node name="EmptyTile9" type="Control" parent="MarginContainer/CenterContainer/TileContainer/Row3"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+
+[node name="Row4" type="GridContainer" parent="MarginContainer/CenterContainer/TileContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 2
+theme_override_constants/v_separation = 2
+columns = 11
+
+[node name="EmptyTile1" type="Control" parent="MarginContainer/CenterContainer/TileContainer/Row4"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+
+[node name="EmptyTile2" type="Control" parent="MarginContainer/CenterContainer/TileContainer/Row4"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+
+[node name="EmptyTile3" type="Control" parent="MarginContainer/CenterContainer/TileContainer/Row4"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+
+[node name="EmptyTile4" type="Control" parent="MarginContainer/CenterContainer/TileContainer/Row4"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+
+[node name="Tile38" type="TextureRect" parent="MarginContainer/CenterContainer/TileContainer/Row4"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+texture = ExtResource("2_xfqoh")
+stretch_mode = 5
+
+[node name="EmptyTile5" type="Control" parent="MarginContainer/CenterContainer/TileContainer/Row4"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+
+[node name="Tile6" type="TextureRect" parent="MarginContainer/CenterContainer/TileContainer/Row4"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+texture = ExtResource("2_xfqoh")
+stretch_mode = 5
+
+[node name="EmptyTile6" type="Control" parent="MarginContainer/CenterContainer/TileContainer/Row4"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+
+[node name="EmptyTile7" type="Control" parent="MarginContainer/CenterContainer/TileContainer/Row4"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+
+[node name="EmptyTile8" type="Control" parent="MarginContainer/CenterContainer/TileContainer/Row4"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+
+[node name="EmptyTile9" type="Control" parent="MarginContainer/CenterContainer/TileContainer/Row4"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+
+[node name="Row5" type="GridContainer" parent="MarginContainer/CenterContainer/TileContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 2
+theme_override_constants/v_separation = 2
+columns = 11
+
+[node name="Tile33" type="TextureRect" parent="MarginContainer/CenterContainer/TileContainer/Row5"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+texture = ExtResource("2_xfqoh")
+stretch_mode = 5
+
+[node name="Tile34" type="TextureRect" parent="MarginContainer/CenterContainer/TileContainer/Row5"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+texture = ExtResource("2_xfqoh")
+stretch_mode = 5
+
+[node name="Tile35" type="TextureRect" parent="MarginContainer/CenterContainer/TileContainer/Row5"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+texture = ExtResource("2_xfqoh")
+stretch_mode = 5
+
+[node name="Tile36" type="TextureRect" parent="MarginContainer/CenterContainer/TileContainer/Row5"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+texture = ExtResource("2_xfqoh")
+stretch_mode = 5
+
+[node name="Tile37" type="TextureRect" parent="MarginContainer/CenterContainer/TileContainer/Row5"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+texture = ExtResource("2_xfqoh")
+stretch_mode = 5
+
+[node name="EmptyTile1" type="Control" parent="MarginContainer/CenterContainer/TileContainer/Row5"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+
+[node name="Tile7" type="TextureRect" parent="MarginContainer/CenterContainer/TileContainer/Row5"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+texture = ExtResource("2_xfqoh")
+stretch_mode = 5
+
+[node name="Tile8" type="TextureRect" parent="MarginContainer/CenterContainer/TileContainer/Row5"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+texture = ExtResource("2_xfqoh")
+stretch_mode = 5
+
+[node name="Tile9" type="TextureRect" parent="MarginContainer/CenterContainer/TileContainer/Row5"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+texture = ExtResource("2_xfqoh")
+stretch_mode = 5
+
+[node name="Tile10" type="TextureRect" parent="MarginContainer/CenterContainer/TileContainer/Row5"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+texture = ExtResource("2_xfqoh")
+stretch_mode = 5
+
+[node name="Tile11" type="TextureRect" parent="MarginContainer/CenterContainer/TileContainer/Row5"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+texture = ExtResource("2_xfqoh")
+stretch_mode = 5
+
+[node name="Row6" type="GridContainer" parent="MarginContainer/CenterContainer/TileContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 2
+theme_override_constants/v_separation = 2
+columns = 11
+
+[node name="Tile32" type="TextureRect" parent="MarginContainer/CenterContainer/TileContainer/Row6"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+texture = ExtResource("2_xfqoh")
+stretch_mode = 5
+
+[node name="EmptyTile1" type="Control" parent="MarginContainer/CenterContainer/TileContainer/Row6"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+
+[node name="EmptyTile2" type="Control" parent="MarginContainer/CenterContainer/TileContainer/Row6"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+
+[node name="EmptyTile3" type="Control" parent="MarginContainer/CenterContainer/TileContainer/Row6"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+
+[node name="EmptyTile4" type="Control" parent="MarginContainer/CenterContainer/TileContainer/Row6"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+
+[node name="EmptyTile5" type="Control" parent="MarginContainer/CenterContainer/TileContainer/Row6"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+
+[node name="EmptyTile6" type="Control" parent="MarginContainer/CenterContainer/TileContainer/Row6"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+
+[node name="EmptyTile7" type="Control" parent="MarginContainer/CenterContainer/TileContainer/Row6"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+
+[node name="EmptyTile8" type="Control" parent="MarginContainer/CenterContainer/TileContainer/Row6"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+
+[node name="EmptyTile9" type="Control" parent="MarginContainer/CenterContainer/TileContainer/Row6"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+
+[node name="Tile12" type="TextureRect" parent="MarginContainer/CenterContainer/TileContainer/Row6"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+texture = ExtResource("2_xfqoh")
+stretch_mode = 5
+
+[node name="Row7" type="GridContainer" parent="MarginContainer/CenterContainer/TileContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 2
+theme_override_constants/v_separation = 2
+columns = 11
+
+[node name="Tile31" type="TextureRect" parent="MarginContainer/CenterContainer/TileContainer/Row7"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+texture = ExtResource("2_xfqoh")
+stretch_mode = 5
+
+[node name="Tile30" type="TextureRect" parent="MarginContainer/CenterContainer/TileContainer/Row7"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+texture = ExtResource("2_xfqoh")
+stretch_mode = 5
+
+[node name="Tile29" type="TextureRect" parent="MarginContainer/CenterContainer/TileContainer/Row7"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+texture = ExtResource("2_xfqoh")
+stretch_mode = 5
+
+[node name="Tile28" type="TextureRect" parent="MarginContainer/CenterContainer/TileContainer/Row7"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+texture = ExtResource("2_xfqoh")
+stretch_mode = 5
+
+[node name="Tile27" type="TextureRect" parent="MarginContainer/CenterContainer/TileContainer/Row7"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+texture = ExtResource("2_xfqoh")
+stretch_mode = 5
+
+[node name="EmptyTile1" type="Control" parent="MarginContainer/CenterContainer/TileContainer/Row7"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+
+[node name="Tile17" type="TextureRect" parent="MarginContainer/CenterContainer/TileContainer/Row7"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+texture = ExtResource("2_xfqoh")
+stretch_mode = 5
+
+[node name="Tile16" type="TextureRect" parent="MarginContainer/CenterContainer/TileContainer/Row7"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+texture = ExtResource("2_xfqoh")
+stretch_mode = 5
+
+[node name="Tile15" type="TextureRect" parent="MarginContainer/CenterContainer/TileContainer/Row7"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+texture = ExtResource("2_xfqoh")
+stretch_mode = 5
+
+[node name="Tile14" type="TextureRect" parent="MarginContainer/CenterContainer/TileContainer/Row7"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+texture = ExtResource("2_xfqoh")
+stretch_mode = 5
+
+[node name="Tile13" type="TextureRect" parent="MarginContainer/CenterContainer/TileContainer/Row7"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+texture = ExtResource("2_xfqoh")
+stretch_mode = 5
+
+[node name="Row8" type="GridContainer" parent="MarginContainer/CenterContainer/TileContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 2
+theme_override_constants/v_separation = 2
+columns = 11
+
+[node name="EmptyTile1" type="Control" parent="MarginContainer/CenterContainer/TileContainer/Row8"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+
+[node name="EmptyTile2" type="Control" parent="MarginContainer/CenterContainer/TileContainer/Row8"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+
+[node name="EmptyTile3" type="Control" parent="MarginContainer/CenterContainer/TileContainer/Row8"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+
+[node name="EmptyTile4" type="Control" parent="MarginContainer/CenterContainer/TileContainer/Row8"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+
+[node name="Tile26" type="TextureRect" parent="MarginContainer/CenterContainer/TileContainer/Row8"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+texture = ExtResource("2_xfqoh")
+stretch_mode = 5
+
+[node name="EmptyTile5" type="Control" parent="MarginContainer/CenterContainer/TileContainer/Row8"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+
+[node name="Tile18" type="TextureRect" parent="MarginContainer/CenterContainer/TileContainer/Row8"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+texture = ExtResource("2_xfqoh")
+stretch_mode = 5
+
+[node name="EmptyTile6" type="Control" parent="MarginContainer/CenterContainer/TileContainer/Row8"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+
+[node name="EmptyTile7" type="Control" parent="MarginContainer/CenterContainer/TileContainer/Row8"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+
+[node name="EmptyTile8" type="Control" parent="MarginContainer/CenterContainer/TileContainer/Row8"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+
+[node name="EmptyTile9" type="Control" parent="MarginContainer/CenterContainer/TileContainer/Row8"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+
+[node name="Row9" type="GridContainer" parent="MarginContainer/CenterContainer/TileContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 2
+theme_override_constants/v_separation = 2
+columns = 11
+
+[node name="EmptyTile1" type="Control" parent="MarginContainer/CenterContainer/TileContainer/Row9"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+
+[node name="EmptyTile2" type="Control" parent="MarginContainer/CenterContainer/TileContainer/Row9"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+
+[node name="EmptyTile3" type="Control" parent="MarginContainer/CenterContainer/TileContainer/Row9"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+
+[node name="EmptyTile4" type="Control" parent="MarginContainer/CenterContainer/TileContainer/Row9"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+
+[node name="Tile25" type="TextureRect" parent="MarginContainer/CenterContainer/TileContainer/Row9"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+texture = ExtResource("2_xfqoh")
+stretch_mode = 5
+
+[node name="EmptyTile5" type="Control" parent="MarginContainer/CenterContainer/TileContainer/Row9"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+
+[node name="Tile19" type="TextureRect" parent="MarginContainer/CenterContainer/TileContainer/Row9"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+texture = ExtResource("2_xfqoh")
+stretch_mode = 5
+
+[node name="EmptyTile6" type="Control" parent="MarginContainer/CenterContainer/TileContainer/Row9"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+
+[node name="EmptyTile7" type="Control" parent="MarginContainer/CenterContainer/TileContainer/Row9"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+
+[node name="EmptyTile8" type="Control" parent="MarginContainer/CenterContainer/TileContainer/Row9"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+
+[node name="EmptyTile9" type="Control" parent="MarginContainer/CenterContainer/TileContainer/Row9"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+
+[node name="Row10" type="GridContainer" parent="MarginContainer/CenterContainer/TileContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 2
+theme_override_constants/v_separation = 2
+columns = 11
+
+[node name="EmptyTile1" type="Control" parent="MarginContainer/CenterContainer/TileContainer/Row10"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+
+[node name="EmptyTile2" type="Control" parent="MarginContainer/CenterContainer/TileContainer/Row10"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+
+[node name="EmptyTile3" type="Control" parent="MarginContainer/CenterContainer/TileContainer/Row10"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+
+[node name="EmptyTile4" type="Control" parent="MarginContainer/CenterContainer/TileContainer/Row10"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+
+[node name="Tile24" type="TextureRect" parent="MarginContainer/CenterContainer/TileContainer/Row10"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+texture = ExtResource("2_xfqoh")
+stretch_mode = 5
+
+[node name="EmptyTile5" type="Control" parent="MarginContainer/CenterContainer/TileContainer/Row10"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+
+[node name="Tile20" type="TextureRect" parent="MarginContainer/CenterContainer/TileContainer/Row10"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+texture = ExtResource("2_xfqoh")
+stretch_mode = 5
+
+[node name="EmptyTile6" type="Control" parent="MarginContainer/CenterContainer/TileContainer/Row10"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+
+[node name="EmptyTile7" type="Control" parent="MarginContainer/CenterContainer/TileContainer/Row10"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+
+[node name="EmptyTile8" type="Control" parent="MarginContainer/CenterContainer/TileContainer/Row10"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+
+[node name="EmptyTile9" type="Control" parent="MarginContainer/CenterContainer/TileContainer/Row10"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+
+[node name="Row11" type="GridContainer" parent="MarginContainer/CenterContainer/TileContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 2
+theme_override_constants/v_separation = 2
+columns = 11
+
+[node name="EmptyTile1" type="Control" parent="MarginContainer/CenterContainer/TileContainer/Row11"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+
+[node name="EmptyTile2" type="Control" parent="MarginContainer/CenterContainer/TileContainer/Row11"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+
+[node name="EmptyTile3" type="Control" parent="MarginContainer/CenterContainer/TileContainer/Row11"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+
+[node name="EmptyTile4" type="Control" parent="MarginContainer/CenterContainer/TileContainer/Row11"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+
+[node name="Tile23" type="TextureRect" parent="MarginContainer/CenterContainer/TileContainer/Row11"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+texture = ExtResource("2_xfqoh")
+stretch_mode = 5
+
+[node name="Tile22" type="TextureRect" parent="MarginContainer/CenterContainer/TileContainer/Row11"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+texture = ExtResource("2_xfqoh")
+stretch_mode = 5
+
+[node name="Tile21" type="TextureRect" parent="MarginContainer/CenterContainer/TileContainer/Row11"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+texture = ExtResource("2_xfqoh")
+stretch_mode = 5
+
+[node name="EmptyTile5" type="Control" parent="MarginContainer/CenterContainer/TileContainer/Row11"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+
+[node name="EmptyTile6" type="Control" parent="MarginContainer/CenterContainer/TileContainer/Row11"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+
+[node name="EmptyTile7" type="Control" parent="MarginContainer/CenterContainer/TileContainer/Row11"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+
+[node name="EmptyTile8" type="Control" parent="MarginContainer/CenterContainer/TileContainer/Row11"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2

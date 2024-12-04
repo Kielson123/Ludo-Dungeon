@@ -6,4 +6,13 @@ enum GAME_TYPE {
 	ONLINE_MULTIPLAYER
 }
 
+enum PLAYER_COLORS {
+	YELLOW,
+	RED,
+	BLUE,
+	GREEN,
+	ORANGE,
+	PURPLE,
+}
+
 var main_scene: Main
