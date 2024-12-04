@@ -1,6 +1,7 @@
 class_name Board4 extends Board
 
-@export var player_1: Dictionary
-@export var player_2: Dictionary
-@export var player_3: Dictionary
-@export var player_4: Dictionary
+var player_data: Array[Dictionary] = [{}, {}, {}, {}]
+
+func _ready() -> void:
+	for i in starting_tiles.size():
+		starting_tiles[i].texture = Global.player_color_tiles[player_data[i]["color"]]
