@@ -52,7 +52,7 @@ func init_settings() -> void:
 	Engine.max_fps = max_fps
 
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if get_window().mode == Window.MODE_WINDOWED:
 		resolution = get_window().size
 	else:

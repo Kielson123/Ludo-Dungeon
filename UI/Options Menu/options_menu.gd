@@ -1,13 +1,13 @@
 extends Control
 
 
-@onready var max_fps_text: LineEdit = $CenterContainer/MarginContainer/MarginContainer/TabContainer/Display/VBoxContainer/MaxFPS/HSplitContainer/LineEdit
-@onready var max_fps_slider: HSlider = $CenterContainer/MarginContainer/MarginContainer/TabContainer/Display/VBoxContainer/MaxFPS/HSplitContainer/HSlider
+@onready var max_fps_text: LineEdit = $MarginContainer/MarginContainer/TabContainer/Display/VBoxContainer/MaxFPS/HSplitContainer/LineEdit
+@onready var max_fps_slider: HSlider = $MarginContainer/MarginContainer/TabContainer/Display/VBoxContainer/MaxFPS/HSplitContainer/HSlider
 
 
 
 func _ready() -> void:
-	$CenterContainer/MarginContainer/MarginContainer/TabContainer/Display/VBoxContainer/ScreenMode/OptionButton.select(ConfigManager.screen_mode)
+	$MarginContainer/MarginContainer/TabContainer/Display/VBoxContainer/ScreenMode/OptionButton.select(ConfigManager.screen_mode)
 	sync_max_fps()
 	sync_volume(ConfigManager.AUDIO_TYPE.AUDIO)
 	sync_volume(ConfigManager.AUDIO_TYPE.MUSIC)
@@ -15,7 +15,7 @@ func _ready() -> void:
 
 
 func _on_screen_mode_changed(_index: int) -> void:
-	ConfigManager.screen_mode = $CenterContainer/MarginContainer/MarginContainer/TabContainer/Display/VBoxContainer/ScreenMode/OptionButton.get_selected_id()
+	ConfigManager.screen_mode = $MarginContainer/MarginContainer/TabContainer/Display/VBoxContainer/ScreenMode/OptionButton.get_selected_id()
 	ConfigManager.save_settings("screenMode")
 
 
@@ -113,15 +113,15 @@ func sync_volume(type: ConfigManager.AUDIO_TYPE) -> void:
 	match type:
 		ConfigManager.AUDIO_TYPE.MUSIC:
 			volume = ConfigManager.music_volume
-			volume_text = $CenterContainer/MarginContainer/MarginContainer/TabContainer/Audio/VBoxContainer/MusicVolume/HSplitContainer/HSplitContainer/LineEdit
-			volume_slider = $CenterContainer/MarginContainer/MarginContainer/TabContainer/Audio/VBoxContainer/MusicVolume/HSplitContainer/HSlider
+			volume_text = $MarginContainer/MarginContainer/TabContainer/Audio/VBoxContainer/MusicVolume/HSplitContainer/HSplitContainer/LineEdit
+			volume_slider = $MarginContainer/MarginContainer/TabContainer/Audio/VBoxContainer/MusicVolume/HSplitContainer/HSlider
 		ConfigManager.AUDIO_TYPE.SFX:
 			volume = ConfigManager.sfx_volume
-			volume_text = $CenterContainer/MarginContainer/MarginContainer/TabContainer/Audio/VBoxContainer/SFXVolume/HSplitContainer/HSplitContainer/LineEdit
-			volume_slider = $CenterContainer/MarginContainer/MarginContainer/TabContainer/Audio/VBoxContainer/SFXVolume/HSplitContainer/HSlider
+			volume_text = $MarginContainer/MarginContainer/TabContainer/Audio/VBoxContainer/SFXVolume/HSplitContainer/HSplitContainer/LineEdit
+			volume_slider = $MarginContainer/MarginContainer/TabContainer/Audio/VBoxContainer/SFXVolume/HSplitContainer/HSlider
 		_:
 			volume = ConfigManager.audio_volume
-			volume_text = $CenterContainer/MarginContainer/MarginContainer/TabContainer/Audio/VBoxContainer/AudioVolume/HSplitContainer/HSplitContainer/LineEdit
-			volume_slider = $CenterContainer/MarginContainer/MarginContainer/TabContainer/Audio/VBoxContainer/AudioVolume/HSplitContainer/HSlider
+			volume_text = $MarginContainer/MarginContainer/TabContainer/Audio/VBoxContainer/AudioVolume/HSplitContainer/HSplitContainer/LineEdit
+			volume_slider = $MarginContainer/MarginContainer/TabContainer/Audio/VBoxContainer/AudioVolume/HSplitContainer/HSlider
 	volume_text.text = str(volume)
 	volume_slider.set_value_no_signal(volume)
