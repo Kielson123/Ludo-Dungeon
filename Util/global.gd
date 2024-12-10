@@ -1,6 +1,14 @@
 extends Node
 
+
+signal request_main_menu()
+signal request_options_menu()
+signal request_singleplayer_start_menu()
+signal request_game_start(game_type: Global.GAME_TYPE, data: Dictionary)
+
+
 const player_colors: Array[StringName] = ["green", "blue", "red", "yellow", "orange", "purple"]
+
 
 var player_color_tiles: Dictionary = {
 	"blue": load("res://Assets/Game/blue_tile.png"), 
@@ -10,13 +18,14 @@ var player_color_tiles: Dictionary = {
 	"red": load("res://Assets/Game/red_tile.png"),
 	"yellow": load("res://Assets/Game/yellow_tile.png"),
 }
+var main_scene: Main
+
 
 enum GAME_TYPE {
 	SINGLEPLAYER,
 	LOCAL_MULTIPLAYER,
 	ONLINE_MULTIPLAYER
 }
-
 enum PLAYER_COLORS {
 	YELLOW,
 	RED,
@@ -25,5 +34,3 @@ enum PLAYER_COLORS {
 	ORANGE,
 	PURPLE,
 }
-
-var main_scene: Main

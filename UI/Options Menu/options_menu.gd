@@ -5,7 +5,6 @@ extends Control
 @onready var max_fps_slider: HSlider = $MarginContainer/MarginContainer/TabContainer/Display/VBoxContainer/MaxFPS/HSplitContainer/HSlider
 
 
-
 func _ready() -> void:
 	$MarginContainer/MarginContainer/TabContainer/Display/VBoxContainer/ScreenMode/OptionButton.select(ConfigManager.screen_mode)
 	sync_max_fps()
@@ -47,7 +46,7 @@ func sync_max_fps() -> void:
 
 
 func _on_exit_button_pressed() -> void:
-	Signals.request_main_menu.emit()
+	Global.request_main_menu.emit()
 
 
 func _on_vsync_mode_changed(index: int) -> void:

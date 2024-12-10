@@ -3,9 +3,9 @@ extends Control
 
 
 func _ready() -> void:
-	Signals.request_main_menu.connect(on_main_menu_requested)
-	Signals.request_options_menu.connect(on_options_menu_requested)
-	Signals.request_singleplayer_start_menu.connect(on_singleplaye_start_menu_requested)
+	Global.request_main_menu.connect(on_main_menu_requested)
+	Global.request_options_menu.connect(on_options_menu_requested)
+	Global.request_singleplayer_start_menu.connect(on_singleplaye_start_menu_requested)
 
 
 func on_main_menu_requested() -> void:
