@@ -1,6 +1,6 @@
 class_name Main extends Node
 
-@onready var game: Control = $Control/Game
+@onready var game: Control = $Game
 @onready var ui: UI = $UI
 
 @export var dev_mode: bool = true
@@ -13,24 +13,27 @@ func _on_intro_finished() -> void:
 	intro_finished = true
 	$IntroContainer.queue_free()
 	if dev_mode:
-		Signals.request_game_start.emit(Global.GAME_TYPE.SINGLEPLAYER, {
-			"bots": 3,
-			"players": 1,
+		Global.request_game_start.emit(Global.GAME_TYPE.SINGLEPLAYER, {
+			"type": 4,
 			"player1": {
+				"is_bot": false,
 				"color": Global.player_colors.pick_random()
 			},
 			"player2": {
+				"is_bot": true,
 				"color": Global.player_colors.pick_random()
 			},
 			"player3": {
+				"is_bot": true,
 				"color": Global.player_colors.pick_random()
 			},
 			"player4": {
+				"is_bot": true,
 				"color": Global.player_colors.pick_random()
 			}
 		})
 	else:
-		Signals.request_main_menu.emit()
+		Global.request_main_menu.emit()
 	ui.visible = true
 
 func _ready() -> void:
