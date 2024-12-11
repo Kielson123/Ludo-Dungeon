@@ -26,12 +26,17 @@ func setup_singleplayer(game_data: Dictionary) -> void:
 	for i in range(type):
 		var player_data: Dictionary = game_data["player" + str(i+1)]
 		if player_data.has_all(["color", "is_bot"]):
-			var player: Node = Node.new()
+			var player: Node
 			if player_data["is_bot"]:
+				player = Bot.new()
+				player.add_to_group("Players")
 				add_child(player)
 			else:
+				player = Player.new()
+				player.add_to_group("Players")
 				add_child(player)
 			player.color = player_data["color"]
+			player.texture = load("res://Assets/Game/orange_tile.png")
 		else:
 			printerr("Player " + str(i+1) + " expects values that are missing!")
 	add_child(board)
