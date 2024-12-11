@@ -11,12 +11,12 @@ const player_colors: Array[StringName] = ["green", "blue", "red", "yellow", "ora
 
 
 var player_color_tiles: Dictionary = {
-	"blue": load("res://Assets/Game/blue_tile.png"), 
-	"green": load("res://Assets/Game/green_tile.png"),
-	"orange": load("res://Assets/Game/orange_tile.png"),
-	"purple": load("res://Assets/Game/purple_tile.png"),
-	"red": load("res://Assets/Game/red_tile.png"),
-	"yellow": load("res://Assets/Game/yellow_tile.png"),
+	"blue": load("res://Assets/Game/Tiles/blue_tile.png"), 
+	"green": load("res://Assets/Game/Tiles/green_tile.png"),
+	"orange": load("res://Assets/Game/Tiles/orange_tile.png"),
+	"purple": load("res://Assets/Game/Tiles/purple_tile.png"),
+	"red": load("res://Assets/Game/Tiles/red_tile.png"),
+	"yellow": load("res://Assets/Game/Tiles/yellow_tile.png"),
 }
 var main_scene: Main
 

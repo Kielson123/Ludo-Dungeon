@@ -34,9 +34,9 @@ func setup_singleplayer(game_data: Dictionary) -> void:
 			else:
 				player = Player.new()
 				player.add_to_group("Players")
+				player.texture = load("res://Assets/Game/Pawns/Default.png")
 				add_child(player)
 			player.color = player_data["color"]
-			player.texture = load("res://Assets/Game/orange_tile.png")
 		else:
 			printerr("Player " + str(i+1) + " expects values that are missing!")
 	add_child(board)
