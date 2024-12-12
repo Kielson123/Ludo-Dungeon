@@ -34,7 +34,7 @@ func setup_singleplayer(game_data: Dictionary) -> void:
 			else:
 				player = Player.new()
 				player.add_to_group("Players")
-				player.texture = load("res://Assets/Game/Pawns/Default.png")
+				player.texture = load("res://Assets/Game/Pawns/default.svg")
 				add_child(player)
 			player.color = player_data["color"]
 		else:
