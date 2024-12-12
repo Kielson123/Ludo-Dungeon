@@ -6,6 +6,8 @@ class_name Player extends Node2D
 
 var sprite2d: Sprite2D
 var mouse_hovered: bool = false
+var menu_opened: bool = false
+var previous_menu_opened: bool = false
 
 func _ready() -> void:
 	var sprite := Sprite2D.new()
@@ -20,6 +22,11 @@ func _process(_delta: float) -> void:
 	else:
 		mouse_hovered = false
 	sprite2d.texture = texture
+	
+	if menu_opened != previous_menu_opened:
+		pass
+	
+	previous_menu_opened = menu_opened
 
 func move(tiles: Array[TextureRect], amount: int) -> void:
 	var current_tile: TextureRect = get_parent()
