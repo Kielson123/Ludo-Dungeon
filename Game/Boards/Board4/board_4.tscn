@@ -1,13 +1,174 @@
-[gd_scene load_steps=7 format=3 uid="uid://d1rwgwto16neu"]
+[gd_scene load_steps=48 format=3 uid="uid://d1rwgwto16neu"]
 
 [ext_resource type="Script" path="res://Game/Boards/Board4/board_4.gd" id="1_wg12l"]
+[ext_resource type="Shader" path="res://Assets/Shaders/blinking.gdshader" id="2_ncn7f"]
 [ext_resource type="Texture2D" uid="uid://dhslwmayr66ei" path="res://Assets/Game/Tiles/tile.png" id="2_xfqoh"]
 [ext_resource type="Texture2D" uid="uid://d27nd1on1ur5x" path="res://Assets/Game/Tiles/blue_tile.png" id="3_f7dw7"]
 [ext_resource type="Texture2D" uid="uid://cg2tkfgkgwve6" path="res://Assets/Game/Tiles/red_tile.png" id="4_jyj6i"]
 [ext_resource type="Texture2D" uid="uid://cs8bk7ve17yfa" path="res://Assets/Game/Tiles/green_tile.png" id="5_4apwn"]
 [ext_resource type="Texture2D" uid="uid://beixueqlatgi" path="res://Assets/Game/Tiles/yellow_tile.png" id="6_24avq"]
 
-[node name="Board-4" type="Control" node_paths=PackedStringArray("background", "tiles", "starting_tiles")]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_sev5u"]
+shader = ExtResource("2_ncn7f")
+shader_parameter/active = false
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_p3cxo"]
+shader = ExtResource("2_ncn7f")
+shader_parameter/active = false
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_p8fg7"]
+shader = ExtResource("2_ncn7f")
+shader_parameter/active = false
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mtgmb"]
+shader = ExtResource("2_ncn7f")
+shader_parameter/active = false
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qhn7x"]
+shader = ExtResource("2_ncn7f")
+shader_parameter/active = false
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_edm20"]
+shader = ExtResource("2_ncn7f")
+shader_parameter/active = false
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_j50gl"]
+shader = ExtResource("2_ncn7f")
+shader_parameter/active = false
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_an2c3"]
+shader = ExtResource("2_ncn7f")
+shader_parameter/active = false
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1456j"]
+shader = ExtResource("2_ncn7f")
+shader_parameter/active = false
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_23w60"]
+shader = ExtResource("2_ncn7f")
+shader_parameter/active = false
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_46drt"]
+shader = ExtResource("2_ncn7f")
+shader_parameter/active = false
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_shtdg"]
+shader = ExtResource("2_ncn7f")
+shader_parameter/active = false
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vta6i"]
+shader = ExtResource("2_ncn7f")
+shader_parameter/active = false
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bbeoy"]
+shader = ExtResource("2_ncn7f")
+shader_parameter/active = false
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jhjc8"]
+shader = ExtResource("2_ncn7f")
+shader_parameter/active = false
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_pauca"]
+shader = ExtResource("2_ncn7f")
+shader_parameter/active = false
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ohuch"]
+shader = ExtResource("2_ncn7f")
+shader_parameter/active = false
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5uipe"]
+shader = ExtResource("2_ncn7f")
+shader_parameter/active = false
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_802i0"]
+shader = ExtResource("2_ncn7f")
+shader_parameter/active = false
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_um2ey"]
+shader = ExtResource("2_ncn7f")
+shader_parameter/active = false
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_kd4dv"]
+shader = ExtResource("2_ncn7f")
+shader_parameter/active = false
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rfg0r"]
+shader = ExtResource("2_ncn7f")
+shader_parameter/active = false
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ke2rh"]
+shader = ExtResource("2_ncn7f")
+shader_parameter/active = false
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ncsiq"]
+shader = ExtResource("2_ncn7f")
+shader_parameter/active = false
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_sb1fh"]
+shader = ExtResource("2_ncn7f")
+shader_parameter/active = false
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_cro42"]
+shader = ExtResource("2_ncn7f")
+shader_parameter/active = false
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_o1nbv"]
+shader = ExtResource("2_ncn7f")
+shader_parameter/active = false
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ft4fi"]
+shader = ExtResource("2_ncn7f")
+shader_parameter/active = false
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2rh1q"]
+shader = ExtResource("2_ncn7f")
+shader_parameter/active = false
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fxn2o"]
+shader = ExtResource("2_ncn7f")
+shader_parameter/active = false
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_r6mwu"]
+shader = ExtResource("2_ncn7f")
+shader_parameter/active = false
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_y7ehc"]
+shader = ExtResource("2_ncn7f")
+shader_parameter/active = false
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tluk3"]
+shader = ExtResource("2_ncn7f")
+shader_parameter/active = false
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_i570e"]
+shader = ExtResource("2_ncn7f")
+shader_parameter/active = false
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hhhtb"]
+shader = ExtResource("2_ncn7f")
+shader_parameter/active = false
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fnpau"]
+shader = ExtResource("2_ncn7f")
+shader_parameter/active = false
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_cmdp3"]
+shader = ExtResource("2_ncn7f")
+shader_parameter/active = false
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mdmsr"]
+shader = ExtResource("2_ncn7f")
+shader_parameter/active = false
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_gcecm"]
+shader = ExtResource("2_ncn7f")
+shader_parameter/active = false
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_yvdxl"]
+shader = ExtResource("2_ncn7f")
+shader_parameter/active = false
+
+[node name="til" type="Control" node_paths=PackedStringArray("background", "tiles", "starting_tiles")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -75,18 +236,21 @@ custom_minimum_size = Vector2(55, 55)
 layout_mode = 2
 
 [node name="Tile1" type="TextureRect" parent="MarginContainer/CenterContainer/TileContainer/Row1"]
+material = SubResource("ShaderMaterial_sev5u")
 custom_minimum_size = Vector2(55, 55)
 layout_mode = 2
 texture = ExtResource("2_xfqoh")
 stretch_mode = 5
 
 [node name="Tile2" type="TextureRect" parent="MarginContainer/CenterContainer/TileContainer/Row1"]
+material = SubResource("ShaderMaterial_p3cxo")
 custom_minimum_size = Vector2(55, 55)
 layout_mode = 2
 texture = ExtResource("2_xfqoh")
 stretch_mode = 5
 
 [node name="Tile3" type="TextureRect" parent="MarginContainer/CenterContainer/TileContainer/Row1"]
+material = SubResource("ShaderMaterial_p8fg7")
 custom_minimum_size = Vector2(55, 55)
 layout_mode = 2
 texture = ExtResource("3_f7dw7")
@@ -131,6 +295,7 @@ custom_minimum_size = Vector2(55, 55)
 layout_mode = 2
 
 [node name="Tile40" type="TextureRect" parent="MarginContainer/CenterContainer/TileContainer/Row2"]
+material = SubResource("ShaderMaterial_mtgmb")
 custom_minimum_size = Vector2(55, 55)
 layout_mode = 2
 texture = ExtResource("2_xfqoh")
@@ -141,6 +306,7 @@ custom_minimum_size = Vector2(55, 55)
 layout_mode = 2
 
 [node name="Tile4" type="TextureRect" parent="MarginContainer/CenterContainer/TileContainer/Row2"]
+material = SubResource("ShaderMaterial_qhn7x")
 custom_minimum_size = Vector2(55, 55)
 layout_mode = 2
 texture = ExtResource("2_xfqoh")
@@ -185,6 +351,7 @@ custom_minimum_size = Vector2(55, 55)
 layout_mode = 2
 
 [node name="Tile39" type="TextureRect" parent="MarginContainer/CenterContainer/TileContainer/Row3"]
+material = SubResource("ShaderMaterial_edm20")
 custom_minimum_size = Vector2(55, 55)
 layout_mode = 2
 texture = ExtResource("2_xfqoh")
@@ -195,6 +362,7 @@ custom_minimum_size = Vector2(55, 55)
 layout_mode = 2
 
 [node name="Tile5" type="TextureRect" parent="MarginContainer/CenterContainer/TileContainer/Row3"]
+material = SubResource("ShaderMaterial_j50gl")
 custom_minimum_size = Vector2(55, 55)
 layout_mode = 2
 texture = ExtResource("2_xfqoh")
@@ -239,6 +407,7 @@ custom_minimum_size = Vector2(55, 55)
 layout_mode = 2
 
 [node name="Tile38" type="TextureRect" parent="MarginContainer/CenterContainer/TileContainer/Row4"]
+material = SubResource("ShaderMaterial_an2c3")
 custom_minimum_size = Vector2(55, 55)
 layout_mode = 2
 texture = ExtResource("2_xfqoh")
@@ -249,6 +418,7 @@ custom_minimum_size = Vector2(55, 55)
 layout_mode = 2
 
 [node name="Tile6" type="TextureRect" parent="MarginContainer/CenterContainer/TileContainer/Row4"]
+material = SubResource("ShaderMaterial_1456j")
 custom_minimum_size = Vector2(55, 55)
 layout_mode = 2
 texture = ExtResource("2_xfqoh")
@@ -277,30 +447,35 @@ theme_override_constants/v_separation = 2
 columns = 11
 
 [node name="Tile33" type="TextureRect" parent="MarginContainer/CenterContainer/TileContainer/Row5"]
+material = SubResource("ShaderMaterial_23w60")
 custom_minimum_size = Vector2(55, 55)
 layout_mode = 2
 texture = ExtResource("4_jyj6i")
 stretch_mode = 5
 
 [node name="Tile34" type="TextureRect" parent="MarginContainer/CenterContainer/TileContainer/Row5"]
+material = SubResource("ShaderMaterial_46drt")
 custom_minimum_size = Vector2(55, 55)
 layout_mode = 2
 texture = ExtResource("2_xfqoh")
 stretch_mode = 5
 
 [node name="Tile35" type="TextureRect" parent="MarginContainer/CenterContainer/TileContainer/Row5"]
+material = SubResource("ShaderMaterial_shtdg")
 custom_minimum_size = Vector2(55, 55)
 layout_mode = 2
 texture = ExtResource("2_xfqoh")
 stretch_mode = 5
 
 [node name="Tile36" type="TextureRect" parent="MarginContainer/CenterContainer/TileContainer/Row5"]
+material = SubResource("ShaderMaterial_vta6i")
 custom_minimum_size = Vector2(55, 55)
 layout_mode = 2
 texture = ExtResource("2_xfqoh")
 stretch_mode = 5
 
 [node name="Tile37" type="TextureRect" parent="MarginContainer/CenterContainer/TileContainer/Row5"]
+material = SubResource("ShaderMaterial_bbeoy")
 custom_minimum_size = Vector2(55, 55)
 layout_mode = 2
 texture = ExtResource("2_xfqoh")
@@ -311,30 +486,35 @@ custom_minimum_size = Vector2(55, 55)
 layout_mode = 2
 
 [node name="Tile7" type="TextureRect" parent="MarginContainer/CenterContainer/TileContainer/Row5"]
+material = SubResource("ShaderMaterial_jhjc8")
 custom_minimum_size = Vector2(55, 55)
 layout_mode = 2
 texture = ExtResource("2_xfqoh")
 stretch_mode = 5
 
 [node name="Tile8" type="TextureRect" parent="MarginContainer/CenterContainer/TileContainer/Row5"]
+material = SubResource("ShaderMaterial_pauca")
 custom_minimum_size = Vector2(55, 55)
 layout_mode = 2
 texture = ExtResource("2_xfqoh")
 stretch_mode = 5
 
 [node name="Tile9" type="TextureRect" parent="MarginContainer/CenterContainer/TileContainer/Row5"]
+material = SubResource("ShaderMaterial_ohuch")
 custom_minimum_size = Vector2(55, 55)
 layout_mode = 2
 texture = ExtResource("2_xfqoh")
 stretch_mode = 5
 
 [node name="Tile10" type="TextureRect" parent="MarginContainer/CenterContainer/TileContainer/Row5"]
+material = SubResource("ShaderMaterial_5uipe")
 custom_minimum_size = Vector2(55, 55)
 layout_mode = 2
 texture = ExtResource("2_xfqoh")
 stretch_mode = 5
 
 [node name="Tile11" type="TextureRect" parent="MarginContainer/CenterContainer/TileContainer/Row5"]
+material = SubResource("ShaderMaterial_802i0")
 custom_minimum_size = Vector2(55, 55)
 layout_mode = 2
 texture = ExtResource("2_xfqoh")
@@ -347,6 +527,7 @@ theme_override_constants/v_separation = 2
 columns = 11
 
 [node name="Tile32" type="TextureRect" parent="MarginContainer/CenterContainer/TileContainer/Row6"]
+material = SubResource("ShaderMaterial_um2ey")
 custom_minimum_size = Vector2(55, 55)
 layout_mode = 2
 texture = ExtResource("2_xfqoh")
@@ -389,6 +570,7 @@ custom_minimum_size = Vector2(55, 55)
 layout_mode = 2
 
 [node name="Tile12" type="TextureRect" parent="MarginContainer/CenterContainer/TileContainer/Row6"]
+material = SubResource("ShaderMaterial_kd4dv")
 custom_minimum_size = Vector2(55, 55)
 layout_mode = 2
 texture = ExtResource("2_xfqoh")
@@ -401,30 +583,35 @@ theme_override_constants/v_separation = 2
 columns = 11
 
 [node name="Tile31" type="TextureRect" parent="MarginContainer/CenterContainer/TileContainer/Row7"]
+material = SubResource("ShaderMaterial_rfg0r")
 custom_minimum_size = Vector2(55, 55)
 layout_mode = 2
 texture = ExtResource("2_xfqoh")
 stretch_mode = 5
 
 [node name="Tile30" type="TextureRect" parent="MarginContainer/CenterContainer/TileContainer/Row7"]
+material = SubResource("ShaderMaterial_ke2rh")
 custom_minimum_size = Vector2(55, 55)
 layout_mode = 2
 texture = ExtResource("2_xfqoh")
 stretch_mode = 5
 
 [node name="Tile29" type="TextureRect" parent="MarginContainer/CenterContainer/TileContainer/Row7"]
+material = SubResource("ShaderMaterial_ncsiq")
 custom_minimum_size = Vector2(55, 55)
 layout_mode = 2
 texture = ExtResource("2_xfqoh")
 stretch_mode = 5
 
 [node name="Tile28" type="TextureRect" parent="MarginContainer/CenterContainer/TileContainer/Row7"]
+material = SubResource("ShaderMaterial_sb1fh")
 custom_minimum_size = Vector2(55, 55)
 layout_mode = 2
 texture = ExtResource("2_xfqoh")
 stretch_mode = 5
 
 [node name="Tile27" type="TextureRect" parent="MarginContainer/CenterContainer/TileContainer/Row7"]
+material = SubResource("ShaderMaterial_cro42")
 custom_minimum_size = Vector2(55, 55)
 layout_mode = 2
 texture = ExtResource("2_xfqoh")
@@ -435,30 +622,35 @@ custom_minimum_size = Vector2(55, 55)
 layout_mode = 2
 
 [node name="Tile17" type="TextureRect" parent="MarginContainer/CenterContainer/TileContainer/Row7"]
+material = SubResource("ShaderMaterial_o1nbv")
 custom_minimum_size = Vector2(55, 55)
 layout_mode = 2
 texture = ExtResource("2_xfqoh")
 stretch_mode = 5
 
 [node name="Tile16" type="TextureRect" parent="MarginContainer/CenterContainer/TileContainer/Row7"]
+material = SubResource("ShaderMaterial_ft4fi")
 custom_minimum_size = Vector2(55, 55)
 layout_mode = 2
 texture = ExtResource("2_xfqoh")
 stretch_mode = 5
 
 [node name="Tile15" type="TextureRect" parent="MarginContainer/CenterContainer/TileContainer/Row7"]
+material = SubResource("ShaderMaterial_2rh1q")
 custom_minimum_size = Vector2(55, 55)
 layout_mode = 2
 texture = ExtResource("2_xfqoh")
 stretch_mode = 5
 
 [node name="Tile14" type="TextureRect" parent="MarginContainer/CenterContainer/TileContainer/Row7"]
+material = SubResource("ShaderMaterial_fxn2o")
 custom_minimum_size = Vector2(55, 55)
 layout_mode = 2
 texture = ExtResource("2_xfqoh")
 stretch_mode = 5
 
 [node name="Tile13" type="TextureRect" parent="MarginContainer/CenterContainer/TileContainer/Row7"]
+material = SubResource("ShaderMaterial_r6mwu")
 custom_minimum_size = Vector2(55, 55)
 layout_mode = 2
 texture = ExtResource("5_4apwn")
@@ -487,6 +679,7 @@ custom_minimum_size = Vector2(55, 55)
 layout_mode = 2
 
 [node name="Tile26" type="TextureRect" parent="MarginContainer/CenterContainer/TileContainer/Row8"]
+material = SubResource("ShaderMaterial_y7ehc")
 custom_minimum_size = Vector2(55, 55)
 layout_mode = 2
 texture = ExtResource("2_xfqoh")
@@ -497,6 +690,7 @@ custom_minimum_size = Vector2(55, 55)
 layout_mode = 2
 
 [node name="Tile18" type="TextureRect" parent="MarginContainer/CenterContainer/TileContainer/Row8"]
+material = SubResource("ShaderMaterial_tluk3")
 custom_minimum_size = Vector2(55, 55)
 layout_mode = 2
 texture = ExtResource("2_xfqoh")
@@ -541,6 +735,7 @@ custom_minimum_size = Vector2(55, 55)
 layout_mode = 2
 
 [node name="Tile25" type="TextureRect" parent="MarginContainer/CenterContainer/TileContainer/Row9"]
+material = SubResource("ShaderMaterial_i570e")
 custom_minimum_size = Vector2(55, 55)
 layout_mode = 2
 texture = ExtResource("2_xfqoh")
@@ -551,6 +746,7 @@ custom_minimum_size = Vector2(55, 55)
 layout_mode = 2
 
 [node name="Tile19" type="TextureRect" parent="MarginContainer/CenterContainer/TileContainer/Row9"]
+material = SubResource("ShaderMaterial_hhhtb")
 custom_minimum_size = Vector2(55, 55)
 layout_mode = 2
 texture = ExtResource("2_xfqoh")
@@ -595,6 +791,7 @@ custom_minimum_size = Vector2(55, 55)
 layout_mode = 2
 
 [node name="Tile24" type="TextureRect" parent="MarginContainer/CenterContainer/TileContainer/Row10"]
+material = SubResource("ShaderMaterial_fnpau")
 custom_minimum_size = Vector2(55, 55)
 layout_mode = 2
 texture = ExtResource("2_xfqoh")
@@ -605,6 +802,7 @@ custom_minimum_size = Vector2(55, 55)
 layout_mode = 2
 
 [node name="Tile20" type="TextureRect" parent="MarginContainer/CenterContainer/TileContainer/Row10"]
+material = SubResource("ShaderMaterial_cmdp3")
 custom_minimum_size = Vector2(55, 55)
 layout_mode = 2
 texture = ExtResource("2_xfqoh")
@@ -649,18 +847,21 @@ custom_minimum_size = Vector2(55, 55)
 layout_mode = 2
 
 [node name="Tile23" type="TextureRect" parent="MarginContainer/CenterContainer/TileContainer/Row11"]
+material = SubResource("ShaderMaterial_mdmsr")
 custom_minimum_size = Vector2(55, 55)
 layout_mode = 2
 texture = ExtResource("6_24avq")
 stretch_mode = 5
 
 [node name="Tile22" type="TextureRect" parent="MarginContainer/CenterContainer/TileContainer/Row11"]
+material = SubResource("ShaderMaterial_gcecm")
 custom_minimum_size = Vector2(55, 55)
 layout_mode = 2
 texture = ExtResource("2_xfqoh")
 stretch_mode = 5
 
 [node name="Tile21" type="TextureRect" parent="MarginContainer/CenterContainer/TileContainer/Row11"]
+material = SubResource("ShaderMaterial_yvdxl")
 custom_minimum_size = Vector2(55, 55)
 layout_mode = 2
 texture = ExtResource("2_xfqoh")

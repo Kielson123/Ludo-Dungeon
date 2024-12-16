@@ -16,10 +16,4 @@ func _ready() -> void:
 		players[i].starting_tile = starting_tiles[i]
 		players[i].reparent(starting_tiles[i])
 		players[i].position = starting_tiles[i].size / 2
-
-func _physics_process(_delta: float) -> void:
-	if Input.is_action_just_pressed("mouse_click"):
-		var players: Array[Node] = get_tree().get_nodes_in_group("Players")
-		for player in players:
-			if player is Player and player.mouse_hovered:
-				player.menu_opened = !player.menu_opened
+		players[i].board_tiles = tiles
