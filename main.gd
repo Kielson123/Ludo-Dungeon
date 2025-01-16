@@ -30,7 +30,8 @@ func _on_intro_finished() -> void:
 			"player4": {
 				"is_bot": true,
 				"color": Global.player_colors.pick_random()
-			}
+			},
+			"turns_per_player": 1
 		})
 	else:
 		Global.request_main_menu.emit()

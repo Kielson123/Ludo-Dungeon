@@ -2,11 +2,11 @@
 
 [ext_resource type="Script" path="res://Game/Boards/Board4/board_4.gd" id="1_wg12l"]
 [ext_resource type="Shader" path="res://Assets/Shaders/blinking.gdshader" id="2_ncn7f"]
-[ext_resource type="Texture2D" uid="uid://dhslwmayr66ei" path="res://Assets/Game/Tiles/tile.png" id="2_xfqoh"]
-[ext_resource type="Texture2D" uid="uid://d27nd1on1ur5x" path="res://Assets/Game/Tiles/blue_tile.png" id="3_f7dw7"]
-[ext_resource type="Texture2D" uid="uid://cg2tkfgkgwve6" path="res://Assets/Game/Tiles/red_tile.png" id="4_jyj6i"]
-[ext_resource type="Texture2D" uid="uid://cs8bk7ve17yfa" path="res://Assets/Game/Tiles/green_tile.png" id="5_4apwn"]
-[ext_resource type="Texture2D" uid="uid://beixueqlatgi" path="res://Assets/Game/Tiles/yellow_tile.png" id="6_24avq"]
+[ext_resource type="Texture2D" uid="uid://ce27k642c22qf" path="res://Assets/Game/Tiles/tile.png" id="2_xfqoh"]
+[ext_resource type="Texture2D" uid="uid://s1whn6q6k726" path="res://Assets/Game/Tiles/blue_tile.png" id="3_f7dw7"]
+[ext_resource type="Texture2D" uid="uid://ujfflrcvcyay" path="res://Assets/Game/Tiles/red_tile.png" id="4_jyj6i"]
+[ext_resource type="Texture2D" uid="uid://bopi8q1kfnlr4" path="res://Assets/Game/Tiles/green_tile.png" id="5_4apwn"]
+[ext_resource type="Texture2D" uid="uid://be3v3cumprbj2" path="res://Assets/Game/Tiles/yellow_tile.png" id="6_24avq"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_sev5u"]
 shader = ExtResource("2_ncn7f")
@@ -168,7 +168,7 @@ shader_parameter/active = false
 shader = ExtResource("2_ncn7f")
 shader_parameter/active = false
 
-[node name="til" type="Control" node_paths=PackedStringArray("background", "tiles", "starting_tiles")]
+[node name="Board4" type="Control" node_paths=PackedStringArray("background", "tiles", "starting_tiles")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
