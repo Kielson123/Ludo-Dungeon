@@ -18,6 +18,14 @@ var player_color_tiles: Dictionary = {
 	"red": load("res://Assets/Game/Tiles/red_tile.png"),
 	"yellow": load("res://Assets/Game/Tiles/yellow_tile.png"),
 }
+var player_color_pawns: Dictionary = {
+	"blue": load("res://Assets/Game/Pawns/default_blue.svg"), 
+	"green": load("res://Assets/Game/Pawns/default_green.svg"),
+	"orange": load("res://Assets/Game/Pawns/default_orange.svg"),
+	"purple": load("res://Assets/Game/Pawns/default_purple.svg"),
+	"red": load("res://Assets/Game/Pawns/default_red.svg"),
+	"yellow": load("res://Assets/Game/Pawns/default_yellow.svg"),
+}
 var main_scene: Main
 
 
