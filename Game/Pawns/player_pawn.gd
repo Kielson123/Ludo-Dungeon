@@ -1,4 +1,4 @@
-class_name Player extends Actor
+class_name PlayerPawn extends Pawn
 
 #region VARIABLES
 var menu_opened: bool = false

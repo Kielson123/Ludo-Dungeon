@@ -1,4 +1,4 @@
-class_name Bot extends Actor
+class_name BotPawn extends Pawn
 
 #region RUNTIME FUNCTIONS
 func _process(_delta: float) -> void:

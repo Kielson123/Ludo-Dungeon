@@ -16,4 +16,4 @@ func _ready() -> void:
 		players[i].reparent(starting_tiles[i])
 		players[i].position = starting_tiles[i].size / 2
 		players[i].board_tiles = tiles
-		Global.main_scene.game.players = players
+		Global.main_scene.game.pawns = players

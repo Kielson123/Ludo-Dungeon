@@ -1,7 +1,7 @@
-class_name Actor extends Node2D
+class_name Pawn extends Node2D
 
 #region VARIABLES
-signal moved(actor: Actor, tile: TextureRect)
+signal moved(pawn: Pawn, tile: TextureRect)
 
 @export var color: StringName
 @export var starting_tile: TextureRect
