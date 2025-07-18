@@ -1,11 +1,29 @@
-[gd_scene load_steps=3 format=3 uid="uid://bkcmdathporqs"]
+[gd_scene load_steps=8 format=3 uid="uid://bkcmdathporqs"]
 
 [ext_resource type="Script" uid="uid://dnny8ksn4en40" path="res://main.gd" id="1_5e5a8"]
 [ext_resource type="VideoStream" uid="uid://b8ufwqbbha37" path="res://Assets/UI/intro.ogv" id="2_kh485"]
+[ext_resource type="Shader" uid="uid://qo4r7p0sila5" path="res://Assets/Shaders/Background/scrolling_dots.gdshader" id="3_h2yge"]
+[ext_resource type="PackedScene" uid="uid://dg1j5ejdlocsk" path="res://Game/board-4.tscn" id="4_1bvp3"]
+
+[sub_resource type="Gradient" id="Gradient_1bvp3"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_lquwl"]
+gradient = SubResource("Gradient_1bvp3")
+width = 196
+fill_from = Vector2(0.218638, 0)
+fill_to = Vector2(0.899642, 0.889113)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7mycd"]
+shader = ExtResource("3_h2yge")
+shader_parameter/gradient = SubResource("GradientTexture2D_lquwl")
+shader_parameter/circle_color = Color(1, 0.458824, 0, 1)
+shader_parameter/circle_multiplier = 10.0
+shader_parameter/speed = 1.0
+shader_parameter/direction = Vector2(1, 1)
+shader_parameter/rotation = Transform2D(1, -1, 1, 1, 0, 0)
 
 [node name="Main" type="Node"]
 script = ExtResource("1_5e5a8")
-dev_mode = false
 
 [node name="IntroContainer" type="Control" parent="."]
 layout_mode = 3
@@ -42,5 +60,35 @@ stream = ExtResource("2_kh485")
 volume_db = -10.0
 autoplay = true
 expand = true
+
+[node name="BackgroundContainer" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="BackgroundContainer"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(1, 0.65098, 0, 1)
+
+[node name="Panel" type="Panel" parent="BackgroundContainer"]
+material = SubResource("ShaderMaterial_7mycd")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Board-4" parent="." instance=ExtResource("4_1bvp3")]
 
 [connection signal="finished" from="IntroContainer/AspectRatioContainer/Intro" to="." method="_on_intro_finished"]

@@ -22,6 +22,10 @@ config/icon="res://icon.svg"
 
 buses/default_bus_layout=""
 
+[autoload]
+
+TurnManager="*res://Util/turn_manager.gd"
+
 [debug]
 
 gdscript/warnings/unused_signal=0
@@ -29,7 +33,7 @@ gdscript/warnings/untyped_declaration=1
 
 [display]
 
-window/size/viewport_width=1280
+window/size/viewport_width=720
 window/size/viewport_height=720
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
