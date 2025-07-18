@@ -22,11 +22,6 @@ config/icon="res://icon.svg"
 
 buses/default_bus_layout=""
 
-[autoload]
-
-ConfigManager="*res://Util/config_manager.gd"
-Global="*res://Util/global.gd"
-
 [debug]
 
 gdscript/warnings/unused_signal=0
