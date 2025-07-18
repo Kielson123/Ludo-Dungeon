@@ -39,13 +39,13 @@ func setup_singleplayer(game_data: Dictionary) -> void:
 		if player_data.has_all(["color", "is_bot"]):
 			var actor: Control = Bot.new() if player_data["is_bot"] else Player.new()
 			for j in range(4):
-				var pawn: Pawn = BotPawn.new() if player_data["is_bot"] else PlayerPawn.new()
+				var pawn: Pawn = BotPawn.new() if actor is Bot else PlayerPawn.new()
 				pawn.color = player_data["color"]
-				pawn.texture = Global.player_color_pawns[actor.color]
+				pawn.texture = Global.player_color_pawns[pawn.color]
 				pawn.game = self
-				pawn.add_to_group("Pawns")
-				actor.pawns.append(pawn)
 				add_child(pawn)
+				actor.pawns.append(pawn)
+				pawn.add_to_group("Pawns")
 			
 	add_child(board)
 	for pawn: Pawn in pawns:
@@ -79,7 +79,7 @@ func manage_turns() -> void:
 	elif not pawn.can_move and pawn.finished_moving:
 		pass
 	elif not pawn.can_move and not pawn.finished_moving:
-		if pawn is BotPawn: 
+		if pawn is BotPawn: #fake thinking
 			if _bot_delay < 0:
 				pawn.can_move = true
 				_bot_delay = randi_range(45, 100)

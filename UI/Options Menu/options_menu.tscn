@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bxnumb3igwfcm"]
 
-[ext_resource type="Script" path="res://UI/Options Menu/options_menu.gd" id="1_3mbnd"]
+[ext_resource type="Script" uid="uid://co0vyqykekapg" path="res://UI/Options Menu/options_menu.gd" id="1_3mbnd"]
 
 [node name="OptionsMenu" type="Control" groups=["Main Menu Incompatible", "Singleplayer Start Menu Incompatible"]]
 layout_mode = 3
