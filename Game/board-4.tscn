@@ -10,6 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 script = ExtResource("1_eisvb")
 
 [node name="UI" type="Control" parent="."]
@@ -19,6 +20,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="MarginContainer" type="MarginContainer" parent="UI"]
@@ -1466,3 +1468,60 @@ custom_minimum_size = Vector2(20, 20)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+
+[connection signal="tile_pressed" from="UI/MarginContainer/TileContainer/Row1/Tile" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="UI/MarginContainer/TileContainer/Row1/Tile2" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="UI/MarginContainer/TileContainer/Row1/Tile3" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="UI/MarginContainer/TileContainer/Row2/Tile" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="UI/MarginContainer/TileContainer/Row2/Tile3" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="UI/MarginContainer/TileContainer/Row3/Tile" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="UI/MarginContainer/TileContainer/Row3/Tile3" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="UI/MarginContainer/TileContainer/Row4/Tile" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="UI/MarginContainer/TileContainer/Row4/Tile3" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="UI/MarginContainer/TileContainer/Row5/Tile" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="UI/MarginContainer/TileContainer/Row5/Tile3" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="UI/MarginContainer/TileContainer/Row6/Tile" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="UI/MarginContainer/TileContainer/Row6/Tile2" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="UI/MarginContainer/TileContainer/Row6/Tile3" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="UI/MarginContainer/TileContainer/Row6/Tile4" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="UI/MarginContainer/TileContainer/Row7/Tile" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="UI/MarginContainer/TileContainer/Row7/Tile2" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="UI/MarginContainer/TileContainer/Row7/Tile3" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="UI/MarginContainer/TileContainer/Row7/Tile4" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="UI/MarginContainer/TileContainer/Row7/Tile5" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="UI/MarginContainer/TileContainer/Row7/Tile6" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="UI/MarginContainer/TileContainer/Row7/Tile7" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="UI/MarginContainer/TileContainer/Row7/Tile8" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="UI/MarginContainer/TileContainer/Row7/Tile9" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="UI/MarginContainer/TileContainer/Row7/Tile10" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="UI/MarginContainer/TileContainer/Row7/Tile11" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="UI/MarginContainer/TileContainer/Row7/Tile12" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="UI/MarginContainer/TileContainer/Row8/Tile" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="UI/MarginContainer/TileContainer/Row8/Tile12" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="UI/MarginContainer/TileContainer/Row9/Tile" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="UI/MarginContainer/TileContainer/Row9/Tile2" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="UI/MarginContainer/TileContainer/Row9/Tile3" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="UI/MarginContainer/TileContainer/Row9/Tile4" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="UI/MarginContainer/TileContainer/Row9/Tile5" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="UI/MarginContainer/TileContainer/Row9/Tile6" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="UI/MarginContainer/TileContainer/Row9/Tile7" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="UI/MarginContainer/TileContainer/Row9/Tile8" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="UI/MarginContainer/TileContainer/Row9/Tile9" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="UI/MarginContainer/TileContainer/Row9/Tile10" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="UI/MarginContainer/TileContainer/Row9/Tile11" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="UI/MarginContainer/TileContainer/Row9/Tile12" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="UI/MarginContainer/TileContainer/Row16/Tile" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="UI/MarginContainer/TileContainer/Row16/Tile2" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="UI/MarginContainer/TileContainer/Row16/Tile3" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="UI/MarginContainer/TileContainer/Row16/Tile4" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="UI/MarginContainer/TileContainer/Row11/Tile" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="UI/MarginContainer/TileContainer/Row11/Tile3" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="UI/MarginContainer/TileContainer/Row12/Tile" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="UI/MarginContainer/TileContainer/Row12/Tile3" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="UI/MarginContainer/TileContainer/Row13/Tile" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="UI/MarginContainer/TileContainer/Row13/Tile3" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="UI/MarginContainer/TileContainer/Row14/Tile" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="UI/MarginContainer/TileContainer/Row14/Tile3" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="UI/MarginContainer/TileContainer/Row15/Tile" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="UI/MarginContainer/TileContainer/Row15/Tile2" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="UI/MarginContainer/TileContainer/Row15/Tile3" to="." method="_on_tile_pressed"]

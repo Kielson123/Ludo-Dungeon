@@ -14,8 +14,8 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-action_mode = 0
-button_mask = 7
+focus_mode = 1
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource("1_i4psv")
 texture_pressed = ExtResource("1_i4psv")
 texture_hover = ExtResource("1_i4psv")
@@ -34,4 +34,7 @@ anchor_right = 1.075
 anchor_bottom = 1.075
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 color = Color(0, 0, 0, 1)
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]
