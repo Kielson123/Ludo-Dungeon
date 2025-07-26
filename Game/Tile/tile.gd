@@ -13,8 +13,14 @@ enum Type {
 }
 
 @export var type: Type = Type.NORMAL
+@export var marker: Marker2D
 
 func _ready() -> void:
+	var marker_position: Vector2 = marker.get_position()
+	var new_positon: Vector2
+	new_positon = marker_position * (get_viewport_rect().size / 720)
+	marker.set_position(new_positon)
+	
 	match type:
 		Type.RED:
 			set_every_texture("res://Assets/Game/Tiles/red_tile.png")
@@ -37,6 +43,9 @@ func set_every_texture(texture_path: String) -> void:
 	texture_hover = load(texture_path)
 	texture_disabled = load(texture_path)
 	texture_focused = load(texture_path)
+
+func get_marker() -> Marker2D:
+	return marker
 
 func _on_pressed() -> void:
 	tile_pressed.emit(self, type)

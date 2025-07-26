@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://4y0q84epus1p"]
 
 [ext_resource type="Texture2D" uid="uid://dhslwmayr66ei" path="res://Assets/Game/Tiles/tile.png" id="1_i4psv"]
-[ext_resource type="Script" uid="uid://cpn8ovn36utgi" path="res://Game/tile.gd" id="2_np05s"]
+[ext_resource type="Script" uid="uid://cpn8ovn36utgi" path="res://Game/Tile/tile.gd" id="2_np05s"]
 
 [node name="Tile" type="TextureButton"]
 texture_filter = 3

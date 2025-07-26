@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://baly72iem7w7s"]
+
+[ext_resource type="Script" uid="uid://b7paf8oftd75j" path="res://Game/Pawns/player_controlled_pawn.gd" id="1_5y7ah"]
+[ext_resource type="Texture2D" uid="uid://bgkksdbt5jd4g" path="res://Assets/Game/Pawns/default.svg" id="2_apo7f"]
+
+[node name="PlayerControlledPawn" type="Node2D"]
+script = ExtResource("1_5y7ah")
+metadata/_custom_type_script = "uid://dr6ni13tnlipr"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_apo7f")

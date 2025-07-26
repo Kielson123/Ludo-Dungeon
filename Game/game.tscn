@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://b6fvult3nbn8n"]
+
+[ext_resource type="Script" uid="uid://clcgmlnx8tebp" path="res://Game/game.gd" id="1_bk3v5"]
+[ext_resource type="PackedScene" uid="uid://dg1j5ejdlocsk" path="res://Game/Boards/board-4.tscn" id="2_1r4le"]
+
+[node name="Game" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bk3v5")
+
+[node name="Board-4" parent="." instance=ExtResource("2_1r4le")]
+layout_mode = 1
+
+[node name="Players" type="Node2D" parent="."]

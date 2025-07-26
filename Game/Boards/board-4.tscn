@@ -1,0 +1,1799 @@
+[gd_scene load_steps=3 format=3 uid="uid://dg1j5ejdlocsk"]
+
+[ext_resource type="Script" uid="uid://djg0pesqyfovg" path="res://Game/Boards/board-4.gd" id="1_eisvb"]
+[ext_resource type="PackedScene" uid="uid://4y0q84epus1p" path="res://Game/Tile/tile.tscn" id="2_s357q"]
+
+[node name="Board-4" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_eisvb")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 40
+
+[node name="TileContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 3
+
+[node name="Row1" type="HBoxContainer" parent="MarginContainer/TileContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 3
+
+[node name="Blank" type="Panel" parent="MarginContainer/TileContainer/Row1"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank2" type="Panel" parent="MarginContainer/TileContainer/Row1"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank3" type="Panel" parent="MarginContainer/TileContainer/Row1"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank4" type="Panel" parent="MarginContainer/TileContainer/Row1"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank5" type="Panel" parent="MarginContainer/TileContainer/Row1"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank6" type="Panel" parent="MarginContainer/TileContainer/Row1"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Tile" parent="MarginContainer/TileContainer/Row1" node_paths=PackedStringArray("marker") instance=ExtResource("2_s357q")]
+layout_mode = 2
+marker = NodePath("../../../../TileMarkers/Marker2D1")
+
+[node name="Tile2" parent="MarginContainer/TileContainer/Row1" node_paths=PackedStringArray("marker") instance=ExtResource("2_s357q")]
+layout_mode = 2
+marker = NodePath("../../../../TileMarkers/Marker2D2")
+
+[node name="Tile3" parent="MarginContainer/TileContainer/Row1" node_paths=PackedStringArray("marker") instance=ExtResource("2_s357q")]
+layout_mode = 2
+type = 1
+marker = NodePath("../../../../TileMarkers/Marker2D3")
+
+[node name="Blank7" type="Panel" parent="MarginContainer/TileContainer/Row1"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank8" type="Panel" parent="MarginContainer/TileContainer/Row1"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank9" type="Panel" parent="MarginContainer/TileContainer/Row1"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank10" type="Panel" parent="MarginContainer/TileContainer/Row1"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank11" type="Panel" parent="MarginContainer/TileContainer/Row1"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank12" type="Panel" parent="MarginContainer/TileContainer/Row1"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Row2" type="HBoxContainer" parent="MarginContainer/TileContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 3
+
+[node name="Blank" type="Panel" parent="MarginContainer/TileContainer/Row2"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank2" type="Panel" parent="MarginContainer/TileContainer/Row2"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank3" type="Panel" parent="MarginContainer/TileContainer/Row2"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank4" type="Panel" parent="MarginContainer/TileContainer/Row2"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank5" type="Panel" parent="MarginContainer/TileContainer/Row2"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank6" type="Panel" parent="MarginContainer/TileContainer/Row2"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Tile" parent="MarginContainer/TileContainer/Row2" node_paths=PackedStringArray("marker") instance=ExtResource("2_s357q")]
+layout_mode = 2
+marker = NodePath("../../../../TileMarkers/Marker2D56")
+
+[node name="Blank13" type="Panel" parent="MarginContainer/TileContainer/Row2"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Tile3" parent="MarginContainer/TileContainer/Row2" node_paths=PackedStringArray("marker") instance=ExtResource("2_s357q")]
+layout_mode = 2
+marker = NodePath("../../../../TileMarkers/Marker2D4")
+
+[node name="Blank7" type="Panel" parent="MarginContainer/TileContainer/Row2"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank8" type="Panel" parent="MarginContainer/TileContainer/Row2"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank9" type="Panel" parent="MarginContainer/TileContainer/Row2"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank10" type="Panel" parent="MarginContainer/TileContainer/Row2"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank11" type="Panel" parent="MarginContainer/TileContainer/Row2"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank12" type="Panel" parent="MarginContainer/TileContainer/Row2"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Row3" type="HBoxContainer" parent="MarginContainer/TileContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 3
+
+[node name="Blank" type="Panel" parent="MarginContainer/TileContainer/Row3"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank2" type="Panel" parent="MarginContainer/TileContainer/Row3"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank3" type="Panel" parent="MarginContainer/TileContainer/Row3"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank4" type="Panel" parent="MarginContainer/TileContainer/Row3"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank5" type="Panel" parent="MarginContainer/TileContainer/Row3"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank6" type="Panel" parent="MarginContainer/TileContainer/Row3"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Tile" parent="MarginContainer/TileContainer/Row3" node_paths=PackedStringArray("marker") instance=ExtResource("2_s357q")]
+layout_mode = 2
+marker = NodePath("../../../../TileMarkers/Marker2D55")
+
+[node name="Blank13" type="Panel" parent="MarginContainer/TileContainer/Row3"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Tile3" parent="MarginContainer/TileContainer/Row3" node_paths=PackedStringArray("marker") instance=ExtResource("2_s357q")]
+layout_mode = 2
+marker = NodePath("../../../../TileMarkers/Marker2D5")
+
+[node name="Blank7" type="Panel" parent="MarginContainer/TileContainer/Row3"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank8" type="Panel" parent="MarginContainer/TileContainer/Row3"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank9" type="Panel" parent="MarginContainer/TileContainer/Row3"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank10" type="Panel" parent="MarginContainer/TileContainer/Row3"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank11" type="Panel" parent="MarginContainer/TileContainer/Row3"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank12" type="Panel" parent="MarginContainer/TileContainer/Row3"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Row4" type="HBoxContainer" parent="MarginContainer/TileContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 3
+
+[node name="Blank" type="Panel" parent="MarginContainer/TileContainer/Row4"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank2" type="Panel" parent="MarginContainer/TileContainer/Row4"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank3" type="Panel" parent="MarginContainer/TileContainer/Row4"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank4" type="Panel" parent="MarginContainer/TileContainer/Row4"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank5" type="Panel" parent="MarginContainer/TileContainer/Row4"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank6" type="Panel" parent="MarginContainer/TileContainer/Row4"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Tile" parent="MarginContainer/TileContainer/Row4" node_paths=PackedStringArray("marker") instance=ExtResource("2_s357q")]
+layout_mode = 2
+marker = NodePath("../../../../TileMarkers/Marker2D54")
+
+[node name="Blank13" type="Panel" parent="MarginContainer/TileContainer/Row4"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Tile3" parent="MarginContainer/TileContainer/Row4" node_paths=PackedStringArray("marker") instance=ExtResource("2_s357q")]
+layout_mode = 2
+marker = NodePath("../../../../TileMarkers/Marker2D6")
+
+[node name="Blank7" type="Panel" parent="MarginContainer/TileContainer/Row4"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank8" type="Panel" parent="MarginContainer/TileContainer/Row4"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank9" type="Panel" parent="MarginContainer/TileContainer/Row4"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank10" type="Panel" parent="MarginContainer/TileContainer/Row4"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank11" type="Panel" parent="MarginContainer/TileContainer/Row4"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank12" type="Panel" parent="MarginContainer/TileContainer/Row4"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Row5" type="HBoxContainer" parent="MarginContainer/TileContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 3
+
+[node name="Blank" type="Panel" parent="MarginContainer/TileContainer/Row5"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank2" type="Panel" parent="MarginContainer/TileContainer/Row5"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank3" type="Panel" parent="MarginContainer/TileContainer/Row5"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank4" type="Panel" parent="MarginContainer/TileContainer/Row5"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank5" type="Panel" parent="MarginContainer/TileContainer/Row5"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank6" type="Panel" parent="MarginContainer/TileContainer/Row5"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Tile" parent="MarginContainer/TileContainer/Row5" node_paths=PackedStringArray("marker") instance=ExtResource("2_s357q")]
+layout_mode = 2
+marker = NodePath("../../../../TileMarkers/Marker2D53")
+
+[node name="Blank13" type="Panel" parent="MarginContainer/TileContainer/Row5"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Tile3" parent="MarginContainer/TileContainer/Row5" node_paths=PackedStringArray("marker") instance=ExtResource("2_s357q")]
+layout_mode = 2
+marker = NodePath("../../../../TileMarkers/Marker2D7")
+
+[node name="Blank7" type="Panel" parent="MarginContainer/TileContainer/Row5"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank8" type="Panel" parent="MarginContainer/TileContainer/Row5"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank9" type="Panel" parent="MarginContainer/TileContainer/Row5"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank10" type="Panel" parent="MarginContainer/TileContainer/Row5"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank11" type="Panel" parent="MarginContainer/TileContainer/Row5"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank12" type="Panel" parent="MarginContainer/TileContainer/Row5"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Row6" type="HBoxContainer" parent="MarginContainer/TileContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 3
+
+[node name="Blank" type="Panel" parent="MarginContainer/TileContainer/Row6"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank2" type="Panel" parent="MarginContainer/TileContainer/Row6"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank3" type="Panel" parent="MarginContainer/TileContainer/Row6"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank4" type="Panel" parent="MarginContainer/TileContainer/Row6"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank5" type="Panel" parent="MarginContainer/TileContainer/Row6"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Tile" parent="MarginContainer/TileContainer/Row6" node_paths=PackedStringArray("marker") instance=ExtResource("2_s357q")]
+layout_mode = 2
+marker = NodePath("../../../../TileMarkers/Marker2D51")
+
+[node name="Tile2" parent="MarginContainer/TileContainer/Row6" node_paths=PackedStringArray("marker") instance=ExtResource("2_s357q")]
+layout_mode = 2
+marker = NodePath("../../../../TileMarkers/Marker2D52")
+
+[node name="Blank6" type="Panel" parent="MarginContainer/TileContainer/Row6"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Tile3" parent="MarginContainer/TileContainer/Row6" node_paths=PackedStringArray("marker") instance=ExtResource("2_s357q")]
+layout_mode = 2
+marker = NodePath("../../../../TileMarkers/Marker2D8")
+
+[node name="Tile4" parent="MarginContainer/TileContainer/Row6" node_paths=PackedStringArray("marker") instance=ExtResource("2_s357q")]
+layout_mode = 2
+marker = NodePath("../../../../TileMarkers/Marker2D9")
+
+[node name="Blank8" type="Panel" parent="MarginContainer/TileContainer/Row6"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank9" type="Panel" parent="MarginContainer/TileContainer/Row6"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank10" type="Panel" parent="MarginContainer/TileContainer/Row6"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank11" type="Panel" parent="MarginContainer/TileContainer/Row6"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank12" type="Panel" parent="MarginContainer/TileContainer/Row6"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Row7" type="HBoxContainer" parent="MarginContainer/TileContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 3
+
+[node name="Tile" parent="MarginContainer/TileContainer/Row7" node_paths=PackedStringArray("marker") instance=ExtResource("2_s357q")]
+layout_mode = 2
+type = 4
+marker = NodePath("../../../../TileMarkers/Marker2D45")
+
+[node name="Tile2" parent="MarginContainer/TileContainer/Row7" node_paths=PackedStringArray("marker") instance=ExtResource("2_s357q")]
+layout_mode = 2
+marker = NodePath("../../../../TileMarkers/Marker2D46")
+
+[node name="Tile3" parent="MarginContainer/TileContainer/Row7" node_paths=PackedStringArray("marker") instance=ExtResource("2_s357q")]
+layout_mode = 2
+marker = NodePath("../../../../TileMarkers/Marker2D47")
+
+[node name="Tile4" parent="MarginContainer/TileContainer/Row7" node_paths=PackedStringArray("marker") instance=ExtResource("2_s357q")]
+layout_mode = 2
+marker = NodePath("../../../../TileMarkers/Marker2D48")
+
+[node name="Tile5" parent="MarginContainer/TileContainer/Row7" node_paths=PackedStringArray("marker") instance=ExtResource("2_s357q")]
+layout_mode = 2
+marker = NodePath("../../../../TileMarkers/Marker2D49")
+
+[node name="Tile6" parent="MarginContainer/TileContainer/Row7" node_paths=PackedStringArray("marker") instance=ExtResource("2_s357q")]
+layout_mode = 2
+marker = NodePath("../../../../TileMarkers/Marker2D50")
+
+[node name="Blank" type="Panel" parent="MarginContainer/TileContainer/Row7"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank2" type="Panel" parent="MarginContainer/TileContainer/Row7"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank3" type="Panel" parent="MarginContainer/TileContainer/Row7"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Tile7" parent="MarginContainer/TileContainer/Row7" node_paths=PackedStringArray("marker") instance=ExtResource("2_s357q")]
+layout_mode = 2
+marker = NodePath("../../../../TileMarkers/Marker2D10")
+
+[node name="Tile8" parent="MarginContainer/TileContainer/Row7" node_paths=PackedStringArray("marker") instance=ExtResource("2_s357q")]
+layout_mode = 2
+marker = NodePath("../../../../TileMarkers/Marker2D11")
+
+[node name="Tile9" parent="MarginContainer/TileContainer/Row7" node_paths=PackedStringArray("marker") instance=ExtResource("2_s357q")]
+layout_mode = 2
+marker = NodePath("../../../../TileMarkers/Marker2D12")
+
+[node name="Tile10" parent="MarginContainer/TileContainer/Row7" node_paths=PackedStringArray("marker") instance=ExtResource("2_s357q")]
+layout_mode = 2
+marker = NodePath("../../../../TileMarkers/Marker2D13")
+
+[node name="Tile11" parent="MarginContainer/TileContainer/Row7" node_paths=PackedStringArray("marker") instance=ExtResource("2_s357q")]
+layout_mode = 2
+marker = NodePath("../../../../TileMarkers/Marker2D14")
+
+[node name="Tile12" parent="MarginContainer/TileContainer/Row7" node_paths=PackedStringArray("marker") instance=ExtResource("2_s357q")]
+layout_mode = 2
+marker = NodePath("../../../../TileMarkers/Marker2D15")
+
+[node name="Row8" type="HBoxContainer" parent="MarginContainer/TileContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 3
+
+[node name="Tile" parent="MarginContainer/TileContainer/Row8" node_paths=PackedStringArray("marker") instance=ExtResource("2_s357q")]
+layout_mode = 2
+marker = NodePath("../../../../TileMarkers/Marker2D44")
+
+[node name="Blank" type="Panel" parent="MarginContainer/TileContainer/Row8"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank2" type="Panel" parent="MarginContainer/TileContainer/Row8"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank3" type="Panel" parent="MarginContainer/TileContainer/Row8"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank4" type="Panel" parent="MarginContainer/TileContainer/Row8"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank5" type="Panel" parent="MarginContainer/TileContainer/Row8"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank6" type="Panel" parent="MarginContainer/TileContainer/Row8"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank7" type="Panel" parent="MarginContainer/TileContainer/Row8"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank8" type="Panel" parent="MarginContainer/TileContainer/Row8"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank9" type="Panel" parent="MarginContainer/TileContainer/Row8"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank10" type="Panel" parent="MarginContainer/TileContainer/Row8"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank11" type="Panel" parent="MarginContainer/TileContainer/Row8"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank12" type="Panel" parent="MarginContainer/TileContainer/Row8"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank13" type="Panel" parent="MarginContainer/TileContainer/Row8"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Tile12" parent="MarginContainer/TileContainer/Row8" node_paths=PackedStringArray("marker") instance=ExtResource("2_s357q")]
+layout_mode = 2
+marker = NodePath("../../../../TileMarkers/Marker2D16")
+
+[node name="Row9" type="HBoxContainer" parent="MarginContainer/TileContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 3
+
+[node name="Tile" parent="MarginContainer/TileContainer/Row9" node_paths=PackedStringArray("marker") instance=ExtResource("2_s357q")]
+layout_mode = 2
+marker = NodePath("../../../../TileMarkers/Marker2D43")
+
+[node name="Tile2" parent="MarginContainer/TileContainer/Row9" node_paths=PackedStringArray("marker") instance=ExtResource("2_s357q")]
+layout_mode = 2
+marker = NodePath("../../../../TileMarkers/Marker2D42")
+
+[node name="Tile3" parent="MarginContainer/TileContainer/Row9" node_paths=PackedStringArray("marker") instance=ExtResource("2_s357q")]
+layout_mode = 2
+marker = NodePath("../../../../TileMarkers/Marker2D41")
+
+[node name="Tile4" parent="MarginContainer/TileContainer/Row9" node_paths=PackedStringArray("marker") instance=ExtResource("2_s357q")]
+layout_mode = 2
+marker = NodePath("../../../../TileMarkers/Marker2D40")
+
+[node name="Tile5" parent="MarginContainer/TileContainer/Row9" node_paths=PackedStringArray("marker") instance=ExtResource("2_s357q")]
+layout_mode = 2
+marker = NodePath("../../../../TileMarkers/Marker2D39")
+
+[node name="Tile6" parent="MarginContainer/TileContainer/Row9" node_paths=PackedStringArray("marker") instance=ExtResource("2_s357q")]
+layout_mode = 2
+marker = NodePath("../../../../TileMarkers/Marker2D38")
+
+[node name="Blank" type="Panel" parent="MarginContainer/TileContainer/Row9"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank2" type="Panel" parent="MarginContainer/TileContainer/Row9"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank3" type="Panel" parent="MarginContainer/TileContainer/Row9"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Tile7" parent="MarginContainer/TileContainer/Row9" node_paths=PackedStringArray("marker") instance=ExtResource("2_s357q")]
+layout_mode = 2
+marker = NodePath("../../../../TileMarkers/Marker2D22")
+
+[node name="Tile8" parent="MarginContainer/TileContainer/Row9" node_paths=PackedStringArray("marker") instance=ExtResource("2_s357q")]
+layout_mode = 2
+marker = NodePath("../../../../TileMarkers/Marker2D21")
+
+[node name="Tile9" parent="MarginContainer/TileContainer/Row9" node_paths=PackedStringArray("marker") instance=ExtResource("2_s357q")]
+layout_mode = 2
+marker = NodePath("../../../../TileMarkers/Marker2D20")
+
+[node name="Tile10" parent="MarginContainer/TileContainer/Row9" node_paths=PackedStringArray("marker") instance=ExtResource("2_s357q")]
+layout_mode = 2
+marker = NodePath("../../../../TileMarkers/Marker2D19")
+
+[node name="Tile11" parent="MarginContainer/TileContainer/Row9" node_paths=PackedStringArray("marker") instance=ExtResource("2_s357q")]
+layout_mode = 2
+marker = NodePath("../../../../TileMarkers/Marker2D18")
+
+[node name="Tile12" parent="MarginContainer/TileContainer/Row9" node_paths=PackedStringArray("marker") instance=ExtResource("2_s357q")]
+layout_mode = 2
+type = 2
+marker = NodePath("../../../../TileMarkers/Marker2D17")
+
+[node name="Row16" type="HBoxContainer" parent="MarginContainer/TileContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 3
+
+[node name="Blank" type="Panel" parent="MarginContainer/TileContainer/Row16"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank2" type="Panel" parent="MarginContainer/TileContainer/Row16"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank3" type="Panel" parent="MarginContainer/TileContainer/Row16"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank4" type="Panel" parent="MarginContainer/TileContainer/Row16"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank5" type="Panel" parent="MarginContainer/TileContainer/Row16"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Tile" parent="MarginContainer/TileContainer/Row16" node_paths=PackedStringArray("marker") instance=ExtResource("2_s357q")]
+layout_mode = 2
+marker = NodePath("../../../../TileMarkers/Marker2D37")
+
+[node name="Tile2" parent="MarginContainer/TileContainer/Row16" node_paths=PackedStringArray("marker") instance=ExtResource("2_s357q")]
+layout_mode = 2
+marker = NodePath("../../../../TileMarkers/Marker2D36")
+
+[node name="Blank6" type="Panel" parent="MarginContainer/TileContainer/Row16"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Tile3" parent="MarginContainer/TileContainer/Row16" node_paths=PackedStringArray("marker") instance=ExtResource("2_s357q")]
+layout_mode = 2
+marker = NodePath("../../../../TileMarkers/Marker2D24")
+
+[node name="Tile4" parent="MarginContainer/TileContainer/Row16" node_paths=PackedStringArray("marker") instance=ExtResource("2_s357q")]
+layout_mode = 2
+marker = NodePath("../../../../TileMarkers/Marker2D23")
+
+[node name="Blank8" type="Panel" parent="MarginContainer/TileContainer/Row16"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank9" type="Panel" parent="MarginContainer/TileContainer/Row16"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank10" type="Panel" parent="MarginContainer/TileContainer/Row16"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank11" type="Panel" parent="MarginContainer/TileContainer/Row16"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank12" type="Panel" parent="MarginContainer/TileContainer/Row16"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Row11" type="HBoxContainer" parent="MarginContainer/TileContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 3
+
+[node name="Blank" type="Panel" parent="MarginContainer/TileContainer/Row11"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank2" type="Panel" parent="MarginContainer/TileContainer/Row11"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank3" type="Panel" parent="MarginContainer/TileContainer/Row11"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank4" type="Panel" parent="MarginContainer/TileContainer/Row11"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank5" type="Panel" parent="MarginContainer/TileContainer/Row11"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank6" type="Panel" parent="MarginContainer/TileContainer/Row11"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Tile" parent="MarginContainer/TileContainer/Row11" node_paths=PackedStringArray("marker") instance=ExtResource("2_s357q")]
+layout_mode = 2
+marker = NodePath("../../../../TileMarkers/Marker2D35")
+
+[node name="Blank13" type="Panel" parent="MarginContainer/TileContainer/Row11"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Tile3" parent="MarginContainer/TileContainer/Row11" node_paths=PackedStringArray("marker") instance=ExtResource("2_s357q")]
+layout_mode = 2
+marker = NodePath("../../../../TileMarkers/Marker2D25")
+
+[node name="Blank7" type="Panel" parent="MarginContainer/TileContainer/Row11"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank8" type="Panel" parent="MarginContainer/TileContainer/Row11"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank9" type="Panel" parent="MarginContainer/TileContainer/Row11"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank10" type="Panel" parent="MarginContainer/TileContainer/Row11"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank11" type="Panel" parent="MarginContainer/TileContainer/Row11"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank12" type="Panel" parent="MarginContainer/TileContainer/Row11"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Row12" type="HBoxContainer" parent="MarginContainer/TileContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 3
+
+[node name="Blank" type="Panel" parent="MarginContainer/TileContainer/Row12"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank2" type="Panel" parent="MarginContainer/TileContainer/Row12"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank3" type="Panel" parent="MarginContainer/TileContainer/Row12"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank4" type="Panel" parent="MarginContainer/TileContainer/Row12"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank5" type="Panel" parent="MarginContainer/TileContainer/Row12"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank6" type="Panel" parent="MarginContainer/TileContainer/Row12"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Tile" parent="MarginContainer/TileContainer/Row12" node_paths=PackedStringArray("marker") instance=ExtResource("2_s357q")]
+layout_mode = 2
+marker = NodePath("../../../../TileMarkers/Marker2D34")
+
+[node name="Blank13" type="Panel" parent="MarginContainer/TileContainer/Row12"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Tile3" parent="MarginContainer/TileContainer/Row12" node_paths=PackedStringArray("marker") instance=ExtResource("2_s357q")]
+layout_mode = 2
+marker = NodePath("../../../../TileMarkers/Marker2D26")
+
+[node name="Blank7" type="Panel" parent="MarginContainer/TileContainer/Row12"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank8" type="Panel" parent="MarginContainer/TileContainer/Row12"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank9" type="Panel" parent="MarginContainer/TileContainer/Row12"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank10" type="Panel" parent="MarginContainer/TileContainer/Row12"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank11" type="Panel" parent="MarginContainer/TileContainer/Row12"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank12" type="Panel" parent="MarginContainer/TileContainer/Row12"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Row13" type="HBoxContainer" parent="MarginContainer/TileContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 3
+
+[node name="Blank" type="Panel" parent="MarginContainer/TileContainer/Row13"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank2" type="Panel" parent="MarginContainer/TileContainer/Row13"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank3" type="Panel" parent="MarginContainer/TileContainer/Row13"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank4" type="Panel" parent="MarginContainer/TileContainer/Row13"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank5" type="Panel" parent="MarginContainer/TileContainer/Row13"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank6" type="Panel" parent="MarginContainer/TileContainer/Row13"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Tile" parent="MarginContainer/TileContainer/Row13" node_paths=PackedStringArray("marker") instance=ExtResource("2_s357q")]
+layout_mode = 2
+marker = NodePath("../../../../TileMarkers/Marker2D33")
+
+[node name="Blank13" type="Panel" parent="MarginContainer/TileContainer/Row13"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Tile3" parent="MarginContainer/TileContainer/Row13" node_paths=PackedStringArray("marker") instance=ExtResource("2_s357q")]
+layout_mode = 2
+marker = NodePath("../../../../TileMarkers/Marker2D27")
+
+[node name="Blank7" type="Panel" parent="MarginContainer/TileContainer/Row13"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank8" type="Panel" parent="MarginContainer/TileContainer/Row13"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank9" type="Panel" parent="MarginContainer/TileContainer/Row13"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank10" type="Panel" parent="MarginContainer/TileContainer/Row13"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank11" type="Panel" parent="MarginContainer/TileContainer/Row13"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank12" type="Panel" parent="MarginContainer/TileContainer/Row13"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Row14" type="HBoxContainer" parent="MarginContainer/TileContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 3
+
+[node name="Blank" type="Panel" parent="MarginContainer/TileContainer/Row14"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank2" type="Panel" parent="MarginContainer/TileContainer/Row14"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank3" type="Panel" parent="MarginContainer/TileContainer/Row14"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank4" type="Panel" parent="MarginContainer/TileContainer/Row14"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank5" type="Panel" parent="MarginContainer/TileContainer/Row14"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank6" type="Panel" parent="MarginContainer/TileContainer/Row14"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Tile" parent="MarginContainer/TileContainer/Row14" node_paths=PackedStringArray("marker") instance=ExtResource("2_s357q")]
+layout_mode = 2
+marker = NodePath("../../../../TileMarkers/Marker2D32")
+
+[node name="Blank13" type="Panel" parent="MarginContainer/TileContainer/Row14"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Tile3" parent="MarginContainer/TileContainer/Row14" node_paths=PackedStringArray("marker") instance=ExtResource("2_s357q")]
+layout_mode = 2
+marker = NodePath("../../../../TileMarkers/Marker2D28")
+
+[node name="Blank7" type="Panel" parent="MarginContainer/TileContainer/Row14"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank8" type="Panel" parent="MarginContainer/TileContainer/Row14"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank9" type="Panel" parent="MarginContainer/TileContainer/Row14"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank10" type="Panel" parent="MarginContainer/TileContainer/Row14"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank11" type="Panel" parent="MarginContainer/TileContainer/Row14"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank12" type="Panel" parent="MarginContainer/TileContainer/Row14"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Row15" type="HBoxContainer" parent="MarginContainer/TileContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 3
+
+[node name="Blank" type="Panel" parent="MarginContainer/TileContainer/Row15"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank2" type="Panel" parent="MarginContainer/TileContainer/Row15"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank3" type="Panel" parent="MarginContainer/TileContainer/Row15"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank4" type="Panel" parent="MarginContainer/TileContainer/Row15"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank5" type="Panel" parent="MarginContainer/TileContainer/Row15"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank6" type="Panel" parent="MarginContainer/TileContainer/Row15"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Tile" parent="MarginContainer/TileContainer/Row15" node_paths=PackedStringArray("marker") instance=ExtResource("2_s357q")]
+layout_mode = 2
+type = 3
+marker = NodePath("../../../../TileMarkers/Marker2D31")
+
+[node name="Tile2" parent="MarginContainer/TileContainer/Row15" node_paths=PackedStringArray("marker") instance=ExtResource("2_s357q")]
+layout_mode = 2
+marker = NodePath("../../../../TileMarkers/Marker2D30")
+
+[node name="Tile3" parent="MarginContainer/TileContainer/Row15" node_paths=PackedStringArray("marker") instance=ExtResource("2_s357q")]
+layout_mode = 2
+marker = NodePath("../../../../TileMarkers/Marker2D29")
+
+[node name="Blank7" type="Panel" parent="MarginContainer/TileContainer/Row15"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank8" type="Panel" parent="MarginContainer/TileContainer/Row15"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank9" type="Panel" parent="MarginContainer/TileContainer/Row15"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank10" type="Panel" parent="MarginContainer/TileContainer/Row15"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank11" type="Panel" parent="MarginContainer/TileContainer/Row15"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Blank12" type="Panel" parent="MarginContainer/TileContainer/Row15"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TileMarkers" type="Node2D" parent="."]
+
+[node name="Marker2D1" type="Marker2D" parent="TileMarkers"]
+position = Vector2(317, 59.5)
+gizmo_extents = 20.0
+
+[node name="Marker2D2" type="Marker2D" parent="TileMarkers"]
+position = Vector2(359.5, 59.5)
+gizmo_extents = 20.0
+
+[node name="Marker2D3" type="Marker2D" parent="TileMarkers"]
+position = Vector2(402, 59.5)
+gizmo_extents = 20.0
+
+[node name="Marker2D4" type="Marker2D" parent="TileMarkers"]
+position = Vector2(402, 102)
+gizmo_extents = 20.0
+
+[node name="Marker2D5" type="Marker2D" parent="TileMarkers"]
+position = Vector2(402, 145)
+gizmo_extents = 20.0
+
+[node name="Marker2D6" type="Marker2D" parent="TileMarkers"]
+position = Vector2(402, 188)
+gizmo_extents = 20.0
+
+[node name="Marker2D7" type="Marker2D" parent="TileMarkers"]
+position = Vector2(402, 231)
+gizmo_extents = 20.0
+
+[node name="Marker2D8" type="Marker2D" parent="TileMarkers"]
+position = Vector2(402, 274)
+gizmo_extents = 20.0
+
+[node name="Marker2D9" type="Marker2D" parent="TileMarkers"]
+position = Vector2(445, 274)
+gizmo_extents = 20.0
+
+[node name="Marker2D10" type="Marker2D" parent="TileMarkers"]
+position = Vector2(445, 317)
+gizmo_extents = 20.0
+
+[node name="Marker2D11" type="Marker2D" parent="TileMarkers"]
+position = Vector2(488, 317)
+gizmo_extents = 20.0
+
+[node name="Marker2D12" type="Marker2D" parent="TileMarkers"]
+position = Vector2(531, 317)
+gizmo_extents = 20.0
+
+[node name="Marker2D13" type="Marker2D" parent="TileMarkers"]
+position = Vector2(574, 317)
+gizmo_extents = 20.0
+
+[node name="Marker2D14" type="Marker2D" parent="TileMarkers"]
+position = Vector2(617, 317)
+gizmo_extents = 20.0
+
+[node name="Marker2D15" type="Marker2D" parent="TileMarkers"]
+position = Vector2(660, 317)
+gizmo_extents = 20.0
+
+[node name="Marker2D16" type="Marker2D" parent="TileMarkers"]
+position = Vector2(660, 359.5)
+gizmo_extents = 20.0
+
+[node name="Marker2D17" type="Marker2D" parent="TileMarkers"]
+position = Vector2(660, 402)
+gizmo_extents = 20.0
+
+[node name="Marker2D18" type="Marker2D" parent="TileMarkers"]
+position = Vector2(617, 402)
+gizmo_extents = 20.0
+
+[node name="Marker2D19" type="Marker2D" parent="TileMarkers"]
+position = Vector2(574, 402)
+gizmo_extents = 20.0
+
+[node name="Marker2D20" type="Marker2D" parent="TileMarkers"]
+position = Vector2(531, 402)
+gizmo_extents = 20.0
+
+[node name="Marker2D21" type="Marker2D" parent="TileMarkers"]
+position = Vector2(488, 402)
+gizmo_extents = 20.0
+
+[node name="Marker2D22" type="Marker2D" parent="TileMarkers"]
+position = Vector2(445, 402)
+gizmo_extents = 20.0
+
+[node name="Marker2D23" type="Marker2D" parent="TileMarkers"]
+position = Vector2(445, 445)
+gizmo_extents = 20.0
+
+[node name="Marker2D24" type="Marker2D" parent="TileMarkers"]
+position = Vector2(402, 445)
+gizmo_extents = 20.0
+
+[node name="Marker2D25" type="Marker2D" parent="TileMarkers"]
+position = Vector2(402, 488)
+gizmo_extents = 20.0
+
+[node name="Marker2D26" type="Marker2D" parent="TileMarkers"]
+position = Vector2(402, 531)
+gizmo_extents = 20.0
+
+[node name="Marker2D27" type="Marker2D" parent="TileMarkers"]
+position = Vector2(402, 574)
+gizmo_extents = 20.0
+
+[node name="Marker2D28" type="Marker2D" parent="TileMarkers"]
+position = Vector2(402, 617)
+gizmo_extents = 20.0
+
+[node name="Marker2D29" type="Marker2D" parent="TileMarkers"]
+position = Vector2(402, 660)
+gizmo_extents = 20.0
+
+[node name="Marker2D30" type="Marker2D" parent="TileMarkers"]
+position = Vector2(359.5, 660)
+gizmo_extents = 20.0
+
+[node name="Marker2D31" type="Marker2D" parent="TileMarkers"]
+position = Vector2(317, 660)
+gizmo_extents = 20.0
+
+[node name="Marker2D32" type="Marker2D" parent="TileMarkers"]
+position = Vector2(317, 617)
+gizmo_extents = 20.0
+
+[node name="Marker2D33" type="Marker2D" parent="TileMarkers"]
+position = Vector2(317, 574)
+gizmo_extents = 20.0
+
+[node name="Marker2D34" type="Marker2D" parent="TileMarkers"]
+position = Vector2(317, 531)
+gizmo_extents = 20.0
+
+[node name="Marker2D35" type="Marker2D" parent="TileMarkers"]
+position = Vector2(317, 488)
+gizmo_extents = 20.0
+
+[node name="Marker2D36" type="Marker2D" parent="TileMarkers"]
+position = Vector2(317, 445)
+gizmo_extents = 20.0
+
+[node name="Marker2D37" type="Marker2D" parent="TileMarkers"]
+position = Vector2(274, 445)
+gizmo_extents = 20.0
+
+[node name="Marker2D38" type="Marker2D" parent="TileMarkers"]
+position = Vector2(274, 402)
+gizmo_extents = 20.0
+
+[node name="Marker2D39" type="Marker2D" parent="TileMarkers"]
+position = Vector2(231, 402)
+gizmo_extents = 20.0
+
+[node name="Marker2D40" type="Marker2D" parent="TileMarkers"]
+position = Vector2(188, 402)
+gizmo_extents = 20.0
+
+[node name="Marker2D41" type="Marker2D" parent="TileMarkers"]
+position = Vector2(145, 402)
+gizmo_extents = 20.0
+
+[node name="Marker2D42" type="Marker2D" parent="TileMarkers"]
+position = Vector2(102, 402)
+gizmo_extents = 20.0
+
+[node name="Marker2D43" type="Marker2D" parent="TileMarkers"]
+position = Vector2(59, 402)
+gizmo_extents = 20.0
+
+[node name="Marker2D44" type="Marker2D" parent="TileMarkers"]
+position = Vector2(59, 359.5)
+gizmo_extents = 20.0
+
+[node name="Marker2D45" type="Marker2D" parent="TileMarkers"]
+position = Vector2(59, 317)
+gizmo_extents = 20.0
+
+[node name="Marker2D46" type="Marker2D" parent="TileMarkers"]
+position = Vector2(102, 317)
+gizmo_extents = 20.0
+
+[node name="Marker2D47" type="Marker2D" parent="TileMarkers"]
+position = Vector2(145, 317)
+gizmo_extents = 20.0
+
+[node name="Marker2D48" type="Marker2D" parent="TileMarkers"]
+position = Vector2(188, 317)
+gizmo_extents = 20.0
+
+[node name="Marker2D49" type="Marker2D" parent="TileMarkers"]
+position = Vector2(231, 317)
+gizmo_extents = 20.0
+
+[node name="Marker2D50" type="Marker2D" parent="TileMarkers"]
+position = Vector2(274, 317)
+gizmo_extents = 20.0
+
+[node name="Marker2D51" type="Marker2D" parent="TileMarkers"]
+position = Vector2(274, 274)
+gizmo_extents = 20.0
+
+[node name="Marker2D52" type="Marker2D" parent="TileMarkers"]
+position = Vector2(317, 274)
+gizmo_extents = 20.0
+
+[node name="Marker2D53" type="Marker2D" parent="TileMarkers"]
+position = Vector2(317, 231)
+gizmo_extents = 20.0
+
+[node name="Marker2D54" type="Marker2D" parent="TileMarkers"]
+position = Vector2(317, 188)
+gizmo_extents = 20.0
+
+[node name="Marker2D55" type="Marker2D" parent="TileMarkers"]
+position = Vector2(317, 145)
+gizmo_extents = 20.0
+
+[node name="Marker2D56" type="Marker2D" parent="TileMarkers"]
+position = Vector2(317, 102)
+gizmo_extents = 20.0
+
+[connection signal="tile_pressed" from="MarginContainer/TileContainer/Row1/Tile" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="MarginContainer/TileContainer/Row1/Tile2" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="MarginContainer/TileContainer/Row1/Tile3" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="MarginContainer/TileContainer/Row2/Tile" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="MarginContainer/TileContainer/Row2/Tile3" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="MarginContainer/TileContainer/Row3/Tile" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="MarginContainer/TileContainer/Row3/Tile3" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="MarginContainer/TileContainer/Row4/Tile" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="MarginContainer/TileContainer/Row4/Tile3" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="MarginContainer/TileContainer/Row5/Tile" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="MarginContainer/TileContainer/Row5/Tile3" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="MarginContainer/TileContainer/Row6/Tile" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="MarginContainer/TileContainer/Row6/Tile2" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="MarginContainer/TileContainer/Row6/Tile3" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="MarginContainer/TileContainer/Row6/Tile4" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="MarginContainer/TileContainer/Row7/Tile" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="MarginContainer/TileContainer/Row7/Tile2" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="MarginContainer/TileContainer/Row7/Tile3" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="MarginContainer/TileContainer/Row7/Tile4" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="MarginContainer/TileContainer/Row7/Tile5" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="MarginContainer/TileContainer/Row7/Tile6" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="MarginContainer/TileContainer/Row7/Tile7" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="MarginContainer/TileContainer/Row7/Tile8" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="MarginContainer/TileContainer/Row7/Tile9" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="MarginContainer/TileContainer/Row7/Tile10" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="MarginContainer/TileContainer/Row7/Tile11" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="MarginContainer/TileContainer/Row7/Tile12" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="MarginContainer/TileContainer/Row8/Tile" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="MarginContainer/TileContainer/Row8/Tile12" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="MarginContainer/TileContainer/Row9/Tile" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="MarginContainer/TileContainer/Row9/Tile2" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="MarginContainer/TileContainer/Row9/Tile3" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="MarginContainer/TileContainer/Row9/Tile4" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="MarginContainer/TileContainer/Row9/Tile5" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="MarginContainer/TileContainer/Row9/Tile6" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="MarginContainer/TileContainer/Row9/Tile7" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="MarginContainer/TileContainer/Row9/Tile8" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="MarginContainer/TileContainer/Row9/Tile9" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="MarginContainer/TileContainer/Row9/Tile10" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="MarginContainer/TileContainer/Row9/Tile11" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="MarginContainer/TileContainer/Row9/Tile12" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="MarginContainer/TileContainer/Row16/Tile" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="MarginContainer/TileContainer/Row16/Tile2" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="MarginContainer/TileContainer/Row16/Tile3" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="MarginContainer/TileContainer/Row16/Tile4" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="MarginContainer/TileContainer/Row11/Tile" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="MarginContainer/TileContainer/Row11/Tile3" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="MarginContainer/TileContainer/Row12/Tile" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="MarginContainer/TileContainer/Row12/Tile3" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="MarginContainer/TileContainer/Row13/Tile" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="MarginContainer/TileContainer/Row13/Tile3" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="MarginContainer/TileContainer/Row14/Tile" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="MarginContainer/TileContainer/Row14/Tile3" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="MarginContainer/TileContainer/Row15/Tile" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="MarginContainer/TileContainer/Row15/Tile2" to="." method="_on_tile_pressed"]
+[connection signal="tile_pressed" from="MarginContainer/TileContainer/Row15/Tile3" to="." method="_on_tile_pressed"]
