@@ -1,22 +1,11 @@
 extends Node
 
-signal ally_turn_started()
-signal enemy_turn_starter()
+var turns: Array[Actor]
 
-enum Turn {
-	ALLY, 
-	ENEMY
-}
+var current_turn_index: int
 
-var turn: Turn
+func set_next_turn() -> void:
+	pass
 
-func set_turn(turn_type: Turn) -> void:
-	turn = turn_type
-	match turn:
-		Turn.ALLY: 
-			ally_turn_started.emit()
-		Turn.ENEMY: 
-			enemy_turn_starter.emit()
-
-func get_turn() -> Turn:
-	return turn
+func get_turn() -> Actor:
+	return turns[current_turn_index]
