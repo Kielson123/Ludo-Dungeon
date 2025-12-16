@@ -8,7 +8,7 @@ func _ready() -> void:
 	sprite_2d.texture = pawn_texture
 
 func move_to_tile(tile: Tile) -> void:
-	var marker = tile.get_marker()
+	var marker: Marker2D = tile.get_marker()
 	position = marker.position
 
 func can_move_to_tile(tile: Tile) -> bool:
