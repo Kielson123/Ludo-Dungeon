@@ -7,9 +7,6 @@ var blanks: Array[Panel] = []
 func _ready() -> void:
 	get_all_tiles()
 
-func _on_tile_pressed(tile: Tile, type: Tile.Type) -> void:
-	pass
-
 func get_all_tiles() -> void:
 	for child in get_children():
 		if child is MarginContainer and child.get_child(0) is VBoxContainer:

@@ -89,61 +89,32 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="."]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="UILeft" type="Control" parent="HBoxContainer"]
-custom_minimum_size = Vector2(350, 0)
-layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="ColorRect" type="ColorRect" parent="HBoxContainer/UILeft"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="AspectRatioContainer" type="AspectRatioContainer" parent="HBoxContainer"]
-custom_minimum_size = Vector2(1200, 0)
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="GameContainer" type="SubViewportContainer" parent="HBoxContainer/AspectRatioContainer"]
+[node name="GameContainer" type="SubViewportContainer" parent="AspectRatioContainer"]
 custom_minimum_size = Vector2(720, 720)
 layout_mode = 2
 size_flags_horizontal = 3
 stretch = true
+metadata/_edit_use_anchors_ = true
 
-[node name="GameViewport" type="SubViewport" parent="HBoxContainer/AspectRatioContainer/GameContainer"]
+[node name="GameViewport" type="SubViewport" parent="AspectRatioContainer/GameContainer"]
 disable_3d = true
 transparent_bg = true
 handle_input_locally = false
-size = Vector2i(1080, 1080)
+size = Vector2i(720, 720)
 size_2d_override = Vector2i(720, 720)
 size_2d_override_stretch = true
 render_target_update_mode = 4
 
-[node name="Game" parent="HBoxContainer/AspectRatioContainer/GameContainer/GameViewport" instance=ExtResource("4_1bvp3")]
+[node name="Game" parent="AspectRatioContainer/GameContainer/GameViewport" instance=ExtResource("4_1bvp3")]
 size_flags_horizontal = 3
 size_flags_vertical = 3
-
-[node name="UIRight" type="Control" parent="HBoxContainer"]
-custom_minimum_size = Vector2(350, 0)
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="ColorRect" type="ColorRect" parent="HBoxContainer/UIRight"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
 
 [connection signal="finished" from="IntroContainer/AspectRatioContainer/Intro" to="." method="_on_intro_finished"]
