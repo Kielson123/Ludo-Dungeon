@@ -1,9 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://b6fvult3nbn8n"]
+[gd_scene load_steps=2 format=3 uid="uid://b6fvult3nbn8n"]
 
 [ext_resource type="Script" uid="uid://clcgmlnx8tebp" path="res://Game/game.gd" id="1_bk3v5"]
-[ext_resource type="PackedScene" uid="uid://dg1j5ejdlocsk" path="res://Game/Boards/board-4.tscn" id="2_1r4le"]
-[ext_resource type="Script" uid="uid://cgabdp75yj8lv" path="res://Game/Actors/player.gd" id="3_jcm6v"]
-[ext_resource type="PackedScene" uid="uid://baly72iem7w7s" path="res://Game/Pawns/pawn.tscn" id="4_jcm6v"]
 
 [node name="Game" type="Control"]
 layout_mode = 3
@@ -13,14 +10,3 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_bk3v5")
-
-[node name="Board-4" parent="." instance=ExtResource("2_1r4le")]
-layout_mode = 1
-
-[node name="Players" type="Node2D" parent="."]
-
-[node name="Player" type="Node" parent="Players"]
-script = ExtResource("3_jcm6v")
-metadata/_custom_type_script = "uid://cgabdp75yj8lv"
-
-[node name="Pawn" parent="Players/Player" instance=ExtResource("4_jcm6v")]
