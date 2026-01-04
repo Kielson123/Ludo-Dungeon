@@ -24,7 +24,8 @@ buses/default_bus_layout=""
 
 [autoload]
 
-TurnManager="*res://Util/turn_manager.gd"
+TurnManager="*res://Global/turn_manager.gd"
+Signals="*res://Global/signals.gd"
 
 [debug]
 
@@ -51,8 +52,8 @@ enabled=PackedStringArray()
 folder_colors={
 "res://Assets/": "teal",
 "res://Game/": "orange",
-"res://UI/": "green",
-"res://Util/": "purple"
+"res://Global/": "purple",
+"res://UI/": "green"
 }
 
 [global_group]
