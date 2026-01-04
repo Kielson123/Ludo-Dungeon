@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://bkcmdathporqs"]
+[gd_scene load_steps=9 format=3 uid="uid://bkcmdathporqs"]
 
 [ext_resource type="Script" uid="uid://dnny8ksn4en40" path="res://main.gd" id="1_5e5a8"]
 [ext_resource type="VideoStream" uid="uid://b8ufwqbbha37" path="res://Assets/UI/intro.ogv" id="2_kh485"]
 [ext_resource type="Shader" uid="uid://qo4r7p0sila5" path="res://Assets/Shaders/Background/scrolling_dots.gdshader" id="3_h2yge"]
 [ext_resource type="PackedScene" uid="uid://b6fvult3nbn8n" path="res://Game/game.tscn" id="4_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://bvje8tmrxw5w8" path="res://UI/Board/board.tscn" id="5_lquwl"]
 
 [sub_resource type="Gradient" id="Gradient_1bvp3"]
 
@@ -116,5 +117,19 @@ render_target_update_mode = 4
 [node name="Game" parent="AspectRatioContainer/GameContainer/GameViewport" instance=ExtResource("4_1bvp3")]
 size_flags_horizontal = 3
 size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="AspectRatioContainer/GameContainer/GameViewport"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Board" parent="AspectRatioContainer/GameContainer/GameViewport/MarginContainer" instance=ExtResource("5_lquwl")]
+layout_mode = 2
 
 [connection signal="finished" from="IntroContainer/AspectRatioContainer/Intro" to="." method="_on_intro_finished"]
