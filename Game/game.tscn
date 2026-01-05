@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://b6fvult3nbn8n"]
+[gd_scene load_steps=3 format=3 uid="uid://b6fvult3nbn8n"]
 
 [ext_resource type="Script" uid="uid://clcgmlnx8tebp" path="res://Game/game.gd" id="1_bk3v5"]
+[ext_resource type="PackedScene" uid="uid://bvje8tmrxw5w8" path="res://UI/Board/board.tscn" id="2_1r4le"]
 
 [node name="Game" type="Control"]
 layout_mode = 3
@@ -9,4 +10,27 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 script = ExtResource("1_bk3v5")
+
+[node name="Board" parent="." instance=ExtResource("2_1r4le")]
+layout_mode = 1
+
+[node name="TileMarkers" type="Node2D" parent="."]
+
+[node name="Marker2D" type="Marker2D" parent="TileMarkers"]
+position = Vector2(35.5, 306.5)
+gizmo_extents = 25.0
+
+[node name="Marker2D2" type="Marker2D" parent="TileMarkers"]
+position = Vector2(89.5, 306.5)
+gizmo_extents = 25.0
+
+[node name="Marker2D3" type="Marker2D" parent="TileMarkers"]
+position = Vector2(143.5, 306.5)
+gizmo_extents = 25.0
+
+[node name="Marker2D4" type="Marker2D" parent="TileMarkers"]
+position = Vector2(197.5, 306.5)
+gizmo_extents = 25.0
