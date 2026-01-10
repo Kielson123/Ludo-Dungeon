@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://d137hje0y4uib"]
+
+[ext_resource type="Script" uid="uid://hhgxf35xg6wg" path="res://Game/tile_position.gd" id="1_qqkqe"]
+
+[node name="Marker2D" type="Marker2D"]
+gizmo_extents = 25.0
+script = ExtResource("1_qqkqe")

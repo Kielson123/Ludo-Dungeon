@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://b6fvult3nbn8n"]
+[gd_scene load_steps=4 format=3 uid="uid://b6fvult3nbn8n"]
 
 [ext_resource type="Script" uid="uid://clcgmlnx8tebp" path="res://Game/game.gd" id="1_bk3v5"]
-[ext_resource type="PackedScene" uid="uid://bvje8tmrxw5w8" path="res://UI/Board/board.tscn" id="2_1r4le"]
+[ext_resource type="PackedScene" uid="uid://cwldi7mbvujwv" path="res://Game/Pawn/pawn.tscn" id="2_7raqb"]
+[ext_resource type="Script" uid="uid://hhgxf35xg6wg" path="res://Game/tile_position.gd" id="3_7raqb"]
 
 [node name="Game" type="Control"]
 layout_mode = 3
@@ -12,25 +13,568 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+mouse_filter = 2
 script = ExtResource("1_bk3v5")
 
-[node name="Board" parent="." instance=ExtResource("2_1r4le")]
-layout_mode = 1
+[node name="Pawn" parent="." instance=ExtResource("2_7raqb")]
 
 [node name="TileMarkers" type="Node2D" parent="."]
 
 [node name="Marker2D" type="Marker2D" parent="TileMarkers"]
 position = Vector2(35.5, 306.5)
 gizmo_extents = 25.0
+script = ExtResource("3_7raqb")
+metadata/_custom_type_script = "uid://hhgxf35xg6wg"
 
 [node name="Marker2D2" type="Marker2D" parent="TileMarkers"]
 position = Vector2(89.5, 306.5)
 gizmo_extents = 25.0
+script = ExtResource("3_7raqb")
+index = 1
+metadata/_custom_type_script = "uid://hhgxf35xg6wg"
 
 [node name="Marker2D3" type="Marker2D" parent="TileMarkers"]
 position = Vector2(143.5, 306.5)
 gizmo_extents = 25.0
+script = ExtResource("3_7raqb")
+index = 2
+metadata/_custom_type_script = "uid://hhgxf35xg6wg"
 
 [node name="Marker2D4" type="Marker2D" parent="TileMarkers"]
 position = Vector2(197.5, 306.5)
 gizmo_extents = 25.0
+script = ExtResource("3_7raqb")
+index = 3
+metadata/_custom_type_script = "uid://hhgxf35xg6wg"
+
+[node name="Marker2D5" type="Marker2D" parent="TileMarkers"]
+position = Vector2(251.5, 306.5)
+gizmo_extents = 25.0
+script = ExtResource("3_7raqb")
+index = 4
+metadata/_custom_type_script = "uid://hhgxf35xg6wg"
+
+[node name="Marker2D6" type="Marker2D" parent="TileMarkers"]
+position = Vector2(251.5, 253.5)
+gizmo_extents = 25.0
+script = ExtResource("3_7raqb")
+index = 5
+metadata/_custom_type_script = "uid://hhgxf35xg6wg"
+
+[node name="Marker2D7" type="Marker2D" parent="TileMarkers"]
+position = Vector2(305.5, 253.5)
+gizmo_extents = 25.0
+script = ExtResource("3_7raqb")
+index = 6
+metadata/_custom_type_script = "uid://hhgxf35xg6wg"
+
+[node name="Marker2D8" type="Marker2D" parent="TileMarkers"]
+position = Vector2(305.5, 200.5)
+gizmo_extents = 25.0
+script = ExtResource("3_7raqb")
+index = 7
+metadata/_custom_type_script = "uid://hhgxf35xg6wg"
+
+[node name="Marker2D9" type="Marker2D" parent="TileMarkers"]
+position = Vector2(305.5, 147.5)
+gizmo_extents = 25.0
+script = ExtResource("3_7raqb")
+index = 8
+metadata/_custom_type_script = "uid://hhgxf35xg6wg"
+
+[node name="Marker2D10" type="Marker2D" parent="TileMarkers"]
+position = Vector2(305.5, 94.5)
+gizmo_extents = 25.0
+script = ExtResource("3_7raqb")
+index = 9
+metadata/_custom_type_script = "uid://hhgxf35xg6wg"
+
+[node name="Marker2D11" type="Marker2D" parent="TileMarkers"]
+position = Vector2(305.5, 41.5)
+gizmo_extents = 25.0
+script = ExtResource("3_7raqb")
+index = 10
+metadata/_custom_type_script = "uid://hhgxf35xg6wg"
+
+[node name="Marker2D12" type="Marker2D" parent="TileMarkers"]
+position = Vector2(359.5, 41.5)
+gizmo_extents = 25.0
+script = ExtResource("3_7raqb")
+index = 11
+metadata/_custom_type_script = "uid://hhgxf35xg6wg"
+
+[node name="Marker2D13" type="Marker2D" parent="TileMarkers"]
+position = Vector2(413.5, 41.5)
+gizmo_extents = 25.0
+script = ExtResource("3_7raqb")
+index = 12
+metadata/_custom_type_script = "uid://hhgxf35xg6wg"
+
+[node name="Marker2D14" type="Marker2D" parent="TileMarkers"]
+position = Vector2(413.5, 94.5)
+gizmo_extents = 25.0
+script = ExtResource("3_7raqb")
+index = 13
+metadata/_custom_type_script = "uid://hhgxf35xg6wg"
+
+[node name="Marker2D15" type="Marker2D" parent="TileMarkers"]
+position = Vector2(413.5, 147.5)
+gizmo_extents = 25.0
+script = ExtResource("3_7raqb")
+index = 14
+metadata/_custom_type_script = "uid://hhgxf35xg6wg"
+
+[node name="Marker2D16" type="Marker2D" parent="TileMarkers"]
+position = Vector2(413.5, 200.5)
+gizmo_extents = 25.0
+script = ExtResource("3_7raqb")
+index = 15
+metadata/_custom_type_script = "uid://hhgxf35xg6wg"
+
+[node name="Marker2D17" type="Marker2D" parent="TileMarkers"]
+position = Vector2(413.5, 253.5)
+gizmo_extents = 25.0
+script = ExtResource("3_7raqb")
+index = 16
+metadata/_custom_type_script = "uid://hhgxf35xg6wg"
+
+[node name="Marker2D18" type="Marker2D" parent="TileMarkers"]
+position = Vector2(467.5, 253.5)
+gizmo_extents = 25.0
+script = ExtResource("3_7raqb")
+index = 17
+metadata/_custom_type_script = "uid://hhgxf35xg6wg"
+
+[node name="Marker2D19" type="Marker2D" parent="TileMarkers"]
+position = Vector2(467.5, 306.5)
+gizmo_extents = 25.0
+script = ExtResource("3_7raqb")
+index = 18
+metadata/_custom_type_script = "uid://hhgxf35xg6wg"
+
+[node name="Marker2D20" type="Marker2D" parent="TileMarkers"]
+position = Vector2(521.5, 306.5)
+gizmo_extents = 25.0
+script = ExtResource("3_7raqb")
+index = 19
+metadata/_custom_type_script = "uid://hhgxf35xg6wg"
+
+[node name="Marker2D21" type="Marker2D" parent="TileMarkers"]
+position = Vector2(575.5, 306.5)
+gizmo_extents = 25.0
+script = ExtResource("3_7raqb")
+index = 20
+metadata/_custom_type_script = "uid://hhgxf35xg6wg"
+
+[node name="Marker2D22" type="Marker2D" parent="TileMarkers"]
+position = Vector2(629.5, 306.5)
+gizmo_extents = 25.0
+script = ExtResource("3_7raqb")
+index = 21
+metadata/_custom_type_script = "uid://hhgxf35xg6wg"
+
+[node name="Marker2D23" type="Marker2D" parent="TileMarkers"]
+position = Vector2(683.5, 306.5)
+gizmo_extents = 25.0
+script = ExtResource("3_7raqb")
+index = 22
+metadata/_custom_type_script = "uid://hhgxf35xg6wg"
+
+[node name="Marker2D24" type="Marker2D" parent="TileMarkers"]
+position = Vector2(683.5, 359.5)
+gizmo_extents = 25.0
+script = ExtResource("3_7raqb")
+index = 23
+metadata/_custom_type_script = "uid://hhgxf35xg6wg"
+
+[node name="Marker2D25" type="Marker2D" parent="TileMarkers"]
+position = Vector2(683.5, 412.5)
+gizmo_extents = 25.0
+script = ExtResource("3_7raqb")
+index = 24
+metadata/_custom_type_script = "uid://hhgxf35xg6wg"
+
+[node name="Marker2D26" type="Marker2D" parent="TileMarkers"]
+position = Vector2(629.5, 412.5)
+gizmo_extents = 25.0
+script = ExtResource("3_7raqb")
+index = 25
+metadata/_custom_type_script = "uid://hhgxf35xg6wg"
+
+[node name="Marker2D27" type="Marker2D" parent="TileMarkers"]
+position = Vector2(575.5, 412.5)
+gizmo_extents = 25.0
+script = ExtResource("3_7raqb")
+index = 26
+metadata/_custom_type_script = "uid://hhgxf35xg6wg"
+
+[node name="Marker2D28" type="Marker2D" parent="TileMarkers"]
+position = Vector2(521.5, 412.5)
+gizmo_extents = 25.0
+script = ExtResource("3_7raqb")
+index = 27
+metadata/_custom_type_script = "uid://hhgxf35xg6wg"
+
+[node name="Marker2D29" type="Marker2D" parent="TileMarkers"]
+position = Vector2(467.5, 412.5)
+gizmo_extents = 25.0
+script = ExtResource("3_7raqb")
+index = 28
+metadata/_custom_type_script = "uid://hhgxf35xg6wg"
+
+[node name="Marker2D30" type="Marker2D" parent="TileMarkers"]
+position = Vector2(467.5, 465.5)
+gizmo_extents = 25.0
+script = ExtResource("3_7raqb")
+index = 29
+metadata/_custom_type_script = "uid://hhgxf35xg6wg"
+
+[node name="Marker2D31" type="Marker2D" parent="TileMarkers"]
+position = Vector2(413.5, 465.5)
+gizmo_extents = 25.0
+script = ExtResource("3_7raqb")
+index = 30
+metadata/_custom_type_script = "uid://hhgxf35xg6wg"
+
+[node name="Marker2D32" type="Marker2D" parent="TileMarkers"]
+position = Vector2(413.5, 518.5)
+gizmo_extents = 25.0
+script = ExtResource("3_7raqb")
+index = 31
+metadata/_custom_type_script = "uid://hhgxf35xg6wg"
+
+[node name="Marker2D33" type="Marker2D" parent="TileMarkers"]
+position = Vector2(413.5, 571.5)
+gizmo_extents = 25.0
+script = ExtResource("3_7raqb")
+index = 32
+metadata/_custom_type_script = "uid://hhgxf35xg6wg"
+
+[node name="Marker2D34" type="Marker2D" parent="TileMarkers"]
+position = Vector2(413.5, 624.5)
+gizmo_extents = 25.0
+script = ExtResource("3_7raqb")
+index = 33
+metadata/_custom_type_script = "uid://hhgxf35xg6wg"
+
+[node name="Marker2D35" type="Marker2D" parent="TileMarkers"]
+position = Vector2(413.5, 677.5)
+gizmo_extents = 25.0
+script = ExtResource("3_7raqb")
+index = 34
+metadata/_custom_type_script = "uid://hhgxf35xg6wg"
+
+[node name="Marker2D36" type="Marker2D" parent="TileMarkers"]
+position = Vector2(359.5, 677.5)
+gizmo_extents = 25.0
+script = ExtResource("3_7raqb")
+index = 35
+metadata/_custom_type_script = "uid://hhgxf35xg6wg"
+
+[node name="Marker2D37" type="Marker2D" parent="TileMarkers"]
+position = Vector2(305.5, 677.5)
+gizmo_extents = 25.0
+script = ExtResource("3_7raqb")
+index = 36
+metadata/_custom_type_script = "uid://hhgxf35xg6wg"
+
+[node name="Marker2D38" type="Marker2D" parent="TileMarkers"]
+position = Vector2(305.5, 624.5)
+gizmo_extents = 25.0
+script = ExtResource("3_7raqb")
+index = 37
+metadata/_custom_type_script = "uid://hhgxf35xg6wg"
+
+[node name="Marker2D39" type="Marker2D" parent="TileMarkers"]
+position = Vector2(305.5, 571.5)
+gizmo_extents = 25.0
+script = ExtResource("3_7raqb")
+index = 38
+metadata/_custom_type_script = "uid://hhgxf35xg6wg"
+
+[node name="Marker2D40" type="Marker2D" parent="TileMarkers"]
+position = Vector2(305.5, 518.5)
+gizmo_extents = 25.0
+script = ExtResource("3_7raqb")
+index = 39
+metadata/_custom_type_script = "uid://hhgxf35xg6wg"
+
+[node name="Marker2D41" type="Marker2D" parent="TileMarkers"]
+position = Vector2(305.5, 465.5)
+gizmo_extents = 25.0
+script = ExtResource("3_7raqb")
+index = 40
+metadata/_custom_type_script = "uid://hhgxf35xg6wg"
+
+[node name="Marker2D42" type="Marker2D" parent="TileMarkers"]
+position = Vector2(251.5, 465.5)
+gizmo_extents = 25.0
+script = ExtResource("3_7raqb")
+index = 41
+metadata/_custom_type_script = "uid://hhgxf35xg6wg"
+
+[node name="Marker2D43" type="Marker2D" parent="TileMarkers"]
+position = Vector2(251.5, 412.5)
+gizmo_extents = 25.0
+script = ExtResource("3_7raqb")
+index = 42
+metadata/_custom_type_script = "uid://hhgxf35xg6wg"
+
+[node name="Marker2D44" type="Marker2D" parent="TileMarkers"]
+position = Vector2(197.5, 412.5)
+gizmo_extents = 25.0
+script = ExtResource("3_7raqb")
+index = 43
+metadata/_custom_type_script = "uid://hhgxf35xg6wg"
+
+[node name="Marker2D45" type="Marker2D" parent="TileMarkers"]
+position = Vector2(143.5, 412.5)
+gizmo_extents = 25.0
+script = ExtResource("3_7raqb")
+index = 44
+metadata/_custom_type_script = "uid://hhgxf35xg6wg"
+
+[node name="Marker2D46" type="Marker2D" parent="TileMarkers"]
+position = Vector2(89.5, 412.5)
+gizmo_extents = 25.0
+script = ExtResource("3_7raqb")
+index = 45
+metadata/_custom_type_script = "uid://hhgxf35xg6wg"
+
+[node name="Marker2D47" type="Marker2D" parent="TileMarkers"]
+position = Vector2(35.5, 412.5)
+gizmo_extents = 25.0
+script = ExtResource("3_7raqb")
+index = 46
+metadata/_custom_type_script = "uid://hhgxf35xg6wg"
+
+[node name="Marker2D48" type="Marker2D" parent="TileMarkers"]
+position = Vector2(35.5, 359.5)
+gizmo_extents = 25.0
+script = ExtResource("3_7raqb")
+index = 47
+metadata/_custom_type_script = "uid://hhgxf35xg6wg"
+
+[node name="Marker2D49" type="Marker2D" parent="TileMarkers"]
+position = Vector2(89.5, 359.5)
+gizmo_extents = 25.0
+script = ExtResource("3_7raqb")
+index = 100
+metadata/_custom_type_script = "uid://hhgxf35xg6wg"
+
+[node name="Marker2D50" type="Marker2D" parent="TileMarkers"]
+position = Vector2(143.5, 359.5)
+gizmo_extents = 25.0
+script = ExtResource("3_7raqb")
+index = 101
+metadata/_custom_type_script = "uid://hhgxf35xg6wg"
+
+[node name="Marker2D51" type="Marker2D" parent="TileMarkers"]
+position = Vector2(197.5, 359.5)
+gizmo_extents = 25.0
+script = ExtResource("3_7raqb")
+index = 102
+metadata/_custom_type_script = "uid://hhgxf35xg6wg"
+
+[node name="Marker2D52" type="Marker2D" parent="TileMarkers"]
+position = Vector2(251.5, 359.5)
+gizmo_extents = 25.0
+script = ExtResource("3_7raqb")
+index = 103
+metadata/_custom_type_script = "uid://hhgxf35xg6wg"
+
+[node name="Marker2D53" type="Marker2D" parent="TileMarkers"]
+position = Vector2(89.5, 94.5)
+gizmo_extents = 25.0
+script = ExtResource("3_7raqb")
+index = 150
+metadata/_custom_type_script = "uid://hhgxf35xg6wg"
+
+[node name="Marker2D54" type="Marker2D" parent="TileMarkers"]
+position = Vector2(143.5, 94.5)
+gizmo_extents = 25.0
+script = ExtResource("3_7raqb")
+index = 151
+metadata/_custom_type_script = "uid://hhgxf35xg6wg"
+
+[node name="Marker2D55" type="Marker2D" parent="TileMarkers"]
+position = Vector2(89.5, 147.5)
+gizmo_extents = 25.0
+script = ExtResource("3_7raqb")
+index = 152
+metadata/_custom_type_script = "uid://hhgxf35xg6wg"
+
+[node name="Marker2D56" type="Marker2D" parent="TileMarkers"]
+position = Vector2(143.5, 147.5)
+gizmo_extents = 25.0
+script = ExtResource("3_7raqb")
+index = 153
+metadata/_custom_type_script = "uid://hhgxf35xg6wg"
+
+[node name="Marker2D57" type="Marker2D" parent="TileMarkers"]
+position = Vector2(359.5, 94.5)
+gizmo_extents = 25.0
+script = ExtResource("3_7raqb")
+index = 200
+metadata/_custom_type_script = "uid://hhgxf35xg6wg"
+
+[node name="Marker2D58" type="Marker2D" parent="TileMarkers"]
+position = Vector2(359.5, 147.5)
+gizmo_extents = 25.0
+script = ExtResource("3_7raqb")
+index = 201
+metadata/_custom_type_script = "uid://hhgxf35xg6wg"
+
+[node name="Marker2D59" type="Marker2D" parent="TileMarkers"]
+position = Vector2(359.5, 200.5)
+gizmo_extents = 25.0
+script = ExtResource("3_7raqb")
+index = 202
+metadata/_custom_type_script = "uid://hhgxf35xg6wg"
+
+[node name="Marker2D60" type="Marker2D" parent="TileMarkers"]
+position = Vector2(359.5, 253.5)
+gizmo_extents = 25.0
+script = ExtResource("3_7raqb")
+index = 203
+metadata/_custom_type_script = "uid://hhgxf35xg6wg"
+
+[node name="Marker2D61" type="Marker2D" parent="TileMarkers"]
+position = Vector2(575.5, 94.5)
+gizmo_extents = 25.0
+script = ExtResource("3_7raqb")
+index = 250
+metadata/_custom_type_script = "uid://hhgxf35xg6wg"
+
+[node name="Marker2D62" type="Marker2D" parent="TileMarkers"]
+position = Vector2(629.5, 94.5)
+gizmo_extents = 25.0
+script = ExtResource("3_7raqb")
+index = 251
+metadata/_custom_type_script = "uid://hhgxf35xg6wg"
+
+[node name="Marker2D63" type="Marker2D" parent="TileMarkers"]
+position = Vector2(575.5, 147.5)
+gizmo_extents = 25.0
+script = ExtResource("3_7raqb")
+index = 252
+metadata/_custom_type_script = "uid://hhgxf35xg6wg"
+
+[node name="Marker2D64" type="Marker2D" parent="TileMarkers"]
+position = Vector2(629.5, 147.5)
+gizmo_extents = 25.0
+script = ExtResource("3_7raqb")
+index = 253
+metadata/_custom_type_script = "uid://hhgxf35xg6wg"
+
+[node name="Marker2D65" type="Marker2D" parent="TileMarkers"]
+position = Vector2(629.5, 359.5)
+gizmo_extents = 25.0
+script = ExtResource("3_7raqb")
+index = 300
+metadata/_custom_type_script = "uid://hhgxf35xg6wg"
+
+[node name="Marker2D66" type="Marker2D" parent="TileMarkers"]
+position = Vector2(575.5, 359.5)
+gizmo_extents = 25.0
+script = ExtResource("3_7raqb")
+index = 301
+metadata/_custom_type_script = "uid://hhgxf35xg6wg"
+
+[node name="Marker2D67" type="Marker2D" parent="TileMarkers"]
+position = Vector2(521.5, 359.5)
+gizmo_extents = 25.0
+script = ExtResource("3_7raqb")
+index = 302
+metadata/_custom_type_script = "uid://hhgxf35xg6wg"
+
+[node name="Marker2D68" type="Marker2D" parent="TileMarkers"]
+position = Vector2(467.5, 359.5)
+gizmo_extents = 25.0
+script = ExtResource("3_7raqb")
+index = 303
+metadata/_custom_type_script = "uid://hhgxf35xg6wg"
+
+[node name="Marker2D69" type="Marker2D" parent="TileMarkers"]
+position = Vector2(575.5, 571.5)
+gizmo_extents = 25.0
+script = ExtResource("3_7raqb")
+index = 350
+metadata/_custom_type_script = "uid://hhgxf35xg6wg"
+
+[node name="Marker2D70" type="Marker2D" parent="TileMarkers"]
+position = Vector2(629.5, 571.5)
+gizmo_extents = 25.0
+script = ExtResource("3_7raqb")
+index = 351
+metadata/_custom_type_script = "uid://hhgxf35xg6wg"
+
+[node name="Marker2D71" type="Marker2D" parent="TileMarkers"]
+position = Vector2(575.5, 624.5)
+gizmo_extents = 25.0
+script = ExtResource("3_7raqb")
+index = 352
+metadata/_custom_type_script = "uid://hhgxf35xg6wg"
+
+[node name="Marker2D72" type="Marker2D" parent="TileMarkers"]
+position = Vector2(629.5, 624.5)
+gizmo_extents = 25.0
+script = ExtResource("3_7raqb")
+index = 353
+metadata/_custom_type_script = "uid://hhgxf35xg6wg"
+
+[node name="Marker2D73" type="Marker2D" parent="TileMarkers"]
+position = Vector2(359.5, 624.5)
+gizmo_extents = 25.0
+script = ExtResource("3_7raqb")
+index = 400
+metadata/_custom_type_script = "uid://hhgxf35xg6wg"
+
+[node name="Marker2D74" type="Marker2D" parent="TileMarkers"]
+position = Vector2(359.5, 571.5)
+gizmo_extents = 25.0
+script = ExtResource("3_7raqb")
+index = 401
+metadata/_custom_type_script = "uid://hhgxf35xg6wg"
+
+[node name="Marker2D75" type="Marker2D" parent="TileMarkers"]
+position = Vector2(359.5, 518.5)
+gizmo_extents = 25.0
+script = ExtResource("3_7raqb")
+index = 402
+metadata/_custom_type_script = "uid://hhgxf35xg6wg"
+
+[node name="Marker2D76" type="Marker2D" parent="TileMarkers"]
+position = Vector2(359.5, 465.5)
+gizmo_extents = 25.0
+script = ExtResource("3_7raqb")
+index = 403
+metadata/_custom_type_script = "uid://hhgxf35xg6wg"
+
+[node name="Marker2D77" type="Marker2D" parent="TileMarkers"]
+position = Vector2(89.5, 571.5)
+gizmo_extents = 25.0
+script = ExtResource("3_7raqb")
+index = 450
+metadata/_custom_type_script = "uid://hhgxf35xg6wg"
+
+[node name="Marker2D78" type="Marker2D" parent="TileMarkers"]
+position = Vector2(143.5, 571.5)
+gizmo_extents = 25.0
+script = ExtResource("3_7raqb")
+index = 451
+metadata/_custom_type_script = "uid://hhgxf35xg6wg"
+
+[node name="Marker2D79" type="Marker2D" parent="TileMarkers"]
+position = Vector2(89.5, 624.5)
+gizmo_extents = 25.0
+script = ExtResource("3_7raqb")
+index = 452
+metadata/_custom_type_script = "uid://hhgxf35xg6wg"
+
+[node name="Marker2D80" type="Marker2D" parent="TileMarkers"]
+position = Vector2(143.5, 624.5)
+gizmo_extents = 25.0
+script = ExtResource("3_7raqb")
+index = 453
+metadata/_custom_type_script = "uid://hhgxf35xg6wg"
