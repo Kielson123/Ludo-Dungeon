@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://b6fvult3nbn8n"]
+[gd_scene load_steps=5 format=3 uid="uid://b6fvult3nbn8n"]
 
 [ext_resource type="Script" uid="uid://clcgmlnx8tebp" path="res://Game/game.gd" id="1_bk3v5"]
 [ext_resource type="PackedScene" uid="uid://cwldi7mbvujwv" path="res://Game/Pawn/pawn.tscn" id="2_7raqb"]
 [ext_resource type="Script" uid="uid://hhgxf35xg6wg" path="res://Game/tile_position.gd" id="3_7raqb"]
+[ext_resource type="Script" uid="uid://c14q7645k4lyg" path="res://Game/Actor/actor.gd" id="4_jcm6v"]
 
 [node name="Game" type="Control"]
 layout_mode = 3
@@ -15,8 +16,6 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 mouse_filter = 2
 script = ExtResource("1_bk3v5")
-
-[node name="Pawn" parent="." instance=ExtResource("2_7raqb")]
 
 [node name="TileMarkers" type="Node2D" parent="."]
 
@@ -578,3 +577,24 @@ gizmo_extents = 25.0
 script = ExtResource("3_7raqb")
 index = 453
 metadata/_custom_type_script = "uid://hhgxf35xg6wg"
+
+[node name="Actors" type="Node" parent="."]
+
+[node name="Actor" type="Node" parent="Actors"]
+script = ExtResource("4_jcm6v")
+metadata/_custom_type_script = "uid://c14q7645k4lyg"
+
+[node name="Pawn" parent="Actors/Actor" instance=ExtResource("2_7raqb")]
+position = Vector2(89.5, 94.5)
+
+[node name="Actor2" type="Node" parent="Actors"]
+script = ExtResource("4_jcm6v")
+metadata/_custom_type_script = "uid://c14q7645k4lyg"
+
+[node name="Actor3" type="Node" parent="Actors"]
+script = ExtResource("4_jcm6v")
+metadata/_custom_type_script = "uid://c14q7645k4lyg"
+
+[node name="Actor4" type="Node" parent="Actors"]
+script = ExtResource("4_jcm6v")
+metadata/_custom_type_script = "uid://c14q7645k4lyg"

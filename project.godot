@@ -25,7 +25,7 @@ buses/default_bus_layout=""
 [autoload]
 
 TurnManager="*res://Global/turn_manager.gd"
-Signals="*res://Global/signals.gd"
+Global="*res://Global/global.gd"
 
 [debug]
 
