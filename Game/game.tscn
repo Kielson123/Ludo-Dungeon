@@ -582,6 +582,7 @@ metadata/_custom_type_script = "uid://hhgxf35xg6wg"
 
 [node name="Actor" type="Node" parent="Actors"]
 script = ExtResource("4_jcm6v")
+color = 3
 metadata/_custom_type_script = "uid://c14q7645k4lyg"
 
 [node name="Pawn" parent="Actors/Actor" instance=ExtResource("2_7raqb")]
@@ -589,12 +590,24 @@ position = Vector2(89.5, 94.5)
 
 [node name="Actor2" type="Node" parent="Actors"]
 script = ExtResource("4_jcm6v")
+color = 4
 metadata/_custom_type_script = "uid://c14q7645k4lyg"
+
+[node name="Pawn2" parent="Actors/Actor2" instance=ExtResource("2_7raqb")]
+position = Vector2(89.5, 94.5)
 
 [node name="Actor3" type="Node" parent="Actors"]
 script = ExtResource("4_jcm6v")
+color = 6
 metadata/_custom_type_script = "uid://c14q7645k4lyg"
+
+[node name="Pawn3" parent="Actors/Actor3" instance=ExtResource("2_7raqb")]
+position = Vector2(89.5, 94.5)
 
 [node name="Actor4" type="Node" parent="Actors"]
 script = ExtResource("4_jcm6v")
+color = 5
 metadata/_custom_type_script = "uid://c14q7645k4lyg"
+
+[node name="Pawn4" parent="Actors/Actor4" instance=ExtResource("2_7raqb")]
+position = Vector2(89.5, 94.5)

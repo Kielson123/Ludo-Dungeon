@@ -22,18 +22,22 @@ func _ready() -> void:
 			actor.pawn_path.append(i + home_index)
 		start_index += 12
 		home_index += 100
+	
+	Global.should_color_tiles.emit(actors[0].color, actors[1].color, actors[2].color, actors[3].color)
 
 func _on_tile_pressed(tile_index: int) -> void:
 	#var tile_position: Vector2 = get_tile_position(tile_index)
 	#pawn.position = tile_position
 	pass
 
+func _physics_process(delta: float) -> void:
+	for actor in actors:
+		for pawn in actor.pawns:
+			var tile_position: Vector2 = get_tile_position(actor.pawn_path[pawn.path_index])
+			pawn.position = tile_position
+
 func get_tile_position(tile_index: int) -> Vector2:
 	for marker in $TileMarkers.get_children():
 		if marker.index == tile_index:
 			return marker.position
 	return Vector2(0, 0)
-
-func _input(event: InputEvent) -> void:
-	if event.is_action_pressed(&"ui_down"):
-		pass

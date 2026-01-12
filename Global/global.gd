@@ -2,6 +2,10 @@ extends Node
 
 signal tile_pressed(tile_index: int)
 
+signal game_won(actor: Actor)
+
+signal should_color_tiles(tile_set_1: Global.Colors, tile_set_2: Global.Colors, tile_set_3: Global.Colors, tile_set_4: Global.Colors)
+
 enum Colors {
 	NONE,
 	RED,
