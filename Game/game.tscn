@@ -1,11 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://b6fvult3nbn8n"]
+[gd_scene format=3 uid="uid://b6fvult3nbn8n"]
 
 [ext_resource type="Script" uid="uid://clcgmlnx8tebp" path="res://Game/game.gd" id="1_bk3v5"]
 [ext_resource type="PackedScene" uid="uid://cwldi7mbvujwv" path="res://Game/Pawn/pawn.tscn" id="2_7raqb"]
 [ext_resource type="Script" uid="uid://hhgxf35xg6wg" path="res://Game/tile_position.gd" id="3_7raqb"]
 [ext_resource type="Script" uid="uid://c14q7645k4lyg" path="res://Game/Actor/actor.gd" id="4_jcm6v"]
 
-[node name="Game" type="Control"]
+[node name="Game" type="Control" unique_id=1233011614]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -17,597 +17,597 @@ size_flags_vertical = 3
 mouse_filter = 2
 script = ExtResource("1_bk3v5")
 
-[node name="TileMarkers" type="Node2D" parent="."]
+[node name="TileMarkers" type="Node2D" parent="." unique_id=1688005405]
 
-[node name="Marker2D" type="Marker2D" parent="TileMarkers"]
+[node name="Marker2D" type="Marker2D" parent="TileMarkers" unique_id=695551440]
 position = Vector2(35.5, 306.5)
 gizmo_extents = 25.0
 script = ExtResource("3_7raqb")
 metadata/_custom_type_script = "uid://hhgxf35xg6wg"
 
-[node name="Marker2D2" type="Marker2D" parent="TileMarkers"]
+[node name="Marker2D2" type="Marker2D" parent="TileMarkers" unique_id=98018338]
 position = Vector2(89.5, 306.5)
 gizmo_extents = 25.0
 script = ExtResource("3_7raqb")
 index = 1
 metadata/_custom_type_script = "uid://hhgxf35xg6wg"
 
-[node name="Marker2D3" type="Marker2D" parent="TileMarkers"]
+[node name="Marker2D3" type="Marker2D" parent="TileMarkers" unique_id=1205535856]
 position = Vector2(143.5, 306.5)
 gizmo_extents = 25.0
 script = ExtResource("3_7raqb")
 index = 2
 metadata/_custom_type_script = "uid://hhgxf35xg6wg"
 
-[node name="Marker2D4" type="Marker2D" parent="TileMarkers"]
+[node name="Marker2D4" type="Marker2D" parent="TileMarkers" unique_id=1326761121]
 position = Vector2(197.5, 306.5)
 gizmo_extents = 25.0
 script = ExtResource("3_7raqb")
 index = 3
 metadata/_custom_type_script = "uid://hhgxf35xg6wg"
 
-[node name="Marker2D5" type="Marker2D" parent="TileMarkers"]
+[node name="Marker2D5" type="Marker2D" parent="TileMarkers" unique_id=780211683]
 position = Vector2(251.5, 306.5)
 gizmo_extents = 25.0
 script = ExtResource("3_7raqb")
 index = 4
 metadata/_custom_type_script = "uid://hhgxf35xg6wg"
 
-[node name="Marker2D6" type="Marker2D" parent="TileMarkers"]
+[node name="Marker2D6" type="Marker2D" parent="TileMarkers" unique_id=1017928296]
 position = Vector2(251.5, 253.5)
 gizmo_extents = 25.0
 script = ExtResource("3_7raqb")
 index = 5
 metadata/_custom_type_script = "uid://hhgxf35xg6wg"
 
-[node name="Marker2D7" type="Marker2D" parent="TileMarkers"]
+[node name="Marker2D7" type="Marker2D" parent="TileMarkers" unique_id=1634274653]
 position = Vector2(305.5, 253.5)
 gizmo_extents = 25.0
 script = ExtResource("3_7raqb")
 index = 6
 metadata/_custom_type_script = "uid://hhgxf35xg6wg"
 
-[node name="Marker2D8" type="Marker2D" parent="TileMarkers"]
+[node name="Marker2D8" type="Marker2D" parent="TileMarkers" unique_id=1633450052]
 position = Vector2(305.5, 200.5)
 gizmo_extents = 25.0
 script = ExtResource("3_7raqb")
 index = 7
 metadata/_custom_type_script = "uid://hhgxf35xg6wg"
 
-[node name="Marker2D9" type="Marker2D" parent="TileMarkers"]
+[node name="Marker2D9" type="Marker2D" parent="TileMarkers" unique_id=552787916]
 position = Vector2(305.5, 147.5)
 gizmo_extents = 25.0
 script = ExtResource("3_7raqb")
 index = 8
 metadata/_custom_type_script = "uid://hhgxf35xg6wg"
 
-[node name="Marker2D10" type="Marker2D" parent="TileMarkers"]
+[node name="Marker2D10" type="Marker2D" parent="TileMarkers" unique_id=890843031]
 position = Vector2(305.5, 94.5)
 gizmo_extents = 25.0
 script = ExtResource("3_7raqb")
 index = 9
 metadata/_custom_type_script = "uid://hhgxf35xg6wg"
 
-[node name="Marker2D11" type="Marker2D" parent="TileMarkers"]
+[node name="Marker2D11" type="Marker2D" parent="TileMarkers" unique_id=1665572489]
 position = Vector2(305.5, 41.5)
 gizmo_extents = 25.0
 script = ExtResource("3_7raqb")
 index = 10
 metadata/_custom_type_script = "uid://hhgxf35xg6wg"
 
-[node name="Marker2D12" type="Marker2D" parent="TileMarkers"]
+[node name="Marker2D12" type="Marker2D" parent="TileMarkers" unique_id=73654598]
 position = Vector2(359.5, 41.5)
 gizmo_extents = 25.0
 script = ExtResource("3_7raqb")
 index = 11
 metadata/_custom_type_script = "uid://hhgxf35xg6wg"
 
-[node name="Marker2D13" type="Marker2D" parent="TileMarkers"]
+[node name="Marker2D13" type="Marker2D" parent="TileMarkers" unique_id=1726498255]
 position = Vector2(413.5, 41.5)
 gizmo_extents = 25.0
 script = ExtResource("3_7raqb")
 index = 12
 metadata/_custom_type_script = "uid://hhgxf35xg6wg"
 
-[node name="Marker2D14" type="Marker2D" parent="TileMarkers"]
+[node name="Marker2D14" type="Marker2D" parent="TileMarkers" unique_id=15781887]
 position = Vector2(413.5, 94.5)
 gizmo_extents = 25.0
 script = ExtResource("3_7raqb")
 index = 13
 metadata/_custom_type_script = "uid://hhgxf35xg6wg"
 
-[node name="Marker2D15" type="Marker2D" parent="TileMarkers"]
+[node name="Marker2D15" type="Marker2D" parent="TileMarkers" unique_id=1120968746]
 position = Vector2(413.5, 147.5)
 gizmo_extents = 25.0
 script = ExtResource("3_7raqb")
 index = 14
 metadata/_custom_type_script = "uid://hhgxf35xg6wg"
 
-[node name="Marker2D16" type="Marker2D" parent="TileMarkers"]
+[node name="Marker2D16" type="Marker2D" parent="TileMarkers" unique_id=1641871009]
 position = Vector2(413.5, 200.5)
 gizmo_extents = 25.0
 script = ExtResource("3_7raqb")
 index = 15
 metadata/_custom_type_script = "uid://hhgxf35xg6wg"
 
-[node name="Marker2D17" type="Marker2D" parent="TileMarkers"]
+[node name="Marker2D17" type="Marker2D" parent="TileMarkers" unique_id=1166384361]
 position = Vector2(413.5, 253.5)
 gizmo_extents = 25.0
 script = ExtResource("3_7raqb")
 index = 16
 metadata/_custom_type_script = "uid://hhgxf35xg6wg"
 
-[node name="Marker2D18" type="Marker2D" parent="TileMarkers"]
+[node name="Marker2D18" type="Marker2D" parent="TileMarkers" unique_id=622452467]
 position = Vector2(467.5, 253.5)
 gizmo_extents = 25.0
 script = ExtResource("3_7raqb")
 index = 17
 metadata/_custom_type_script = "uid://hhgxf35xg6wg"
 
-[node name="Marker2D19" type="Marker2D" parent="TileMarkers"]
+[node name="Marker2D19" type="Marker2D" parent="TileMarkers" unique_id=1324405598]
 position = Vector2(467.5, 306.5)
 gizmo_extents = 25.0
 script = ExtResource("3_7raqb")
 index = 18
 metadata/_custom_type_script = "uid://hhgxf35xg6wg"
 
-[node name="Marker2D20" type="Marker2D" parent="TileMarkers"]
+[node name="Marker2D20" type="Marker2D" parent="TileMarkers" unique_id=2051661558]
 position = Vector2(521.5, 306.5)
 gizmo_extents = 25.0
 script = ExtResource("3_7raqb")
 index = 19
 metadata/_custom_type_script = "uid://hhgxf35xg6wg"
 
-[node name="Marker2D21" type="Marker2D" parent="TileMarkers"]
+[node name="Marker2D21" type="Marker2D" parent="TileMarkers" unique_id=2125896819]
 position = Vector2(575.5, 306.5)
 gizmo_extents = 25.0
 script = ExtResource("3_7raqb")
 index = 20
 metadata/_custom_type_script = "uid://hhgxf35xg6wg"
 
-[node name="Marker2D22" type="Marker2D" parent="TileMarkers"]
+[node name="Marker2D22" type="Marker2D" parent="TileMarkers" unique_id=458266533]
 position = Vector2(629.5, 306.5)
 gizmo_extents = 25.0
 script = ExtResource("3_7raqb")
 index = 21
 metadata/_custom_type_script = "uid://hhgxf35xg6wg"
 
-[node name="Marker2D23" type="Marker2D" parent="TileMarkers"]
+[node name="Marker2D23" type="Marker2D" parent="TileMarkers" unique_id=1448600812]
 position = Vector2(683.5, 306.5)
 gizmo_extents = 25.0
 script = ExtResource("3_7raqb")
 index = 22
 metadata/_custom_type_script = "uid://hhgxf35xg6wg"
 
-[node name="Marker2D24" type="Marker2D" parent="TileMarkers"]
+[node name="Marker2D24" type="Marker2D" parent="TileMarkers" unique_id=390573005]
 position = Vector2(683.5, 359.5)
 gizmo_extents = 25.0
 script = ExtResource("3_7raqb")
 index = 23
 metadata/_custom_type_script = "uid://hhgxf35xg6wg"
 
-[node name="Marker2D25" type="Marker2D" parent="TileMarkers"]
+[node name="Marker2D25" type="Marker2D" parent="TileMarkers" unique_id=1024143200]
 position = Vector2(683.5, 412.5)
 gizmo_extents = 25.0
 script = ExtResource("3_7raqb")
 index = 24
 metadata/_custom_type_script = "uid://hhgxf35xg6wg"
 
-[node name="Marker2D26" type="Marker2D" parent="TileMarkers"]
+[node name="Marker2D26" type="Marker2D" parent="TileMarkers" unique_id=1266629688]
 position = Vector2(629.5, 412.5)
 gizmo_extents = 25.0
 script = ExtResource("3_7raqb")
 index = 25
 metadata/_custom_type_script = "uid://hhgxf35xg6wg"
 
-[node name="Marker2D27" type="Marker2D" parent="TileMarkers"]
+[node name="Marker2D27" type="Marker2D" parent="TileMarkers" unique_id=1641455599]
 position = Vector2(575.5, 412.5)
 gizmo_extents = 25.0
 script = ExtResource("3_7raqb")
 index = 26
 metadata/_custom_type_script = "uid://hhgxf35xg6wg"
 
-[node name="Marker2D28" type="Marker2D" parent="TileMarkers"]
+[node name="Marker2D28" type="Marker2D" parent="TileMarkers" unique_id=231459814]
 position = Vector2(521.5, 412.5)
 gizmo_extents = 25.0
 script = ExtResource("3_7raqb")
 index = 27
 metadata/_custom_type_script = "uid://hhgxf35xg6wg"
 
-[node name="Marker2D29" type="Marker2D" parent="TileMarkers"]
+[node name="Marker2D29" type="Marker2D" parent="TileMarkers" unique_id=1321803593]
 position = Vector2(467.5, 412.5)
 gizmo_extents = 25.0
 script = ExtResource("3_7raqb")
 index = 28
 metadata/_custom_type_script = "uid://hhgxf35xg6wg"
 
-[node name="Marker2D30" type="Marker2D" parent="TileMarkers"]
+[node name="Marker2D30" type="Marker2D" parent="TileMarkers" unique_id=1426467529]
 position = Vector2(467.5, 465.5)
 gizmo_extents = 25.0
 script = ExtResource("3_7raqb")
 index = 29
 metadata/_custom_type_script = "uid://hhgxf35xg6wg"
 
-[node name="Marker2D31" type="Marker2D" parent="TileMarkers"]
+[node name="Marker2D31" type="Marker2D" parent="TileMarkers" unique_id=762215294]
 position = Vector2(413.5, 465.5)
 gizmo_extents = 25.0
 script = ExtResource("3_7raqb")
 index = 30
 metadata/_custom_type_script = "uid://hhgxf35xg6wg"
 
-[node name="Marker2D32" type="Marker2D" parent="TileMarkers"]
+[node name="Marker2D32" type="Marker2D" parent="TileMarkers" unique_id=1307893784]
 position = Vector2(413.5, 518.5)
 gizmo_extents = 25.0
 script = ExtResource("3_7raqb")
 index = 31
 metadata/_custom_type_script = "uid://hhgxf35xg6wg"
 
-[node name="Marker2D33" type="Marker2D" parent="TileMarkers"]
+[node name="Marker2D33" type="Marker2D" parent="TileMarkers" unique_id=720462142]
 position = Vector2(413.5, 571.5)
 gizmo_extents = 25.0
 script = ExtResource("3_7raqb")
 index = 32
 metadata/_custom_type_script = "uid://hhgxf35xg6wg"
 
-[node name="Marker2D34" type="Marker2D" parent="TileMarkers"]
+[node name="Marker2D34" type="Marker2D" parent="TileMarkers" unique_id=309560377]
 position = Vector2(413.5, 624.5)
 gizmo_extents = 25.0
 script = ExtResource("3_7raqb")
 index = 33
 metadata/_custom_type_script = "uid://hhgxf35xg6wg"
 
-[node name="Marker2D35" type="Marker2D" parent="TileMarkers"]
+[node name="Marker2D35" type="Marker2D" parent="TileMarkers" unique_id=1679500938]
 position = Vector2(413.5, 677.5)
 gizmo_extents = 25.0
 script = ExtResource("3_7raqb")
 index = 34
 metadata/_custom_type_script = "uid://hhgxf35xg6wg"
 
-[node name="Marker2D36" type="Marker2D" parent="TileMarkers"]
+[node name="Marker2D36" type="Marker2D" parent="TileMarkers" unique_id=809303096]
 position = Vector2(359.5, 677.5)
 gizmo_extents = 25.0
 script = ExtResource("3_7raqb")
 index = 35
 metadata/_custom_type_script = "uid://hhgxf35xg6wg"
 
-[node name="Marker2D37" type="Marker2D" parent="TileMarkers"]
+[node name="Marker2D37" type="Marker2D" parent="TileMarkers" unique_id=1271970965]
 position = Vector2(305.5, 677.5)
 gizmo_extents = 25.0
 script = ExtResource("3_7raqb")
 index = 36
 metadata/_custom_type_script = "uid://hhgxf35xg6wg"
 
-[node name="Marker2D38" type="Marker2D" parent="TileMarkers"]
+[node name="Marker2D38" type="Marker2D" parent="TileMarkers" unique_id=1273219795]
 position = Vector2(305.5, 624.5)
 gizmo_extents = 25.0
 script = ExtResource("3_7raqb")
 index = 37
 metadata/_custom_type_script = "uid://hhgxf35xg6wg"
 
-[node name="Marker2D39" type="Marker2D" parent="TileMarkers"]
+[node name="Marker2D39" type="Marker2D" parent="TileMarkers" unique_id=826454634]
 position = Vector2(305.5, 571.5)
 gizmo_extents = 25.0
 script = ExtResource("3_7raqb")
 index = 38
 metadata/_custom_type_script = "uid://hhgxf35xg6wg"
 
-[node name="Marker2D40" type="Marker2D" parent="TileMarkers"]
+[node name="Marker2D40" type="Marker2D" parent="TileMarkers" unique_id=2037694869]
 position = Vector2(305.5, 518.5)
 gizmo_extents = 25.0
 script = ExtResource("3_7raqb")
 index = 39
 metadata/_custom_type_script = "uid://hhgxf35xg6wg"
 
-[node name="Marker2D41" type="Marker2D" parent="TileMarkers"]
+[node name="Marker2D41" type="Marker2D" parent="TileMarkers" unique_id=1723576591]
 position = Vector2(305.5, 465.5)
 gizmo_extents = 25.0
 script = ExtResource("3_7raqb")
 index = 40
 metadata/_custom_type_script = "uid://hhgxf35xg6wg"
 
-[node name="Marker2D42" type="Marker2D" parent="TileMarkers"]
+[node name="Marker2D42" type="Marker2D" parent="TileMarkers" unique_id=1462955447]
 position = Vector2(251.5, 465.5)
 gizmo_extents = 25.0
 script = ExtResource("3_7raqb")
 index = 41
 metadata/_custom_type_script = "uid://hhgxf35xg6wg"
 
-[node name="Marker2D43" type="Marker2D" parent="TileMarkers"]
+[node name="Marker2D43" type="Marker2D" parent="TileMarkers" unique_id=1278585769]
 position = Vector2(251.5, 412.5)
 gizmo_extents = 25.0
 script = ExtResource("3_7raqb")
 index = 42
 metadata/_custom_type_script = "uid://hhgxf35xg6wg"
 
-[node name="Marker2D44" type="Marker2D" parent="TileMarkers"]
+[node name="Marker2D44" type="Marker2D" parent="TileMarkers" unique_id=6925716]
 position = Vector2(197.5, 412.5)
 gizmo_extents = 25.0
 script = ExtResource("3_7raqb")
 index = 43
 metadata/_custom_type_script = "uid://hhgxf35xg6wg"
 
-[node name="Marker2D45" type="Marker2D" parent="TileMarkers"]
+[node name="Marker2D45" type="Marker2D" parent="TileMarkers" unique_id=163464016]
 position = Vector2(143.5, 412.5)
 gizmo_extents = 25.0
 script = ExtResource("3_7raqb")
 index = 44
 metadata/_custom_type_script = "uid://hhgxf35xg6wg"
 
-[node name="Marker2D46" type="Marker2D" parent="TileMarkers"]
+[node name="Marker2D46" type="Marker2D" parent="TileMarkers" unique_id=1125563647]
 position = Vector2(89.5, 412.5)
 gizmo_extents = 25.0
 script = ExtResource("3_7raqb")
 index = 45
 metadata/_custom_type_script = "uid://hhgxf35xg6wg"
 
-[node name="Marker2D47" type="Marker2D" parent="TileMarkers"]
+[node name="Marker2D47" type="Marker2D" parent="TileMarkers" unique_id=1044933118]
 position = Vector2(35.5, 412.5)
 gizmo_extents = 25.0
 script = ExtResource("3_7raqb")
 index = 46
 metadata/_custom_type_script = "uid://hhgxf35xg6wg"
 
-[node name="Marker2D48" type="Marker2D" parent="TileMarkers"]
+[node name="Marker2D48" type="Marker2D" parent="TileMarkers" unique_id=1705469392]
 position = Vector2(35.5, 359.5)
 gizmo_extents = 25.0
 script = ExtResource("3_7raqb")
 index = 47
 metadata/_custom_type_script = "uid://hhgxf35xg6wg"
 
-[node name="Marker2D49" type="Marker2D" parent="TileMarkers"]
+[node name="Marker2D49" type="Marker2D" parent="TileMarkers" unique_id=1417452982]
 position = Vector2(89.5, 359.5)
 gizmo_extents = 25.0
 script = ExtResource("3_7raqb")
 index = 100
 metadata/_custom_type_script = "uid://hhgxf35xg6wg"
 
-[node name="Marker2D50" type="Marker2D" parent="TileMarkers"]
+[node name="Marker2D50" type="Marker2D" parent="TileMarkers" unique_id=845788155]
 position = Vector2(143.5, 359.5)
 gizmo_extents = 25.0
 script = ExtResource("3_7raqb")
 index = 101
 metadata/_custom_type_script = "uid://hhgxf35xg6wg"
 
-[node name="Marker2D51" type="Marker2D" parent="TileMarkers"]
+[node name="Marker2D51" type="Marker2D" parent="TileMarkers" unique_id=1041505141]
 position = Vector2(197.5, 359.5)
 gizmo_extents = 25.0
 script = ExtResource("3_7raqb")
 index = 102
 metadata/_custom_type_script = "uid://hhgxf35xg6wg"
 
-[node name="Marker2D52" type="Marker2D" parent="TileMarkers"]
+[node name="Marker2D52" type="Marker2D" parent="TileMarkers" unique_id=1484943877]
 position = Vector2(251.5, 359.5)
 gizmo_extents = 25.0
 script = ExtResource("3_7raqb")
 index = 103
 metadata/_custom_type_script = "uid://hhgxf35xg6wg"
 
-[node name="Marker2D53" type="Marker2D" parent="TileMarkers"]
+[node name="Marker2D53" type="Marker2D" parent="TileMarkers" unique_id=1145908698]
 position = Vector2(89.5, 94.5)
 gizmo_extents = 25.0
 script = ExtResource("3_7raqb")
 index = 150
 metadata/_custom_type_script = "uid://hhgxf35xg6wg"
 
-[node name="Marker2D54" type="Marker2D" parent="TileMarkers"]
+[node name="Marker2D54" type="Marker2D" parent="TileMarkers" unique_id=1878564549]
 position = Vector2(143.5, 94.5)
 gizmo_extents = 25.0
 script = ExtResource("3_7raqb")
 index = 151
 metadata/_custom_type_script = "uid://hhgxf35xg6wg"
 
-[node name="Marker2D55" type="Marker2D" parent="TileMarkers"]
+[node name="Marker2D55" type="Marker2D" parent="TileMarkers" unique_id=1378112158]
 position = Vector2(89.5, 147.5)
 gizmo_extents = 25.0
 script = ExtResource("3_7raqb")
 index = 152
 metadata/_custom_type_script = "uid://hhgxf35xg6wg"
 
-[node name="Marker2D56" type="Marker2D" parent="TileMarkers"]
+[node name="Marker2D56" type="Marker2D" parent="TileMarkers" unique_id=230088709]
 position = Vector2(143.5, 147.5)
 gizmo_extents = 25.0
 script = ExtResource("3_7raqb")
 index = 153
 metadata/_custom_type_script = "uid://hhgxf35xg6wg"
 
-[node name="Marker2D57" type="Marker2D" parent="TileMarkers"]
+[node name="Marker2D57" type="Marker2D" parent="TileMarkers" unique_id=489657827]
 position = Vector2(359.5, 94.5)
 gizmo_extents = 25.0
 script = ExtResource("3_7raqb")
 index = 200
 metadata/_custom_type_script = "uid://hhgxf35xg6wg"
 
-[node name="Marker2D58" type="Marker2D" parent="TileMarkers"]
+[node name="Marker2D58" type="Marker2D" parent="TileMarkers" unique_id=310116403]
 position = Vector2(359.5, 147.5)
 gizmo_extents = 25.0
 script = ExtResource("3_7raqb")
 index = 201
 metadata/_custom_type_script = "uid://hhgxf35xg6wg"
 
-[node name="Marker2D59" type="Marker2D" parent="TileMarkers"]
+[node name="Marker2D59" type="Marker2D" parent="TileMarkers" unique_id=564443990]
 position = Vector2(359.5, 200.5)
 gizmo_extents = 25.0
 script = ExtResource("3_7raqb")
 index = 202
 metadata/_custom_type_script = "uid://hhgxf35xg6wg"
 
-[node name="Marker2D60" type="Marker2D" parent="TileMarkers"]
+[node name="Marker2D60" type="Marker2D" parent="TileMarkers" unique_id=1362756030]
 position = Vector2(359.5, 253.5)
 gizmo_extents = 25.0
 script = ExtResource("3_7raqb")
 index = 203
 metadata/_custom_type_script = "uid://hhgxf35xg6wg"
 
-[node name="Marker2D61" type="Marker2D" parent="TileMarkers"]
+[node name="Marker2D61" type="Marker2D" parent="TileMarkers" unique_id=362897588]
 position = Vector2(575.5, 94.5)
 gizmo_extents = 25.0
 script = ExtResource("3_7raqb")
 index = 250
 metadata/_custom_type_script = "uid://hhgxf35xg6wg"
 
-[node name="Marker2D62" type="Marker2D" parent="TileMarkers"]
+[node name="Marker2D62" type="Marker2D" parent="TileMarkers" unique_id=227514666]
 position = Vector2(629.5, 94.5)
 gizmo_extents = 25.0
 script = ExtResource("3_7raqb")
 index = 251
 metadata/_custom_type_script = "uid://hhgxf35xg6wg"
 
-[node name="Marker2D63" type="Marker2D" parent="TileMarkers"]
+[node name="Marker2D63" type="Marker2D" parent="TileMarkers" unique_id=522168489]
 position = Vector2(575.5, 147.5)
 gizmo_extents = 25.0
 script = ExtResource("3_7raqb")
 index = 252
 metadata/_custom_type_script = "uid://hhgxf35xg6wg"
 
-[node name="Marker2D64" type="Marker2D" parent="TileMarkers"]
+[node name="Marker2D64" type="Marker2D" parent="TileMarkers" unique_id=2107237120]
 position = Vector2(629.5, 147.5)
 gizmo_extents = 25.0
 script = ExtResource("3_7raqb")
 index = 253
 metadata/_custom_type_script = "uid://hhgxf35xg6wg"
 
-[node name="Marker2D65" type="Marker2D" parent="TileMarkers"]
+[node name="Marker2D65" type="Marker2D" parent="TileMarkers" unique_id=1181278133]
 position = Vector2(629.5, 359.5)
 gizmo_extents = 25.0
 script = ExtResource("3_7raqb")
 index = 300
 metadata/_custom_type_script = "uid://hhgxf35xg6wg"
 
-[node name="Marker2D66" type="Marker2D" parent="TileMarkers"]
+[node name="Marker2D66" type="Marker2D" parent="TileMarkers" unique_id=769672649]
 position = Vector2(575.5, 359.5)
 gizmo_extents = 25.0
 script = ExtResource("3_7raqb")
 index = 301
 metadata/_custom_type_script = "uid://hhgxf35xg6wg"
 
-[node name="Marker2D67" type="Marker2D" parent="TileMarkers"]
+[node name="Marker2D67" type="Marker2D" parent="TileMarkers" unique_id=337456428]
 position = Vector2(521.5, 359.5)
 gizmo_extents = 25.0
 script = ExtResource("3_7raqb")
 index = 302
 metadata/_custom_type_script = "uid://hhgxf35xg6wg"
 
-[node name="Marker2D68" type="Marker2D" parent="TileMarkers"]
+[node name="Marker2D68" type="Marker2D" parent="TileMarkers" unique_id=1169177966]
 position = Vector2(467.5, 359.5)
 gizmo_extents = 25.0
 script = ExtResource("3_7raqb")
 index = 303
 metadata/_custom_type_script = "uid://hhgxf35xg6wg"
 
-[node name="Marker2D69" type="Marker2D" parent="TileMarkers"]
+[node name="Marker2D69" type="Marker2D" parent="TileMarkers" unique_id=2095254413]
 position = Vector2(575.5, 571.5)
 gizmo_extents = 25.0
 script = ExtResource("3_7raqb")
 index = 350
 metadata/_custom_type_script = "uid://hhgxf35xg6wg"
 
-[node name="Marker2D70" type="Marker2D" parent="TileMarkers"]
+[node name="Marker2D70" type="Marker2D" parent="TileMarkers" unique_id=738002567]
 position = Vector2(629.5, 571.5)
 gizmo_extents = 25.0
 script = ExtResource("3_7raqb")
 index = 351
 metadata/_custom_type_script = "uid://hhgxf35xg6wg"
 
-[node name="Marker2D71" type="Marker2D" parent="TileMarkers"]
+[node name="Marker2D71" type="Marker2D" parent="TileMarkers" unique_id=2086551104]
 position = Vector2(575.5, 624.5)
 gizmo_extents = 25.0
 script = ExtResource("3_7raqb")
 index = 352
 metadata/_custom_type_script = "uid://hhgxf35xg6wg"
 
-[node name="Marker2D72" type="Marker2D" parent="TileMarkers"]
+[node name="Marker2D72" type="Marker2D" parent="TileMarkers" unique_id=1032615066]
 position = Vector2(629.5, 624.5)
 gizmo_extents = 25.0
 script = ExtResource("3_7raqb")
 index = 353
 metadata/_custom_type_script = "uid://hhgxf35xg6wg"
 
-[node name="Marker2D73" type="Marker2D" parent="TileMarkers"]
+[node name="Marker2D73" type="Marker2D" parent="TileMarkers" unique_id=518164148]
 position = Vector2(359.5, 624.5)
 gizmo_extents = 25.0
 script = ExtResource("3_7raqb")
 index = 400
 metadata/_custom_type_script = "uid://hhgxf35xg6wg"
 
-[node name="Marker2D74" type="Marker2D" parent="TileMarkers"]
+[node name="Marker2D74" type="Marker2D" parent="TileMarkers" unique_id=1410136996]
 position = Vector2(359.5, 571.5)
 gizmo_extents = 25.0
 script = ExtResource("3_7raqb")
 index = 401
 metadata/_custom_type_script = "uid://hhgxf35xg6wg"
 
-[node name="Marker2D75" type="Marker2D" parent="TileMarkers"]
+[node name="Marker2D75" type="Marker2D" parent="TileMarkers" unique_id=1044803026]
 position = Vector2(359.5, 518.5)
 gizmo_extents = 25.0
 script = ExtResource("3_7raqb")
 index = 402
 metadata/_custom_type_script = "uid://hhgxf35xg6wg"
 
-[node name="Marker2D76" type="Marker2D" parent="TileMarkers"]
+[node name="Marker2D76" type="Marker2D" parent="TileMarkers" unique_id=2008780479]
 position = Vector2(359.5, 465.5)
 gizmo_extents = 25.0
 script = ExtResource("3_7raqb")
 index = 403
 metadata/_custom_type_script = "uid://hhgxf35xg6wg"
 
-[node name="Marker2D77" type="Marker2D" parent="TileMarkers"]
+[node name="Marker2D77" type="Marker2D" parent="TileMarkers" unique_id=1994836299]
 position = Vector2(89.5, 571.5)
 gizmo_extents = 25.0
 script = ExtResource("3_7raqb")
 index = 450
 metadata/_custom_type_script = "uid://hhgxf35xg6wg"
 
-[node name="Marker2D78" type="Marker2D" parent="TileMarkers"]
+[node name="Marker2D78" type="Marker2D" parent="TileMarkers" unique_id=1144689743]
 position = Vector2(143.5, 571.5)
 gizmo_extents = 25.0
 script = ExtResource("3_7raqb")
 index = 451
 metadata/_custom_type_script = "uid://hhgxf35xg6wg"
 
-[node name="Marker2D79" type="Marker2D" parent="TileMarkers"]
+[node name="Marker2D79" type="Marker2D" parent="TileMarkers" unique_id=1280751434]
 position = Vector2(89.5, 624.5)
 gizmo_extents = 25.0
 script = ExtResource("3_7raqb")
 index = 452
 metadata/_custom_type_script = "uid://hhgxf35xg6wg"
 
-[node name="Marker2D80" type="Marker2D" parent="TileMarkers"]
+[node name="Marker2D80" type="Marker2D" parent="TileMarkers" unique_id=1961487617]
 position = Vector2(143.5, 624.5)
 gizmo_extents = 25.0
 script = ExtResource("3_7raqb")
 index = 453
 metadata/_custom_type_script = "uid://hhgxf35xg6wg"
 
-[node name="Actors" type="Node" parent="."]
+[node name="Actors" type="Node" parent="." unique_id=1800544306]
 
-[node name="Actor" type="Node" parent="Actors"]
+[node name="Actor" type="Node" parent="Actors" unique_id=1180705076]
+script = ExtResource("4_jcm6v")
+color = 1
+metadata/_custom_type_script = "uid://c14q7645k4lyg"
+
+[node name="Pawn" parent="Actors/Actor" unique_id=1332335784 instance=ExtResource("2_7raqb")]
+position = Vector2(89.5, 94.5)
+
+[node name="Actor2" type="Node" parent="Actors" unique_id=48077827]
+script = ExtResource("4_jcm6v")
+color = 2
+metadata/_custom_type_script = "uid://c14q7645k4lyg"
+
+[node name="Pawn2" parent="Actors/Actor2" unique_id=427063312 instance=ExtResource("2_7raqb")]
+position = Vector2(89.5, 94.5)
+
+[node name="Actor3" type="Node" parent="Actors" unique_id=1280574035]
 script = ExtResource("4_jcm6v")
 color = 3
 metadata/_custom_type_script = "uid://c14q7645k4lyg"
 
-[node name="Pawn" parent="Actors/Actor" instance=ExtResource("2_7raqb")]
+[node name="Pawn3" parent="Actors/Actor3" unique_id=1978775414 instance=ExtResource("2_7raqb")]
 position = Vector2(89.5, 94.5)
 
-[node name="Actor2" type="Node" parent="Actors"]
+[node name="Actor4" type="Node" parent="Actors" unique_id=896836612]
 script = ExtResource("4_jcm6v")
 color = 4
 metadata/_custom_type_script = "uid://c14q7645k4lyg"
 
-[node name="Pawn2" parent="Actors/Actor2" instance=ExtResource("2_7raqb")]
-position = Vector2(89.5, 94.5)
-
-[node name="Actor3" type="Node" parent="Actors"]
-script = ExtResource("4_jcm6v")
-color = 6
-metadata/_custom_type_script = "uid://c14q7645k4lyg"
-
-[node name="Pawn3" parent="Actors/Actor3" instance=ExtResource("2_7raqb")]
-position = Vector2(89.5, 94.5)
-
-[node name="Actor4" type="Node" parent="Actors"]
-script = ExtResource("4_jcm6v")
-color = 5
-metadata/_custom_type_script = "uid://c14q7645k4lyg"
-
-[node name="Pawn4" parent="Actors/Actor4" instance=ExtResource("2_7raqb")]
+[node name="Pawn4" parent="Actors/Actor4" unique_id=717834592 instance=ExtResource("2_7raqb")]
 position = Vector2(89.5, 94.5)
