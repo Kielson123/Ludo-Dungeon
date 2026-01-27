@@ -4,9 +4,11 @@
 [ext_resource type="Texture2D" uid="uid://7rhcrmxux57g" path="res://Assets/Game/Pawns/pawn.svg" id="2_44skp"]
 
 [node name="Pawn" type="Node2D" unique_id=428231349]
+y_sort_enabled = true
 script = ExtResource("1_iu052")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2060049472]
-position = Vector2(0, -5)
+y_sort_enabled = true
+position = Vector2(0, -10)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_44skp")

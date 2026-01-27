@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://1qkivx04p60r"]
+
+[ext_resource type="Texture2D" uid="uid://bmjjm7mxukvkd" path="res://Assets/UI/Dice/dice_1.svg" id="1_dkhib"]
+[ext_resource type="Script" uid="uid://bypm40e2op1bl" path="res://UI/dice.gd" id="1_je5a6"]
+
+[node name="Dice" type="TextureButton" unique_id=694397139]
+custom_minimum_size = Vector2(64, 64)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("1_dkhib")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("1_je5a6")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

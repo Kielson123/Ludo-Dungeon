@@ -24,11 +24,22 @@ func _ready() -> void:
 		home_index += 100
 	
 	Global.should_color_tiles.emit(actors[0].color, actors[1].color, actors[2].color, actors[3].color)
+	Global.dice_rolled.connect(_on_dice_rolled)
 
 func _on_tile_pressed(tile_index: int) -> void:
 	#var tile_position: Vector2 = get_tile_position(tile_index)
 	#pawn.position = tile_position
 	pass
+
+func _on_dice_rolled(number: int) -> void:
+	var actor: Actor = TurnManager.get_turn()
+	if actor.pawns[0].path_index + number >= 51:
+		actor.pawns[0].path_index = 51
+		Global.game_won.emit(actor)
+		print('wygrał: ', actor)
+		return
+	actor.pawns[0].path_index += number
+	TurnManager.set_next_turn()
 
 func _physics_process(delta: float) -> void:
 	for actor in actors:
