@@ -1,6 +1,5 @@
 class_name Game extends Control
 
-var dice_roller: Actor = null
 var actors: Array[Actor] = []
 
 func _ready() -> void:
@@ -27,27 +26,28 @@ func _ready() -> void:
 	Global.dice_rolled.connect(_on_dice_rolled)
 
 func _on_tile_pressed(tile_index: int) -> void:
-	#var tile_position: Vector2 = get_tile_position(tile_index)
+	#var tile_position: Vector2 = _get_tile_position(tile_index)
 	#pawn.position = tile_position
 	pass
 
 func _on_dice_rolled(number: int) -> void:
 	var actor: Actor = TurnManager.get_turn()
-	if actor.pawns[0].path_index + number >= 51:
-		actor.pawns[0].path_index = 51
+	var pawn_index: int = randi_range(0, actor.pawns.size())
+	if actor.pawns[pawn_index].path_index + number >= 51:
+		actor.pawns[pawn_index].path_index = 51
 		Global.game_won.emit(actor)
 		print('wygrał: ', actor)
 		return
-	actor.pawns[0].path_index += number
+	actor.pawns[pawn_index].path_index += number
 	TurnManager.set_next_turn()
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	for actor in actors:
 		for pawn in actor.pawns:
-			var tile_position: Vector2 = get_tile_position(actor.pawn_path[pawn.path_index])
+			var tile_position: Vector2 = _get_tile_position(actor.pawn_path[pawn.path_index])
 			pawn.position = tile_position
 
-func get_tile_position(tile_index: int) -> Vector2:
+func _get_tile_position(tile_index: int) -> Vector2:
 	for marker in $TileMarkers.get_children():
 		if marker.index == tile_index:
 			return marker.position
