@@ -6,21 +6,7 @@ func _ready() -> void:
 	TurnManager.turn_changed.connect(_on_turn_changed)
 
 func _get_texture(number: int) -> Texture2D:
-	match number:
-		1:
-			return load("res://Assets/UI/Dice/dice_1.svg")
-		2:
-			return load("res://Assets/UI/Dice/dice_2.svg")
-		3:
-			return load("res://Assets/UI/Dice/dice_3.svg")
-		4:
-			return load("res://Assets/UI/Dice/dice_4.svg")
-		5:
-			return load("res://Assets/UI/Dice/dice_5.svg")
-		6:
-			return load("res://Assets/UI/Dice/dice_6.svg")
-		_:
-			return load("res://Assets/UI/Dice/dice.svg")
+	return load("res://Assets/UI/Dice/dice_" + str(number) + ".svg")
 
 func _roll_anim(number_rolled: int) -> void:
 	var numbers: Array[int] = [1, 2, 3, 4, 5, 6]

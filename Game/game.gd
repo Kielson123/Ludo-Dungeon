@@ -9,6 +9,7 @@ func _ready() -> void:
 			actors.append(child)
 			for actor_child in child.get_children():
 				if actor_child is Pawn:
+					actor_child.pressed.connect(_on_pawn_pressed)
 					child.pawns.append(actor_child)
 	TurnManager.turns = actors
 	
@@ -26,26 +27,36 @@ func _ready() -> void:
 	Global.dice_rolled.connect(_on_dice_rolled)
 
 func _on_tile_pressed(tile_index: int) -> void:
-	#var tile_position: Vector2 = _get_tile_position(tile_index)
-	#pawn.position = tile_position
 	pass
 
 func _on_dice_rolled(number: int) -> void:
 	var actor: Actor = TurnManager.get_turn()
-	var pawn_index: int = randi_range(0, actor.pawns.size())
-	if actor.pawns[pawn_index].path_index + number >= 51:
-		actor.pawns[pawn_index].path_index = 51
-		Global.game_won.emit(actor)
-		print('wygrał: ', actor)
-		return
-	actor.pawns[pawn_index].path_index += number
-	TurnManager.set_next_turn()
+	for pawn in actor.pawns:
+		if not pawn.in_spawn or number == 6:
+			pawn.set_selection_blink(true)
+			await pawn.pressed
+			print("gowno")
+	
+	#if actor.pawns[pawn_index].path_index + number >= 51:
+	#	actor.pawns[pawn_index].path_index = 51
+	#	Global.game_won.emit(actor)
+	#	print('wygrał: ', actor)
+	#	return
+	
+	#actor.pawns[pawn_index].path_index += number
+	#if number == 6:
+	#	actor.pawns[pawn_index].activate_ability()
+	#else:
+	#	TurnManager.set_next_turn()
+
+func _on_pawn_pressed(pawn: Pawn) -> void:
+	pass
 
 func _physics_process(_delta: float) -> void:
 	for actor in actors:
 		for pawn in actor.pawns:
 			var tile_position: Vector2 = _get_tile_position(actor.pawn_path[pawn.path_index])
-			pawn.position = tile_position
+			pawn.move(tile_position)
 
 func _get_tile_position(tile_index: int) -> Vector2:
 	for marker in $TileMarkers.get_children():

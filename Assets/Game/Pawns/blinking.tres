@@ -1,0 +1,11 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://doxcfffbct60i"]
+
+[ext_resource type="Shader" uid="uid://bielctrg1wnps" path="res://Assets/Shaders/pulse.gdshader" id="1_q7x8r"]
+
+[resource]
+shader = ExtResource("1_q7x8r")
+shader_parameter/shine_color = Color(1, 1, 1, 0.39215687)
+shader_parameter/alpha_limit = 0.0
+shader_parameter/cycle_speed = 2.500000037253
+shader_parameter/full_pulse_cycle = true
+shader_parameter/mode = 1

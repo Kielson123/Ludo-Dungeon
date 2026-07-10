@@ -34,6 +34,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 
 [node name="ColorRect" type="ColorRect" parent="BackgroundContainer" unique_id=2072315717]
 layout_mode = 1
@@ -44,6 +45,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+mouse_filter = 1
 color = Color(1, 0.65098, 0, 1)
 
 [node name="Panel" type="Panel" parent="BackgroundContainer" unique_id=198999389]
@@ -54,6 +56,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 
 [node name="AspectRatioContainer" type="AspectRatioContainer" parent="." unique_id=1731945986]
 anchors_preset = 15
@@ -104,6 +107,7 @@ grow_vertical = 2
 
 [node name="Dice" parent="AspectRatioContainer/GameContainer/GameViewport/CenterContainer" unique_id=443722975 instance=ExtResource("5_7mycd")]
 layout_mode = 2
+mouse_filter = 1
 
 [node name="IntroContainer" type="Control" parent="." unique_id=646624538]
 layout_mode = 3
